@@ -29,4 +29,4 @@ Es una plataforma que se encarga de administrar y optimizar el proceso de selecc
 
 ## [Sesiones](/Sesiones/)
 
-  - [Sesión del 16/10/2024](/Documentos/Actas/Acta_sesion_1/)
+  - [Sesión del 16/10/2024](Documentos\Actas\acta_sesion_1\Readme.md)
