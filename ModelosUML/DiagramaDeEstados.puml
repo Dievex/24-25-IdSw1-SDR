@@ -1,0 +1,13 @@
+@startuml
+[*] --> Pendiente : Candidato registrado
+
+Pendiente --> RealizandoTest : Test iniciado
+RealizandoTest --> EnEvaluacion : Test completado
+EnEvaluacion --> Aceptado : Evaluación positiva
+EnEvaluacion --> Rechazado : Evaluación negativa
+
+Aceptado --> AccesoVideoTutorial : Accede a videos
+AccesoVideoTutorial --> [*] : Proceso finalizado
+
+Rechazado --> [*] : Proceso finalizado
+@enduml

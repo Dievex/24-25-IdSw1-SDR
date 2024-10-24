@@ -1,0 +1,50 @@
+@startuml
+' Objeto que representa a un candidato específico
+object candidato1 {
+  id = "C123"
+  nombre = "Juan Pérez"
+  estado = "Pendiente"
+}
+
+' Objeto que representa un test específico
+object test1 {
+  id = "T001"
+  tema = "Programación"
+  fechaRealizacion = "2024-10-24"
+}
+
+' Objeto que representa una evaluación realizada
+object evaluacion1 {
+  id = "E001"
+  resultado = "Positivo"
+  fecha = "2024-10-25"
+}
+
+object evaluacion2 {
+  id = "E002"
+  resultado = "Negativo"
+  fecha = "2024-10-25"
+}
+
+' Objeto que representa un video tutorial específico
+object video1 {
+  id = "V001"
+  titulo = "Introducción a la Beca"
+  url = "https://example.com/intro"
+}
+
+' Objeto que representa la administración encargada de la evaluación
+object admin1 {
+  id = "A001"
+  nombre = "Administración General"
+}
+
+' Relaciones entre los objetos
+candidato1 -- test1 : Realiza
+candidato1 -- evaluacion1 : Es evaluado positivamente
+candidato1 -- evaluacion2 : Es evaluado negativamente
+candidato1 -- video1 : Accede tras evaluación positiva
+admin1 -- evaluacion1 : Realiza evaluación positiva
+admin1 -- evaluacion2 : Realiza evaluación negativa
+
+@enduml
