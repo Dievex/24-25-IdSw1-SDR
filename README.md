@@ -1,10 +1,14 @@
-# NOVUS
+<div align="center">
+
+<h1>NOVUS</h1>
+<hr>
+</div>
 
 ## Proyecto hacia Lucía Terán
 
 
 <div align="center">
-  <image width="200" src="./Documentos/imagenes/novusdef.jpg" align="center">
+  <image width="200" src="./Documentos/imagenes/novusdef.jpg" ">
 </div>
 
   <img alt="Version" src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
