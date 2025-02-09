@@ -1,7 +1,5 @@
 @startuml Diagrama_de_Clases_Beca
 
-title Diagrama de Clases de Plataforma de Gestión de Becas
-
 hide empty members
 hide circle
 
@@ -25,39 +23,21 @@ class PRUEBAS {
 class CAPACITACIÓN {
 }
 
-class CONTENIDO_CAPACITACIÓN {
+class POSTULANTE {
 }
 
-class VIDEO_TUTORIAL {
-}
-
-class DOCUMENTACIÓN {
-}
-
-class BECARIO {
-}
-
-class NO_BECARIO {
-}
-
-class REQUISITO
-{
-  Aprobar pruebas de selección
+class CONTENIDOS {
 }
 
 
 PLATAFORMA --> ESTADÍSTICA : "genera"
-PLATAFORMA --> USUARIO : "tiene acceso a"
+PLATAFORMA <--- USUARIO : "accede a"
 PLATAFORMA --> PRUEBAS : "incluye"
 PLATAFORMA --> CAPACITACIÓN : "ofrece"
 
 USUARIO <|-- ADMINISTRADOR
 ADMINISTRADOR --> PLATAFORMA : "administra"
 
-CAPACITACIÓN --> CONTENIDO_CAPACITACIÓN : "contiene"
-CONTENIDO_CAPACITACIÓN <|-- VIDEO_TUTORIAL
-CONTENIDO_CAPACITACIÓN <|-- DOCUMENTACIÓN
-NO_BECARIO -- REQUISITO : cumple
-REQUISITO <|-- BECARIO
-USUARIO <|-- NO_BECARIO
+CAPACITACIÓN --> CONTENIDOS : "contiene"
+USUARIO <|-- POSTULANTE
 @enduml
