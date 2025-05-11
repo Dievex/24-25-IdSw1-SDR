@@ -1,0 +1,44 @@
+@startuml Diagrama_de_Estados_Capacitacion
+skinparam {
+    StateFontSize 14
+    StateFontColor black
+    StateBackgroundColor #f0f8ff
+    StateBorderColor #4682b4
+    ArrowColor #4682b4
+    ArrowFontColor #191970
+    ArrowFontSize 12
+}
+
+title Estados de Capacitación en Plataforma Novus
+
+[*] --> CREADA : Administrador crea capacitación
+
+state CREADA : Capacitación definida\npero no publicada
+state DISPONIBLE : Capacitación publicada\ny accesible para usuarios
+state EN_PROGRESO : Usuario accediendo\nal material
+state COMPLETADA : Usuario ha finalizado\nel material
+state ARCHIVADA : Capacitación no disponible\npara nuevos accesos
+
+CREADA --> DISPONIBLE : Administrador\npublica capacitación
+
+DISPONIBLE --> EN_PROGRESO : Usuario\ninicia capacitación
+
+EN_PROGRESO --> COMPLETADA : Usuario\nfinaliza capacitación
+
+COMPLETADA --> DISPONIBLE : Disponible\npara otros usuarios
+
+DISPONIBLE --> ARCHIVADA : Administrador\narchiva capacitación
+
+ARCHIVADA --> DISPONIBLE : Administrador\nreactiva capacitación
+
+state "PROGRESO DE USUARIO" as PROGRESO_USUARIO {
+    state NO_INICIADA : Usuario no ha\naccedido al material
+    state INICIADA : Usuario ha comenzado\npero no ha terminado
+    state FINALIZADA : Usuario ha completado\ntodo el material
+    
+    NO_INICIADA --> INICIADA : Usuario accede\npor primera vez
+    INICIADA --> FINALIZADA : Usuario completa\ntodo el contenido
+    FINALIZADA --> INICIADA : Se añade nuevo\ncontenido
+}
+
+@enduml
