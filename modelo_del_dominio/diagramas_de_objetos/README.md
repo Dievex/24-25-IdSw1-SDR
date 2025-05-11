@@ -27,7 +27,7 @@ Este diagrama representa:
 
 ## Diagrama
 
-![Diagrama de Objetos](../../documentos/imagenes/diagrama_objetos.png)
+![Diagrama de Objetos](../../documentos/imagenes/modelo_del_dominio/objetos/objetos.svg)
 
 
 ### Plataforma
