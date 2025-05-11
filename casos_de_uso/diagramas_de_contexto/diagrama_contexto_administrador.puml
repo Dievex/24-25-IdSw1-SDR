@@ -1,5 +1,15 @@
 @startuml diagrama_contexto_administrador
 
+skinparam {
+    StateFontSize 14
+    StateFontColor black
+    StateBackgroundColor #f0f8ff
+    StateBorderColor #4682b4
+    ArrowColor #4682b4
+    ArrowFontColor #191970
+    ArrowFontSize 12
+}
+
 state "NO_AUTENTICADO" as NoAuth
 state "MENU_PRINCIPAL" as Menu
 state "MENU_USUARIOS" as Menu_usuarios
