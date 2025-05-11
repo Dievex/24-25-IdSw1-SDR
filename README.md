@@ -1,35 +1,45 @@
-<div align="center">
-<h1>NOVUS</h1>
-</div>
+# Novus - Plataforma de Administración de Becarios PROFER
 
-## Proyecto hacia Lucía Terán
-
-<div align="center">
-  <image width="300" src="./documentos/imagenes/novusdef.jpg" ">
-</div>
-
-
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+<p align="center">
+  <img src="documentos/imagenes/logo_novus.png" alt="Logo Novus" width="200"/>
+</p>
 
 ## Descripción
 
-Es una plataforma que se encarga de administrar y optimizar el proceso de selección y capacitación de becarios PROFER de la Universidad Europea del Atlántico.
+Novus es una plataforma diseñada para administrar y optimizar el proceso de selección y capacitación de becarios PROFER de la Universidad Europea del Atlántico. La plataforma permite:
+
+- Gestionar el acceso de postulantes (NO_BECARIOS)
+- Administrar tests de selección para convertir NO_BECARIOS en BECARIOS
+- Proporcionar capacitación mediante videos y documentación
+- Generar estadísticas de progreso para los administradores
 
 ## Modelo de Dominio
 
-  - [Diagramas de Clases](modelo_del_dominio/diagramas_de_clases)
-  - [Diagramas de Estados](modelo_del_dominio/diagramas_de_estados)
-  - [Diagaramas de Objetos](modelo_del_dominio/diagramas_de_objetos)
+El [modelo de dominio](modelo_del_dominio/README.md) describe las entidades principales del sistema y sus relaciones:
+
+- [Diagrama de Clases](modelo_del_dominio/diagramas_de_clases/README.md)
+- [Diagrama de Objetos](modelo_del_dominio/diagramas_de_objetos/README.md)
+- [Diagrama de Estados](modelo_del_dominio/diagramas_de_estados/README.md)
 
 ## Casos de Uso
 
-  - [Actores](/casos_de_uso/actores/)
-  - [Casos de Uso Detallados](/casos_de_uso/casos_de_uso/)
-  - [Diagrama Casos de Uso](casos_de_uso/diagramas_casos_de_uso)
-  - [Diagrama de Contexto](casos_de_uso/diagramas_de_contexto)
-  - [Prototipos](casos_de_uso/prototipos)
+Los [casos de uso](casos_de_uso/README.md) definen las interacciones entre los actores y el sistema:
 
-## [Sesiones](documentos/actas/)
+- [Actores](casos_de_uso/actores/README.md)
+- [Diagramas de Contexto](casos_de_uso/diagramas_de_contexto/README.md)
+- [Diagramas de Casos de Uso](casos_de_uso/diagramas_casos_de_uso/README.md)
+- [Prototipos](casos_de_uso/prototipos/README.md)
 
-  - [Sesión del 16/10/2024](/documentos/actas/16-10-2024/README.md)
-  - [Sesión del 12/11/2024](/documentos/actas/12-11-2024/README.md)
+## Sesiones
+
+Las [actas de reuniones](documentos/actas/README.md) documentan el progreso del proyecto y las decisiones tomadas durante su desarrollo.
+
+## Equipo
+
+- [Nombre del Estudiante 1]
+- [Nombre del Estudiante 2]
+- [Nombre del Estudiante 3]
+
+## Metodología
+
+Este proyecto sigue la metodología RUP (Rational Unified Process), que proporciona un enfoque disciplinado para la asignación de tareas y responsabilidades dentro del desarrollo de software.

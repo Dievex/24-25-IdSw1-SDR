@@ -1,64 +1,34 @@
 # Casos de Uso
 
-## [Usuario](/casos_de_uso/casos_de_uso/usuario)
+Los casos de uso definen las interacciones entre los actores y el sistema Novus, describiendo cómo los usuarios utilizan la plataforma para lograr sus objetivos.
 
-  - [Actualizar Datos del Usuario](/casos_de_uso/casos_de_uso/usuario/actualizar_datos_usuario/)
+## Actores
 
-  - [Listar Datos del Usuario](/casos_de_uso/casos_de_uso/usuario/listar_datos_usuario/)
+- [Actores del Sistema](actores/README.md): Define los diferentes tipos de usuarios que interactúan con Novus
 
-  - [Iniciar Sesión](/casos_de_uso/casos_de_uso/usuario/iniciar_sesion/)
+## Diagramas
 
-  - [Cerrar Sesión](/casos_de_uso/casos_de_uso/usuario/cerrar_sesion/)
+- [Diagramas de Contexto](diagramas_de_contexto/README.md): Muestra el sistema en su entorno
+- [Diagramas de Casos de Uso](diagramas_casos_de_uso/README.md): Detalla las interacciones específicas
+- [Prototipos](prototipos/README.md): Presenta interfaces de usuario preliminares
 
-## [Postulante](/casos_de_uso/casos_de_uso/postulante)
+## Casos de Uso Principales
 
-  - [Realizar test](/casos_de_uso/casos_de_uso/postulante/realizar_test/)
+1. **Gestión de Acceso**:
+   - Proporcionar acceso a NO_BECARIOS
+   - Autenticación de usuarios
 
-  - [Ver Test Corregido](/casos_de_uso/casos_de_uso/postulante/ver_test_corregido/)
+2. **Proceso de Selección**:
+   - Realizar tests
+   - Evaluar resultados
+   - Convertir NO_BECARIO en BECARIO
 
-  - [Realizar Capacitación](/casos_de_uso/casos_de_uso/postulante/realizar_capacitacion/)
+3. **Capacitación**:
+   - Acceder a videos
+   - Consultar documentación
+   - Seguimiento del progreso
 
-  - [Ver Progreso de Capacitación](/casos_de_uso/casos_de_uso/postulante/ver_progreso_de_capacitacion/)
-
-
-## [Administrador](/casos_de_uso/casos_de_uso/administrador)
-
-  - [Consultar Estadísticas](/casos_de_uso/casos_de_uso/administrador/consultar_estadisticas/)
-
-  - [Crear Capacitación](/casos_de_uso/casos_de_uso/administrador/crear_capacitacion/)
-
-  - [Editar Capacitación](/casos_de_uso/casos_de_uso/administrador/editar_capacitacion/)
-
-  - [Listar Capacitaciones](/casos_de_uso/casos_de_uso/administrador/listar_capacitaciones/)
-
-  - [Eliminar Capacitación](/casos_de_uso/casos_de_uso/administrador/eliminar_capacitacion/)
-
-  - [Crear Test](/casos_de_uso/casos_de_uso/administrador/crear_test/)
-
-  - [Editar Test](/casos_de_uso/casos_de_uso/administrador/editar_test/)
-
-  - [Listar Tests](/casos_de_uso/casos_de_uso/administrador/listar_tests/)
-
-  - [Eliminar Test](/casos_de_uso/casos_de_uso/administrador/eliminar_test/)
-
-  - [Crear Postulante](/casos_de_uso/casos_de_uso/administrador/crear_postulante/)
-
-  - [Editar Postulante](/casos_de_uso/casos_de_uso/administrador/editar_postulante/)
-
-  - [Listar Postulante](/casos_de_uso/casos_de_uso/administrador/listar_postulantes/)
-
-  - [Eliminar Postulante](/casos_de_uso/casos_de_uso/administrador/eliminar_postulante/)
-
-  - [Crear Administrador](/casos_de_uso/casos_de_uso/administrador/crear_administrador/)
-
-  - [Editar Administrador](/casos_de_uso/casos_de_uso/administrador/editar_administrador/)
-
-  - [Listar Administradores](/casos_de_uso/casos_de_uso/administrador/listar_administradores/)
-
-  - [Eliminar Administrador](/casos_de_uso/casos_de_uso/administrador/eliminar_administrador/)
-
-## [Tiempo](/casos_de_uso/casos_de_uso/tiempo)
-
-  - [Desactivar Postulante](/casos_de_uso/casos_de_uso/tiempo/desactivar_postulante/)
-
-  - [Notificar?/Avisar?](/casos_de_uso/casos_de_uso/tiempo/)
+4. **Administración**:
+   - Gestionar usuarios
+   - Subir material de capacitación
+   - Ver estadísticas

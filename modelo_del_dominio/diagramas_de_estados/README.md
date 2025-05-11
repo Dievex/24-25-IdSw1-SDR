@@ -1,17 +1,43 @@
 # Diagrama de Estados
 
-## Estados de Administrador - Sede
+El diagrama de estados muestra los diferentes estados por los que pasan las entidades del sistema Novus y las transiciones entre estos estados.
 
-|![Diagrama de Estados Administrador](/documentos/imagenes/modelo_del_dominio/estados/estados_sede.svg)|[Código](/modelo_del_dominio/diagramas_de_clases/clases.puml)|
-|---|---|
+## Descripción
 
-## Estados de Administrador
+Este diagrama representa:
 
-|![Diagrama de Estados Administrador](/documentos/imagenes/modelo_del_dominio/estados/estados_administrador.svg)|[Código](/modelo_del_dominio/diagramas_de_clases/clases.puml)|
-|---|---|
+1. **Estados de un Postulante**:
+   - Transición de NO_BECARIO a BECARIO
+   - Estados intermedios durante el proceso de selección
 
-## Estados de Postulante/Becario
+2. **Estados de un Test**:
+   - Pendiente → En Progreso → Completado → Evaluado
+   - Condiciones para las transiciones entre estados
 
-|![Diagrama de Estados Candidato](/documentos/imagenes/modelo_del_dominio/estados/estados_postulante.svg)|[Código](/modelo_del_dominio/diagramas_de_clases/clases.puml)|
-|---|---|
+3. **Estados de Capacitación**:
+   - Disponible → En Progreso → Completada
+   - Seguimiento del avance en la capacitación
 
+## Diagrama
+
+![Diagrama de Estados](../../documentos/imagenes/diagrama_estados.png)
+
+## Estados Principales
+
+### Estados de Postulante
+- **Registrado**: Estado inicial de un NO_BECARIO
+- **En Evaluación**: Realizando tests
+- **Evaluado**: Tests completados, pendiente de resultados
+- **BECARIO**: Aprobado y convertido en BECARIO
+- **Rechazado**: No cumple los requisitos
+
+### Estados de Test
+- **Pendiente**: Test disponible pero no iniciado
+- **En Progreso**: Test siendo realizado
+- **Completado**: Test finalizado
+- **Evaluado**: Resultados procesados
+
+### Estados de Capacitación
+- **Disponible**: Material publicado
+- **En Progreso**: Usuario accediendo al material
+- **Completada**: Usuario ha finalizado el material
