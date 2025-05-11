@@ -7,14 +7,14 @@ El diagrama de objetos muestra instancias concretas de las clases definidas en e
 Este diagrama representa:
 
 1. **Instancias de Usuarios**:
-   - Ejemplos de NO_BECARIOS en diferentes etapas del proceso
+   - Ejemplos de POSTULANTES en diferentes etapas del proceso
    - Ejemplos de BECARIOS que han completado el proceso
-   - Administradores de la aplicación y de la sede
+   - Administradores del sistema
 
 2. **Tests y Resultados**:
    - Tests específicos con sus características
    - Resultados de tests para diferentes usuarios
-   - Transición de NO_BECARIO a BECARIO tras aprobar tests
+   - Transición de POSTULANTE a BECARIO tras aprobar tests
 
 3. **Recursos de Capacitación**:
    - Videos específicos con sus atributos
@@ -29,22 +29,22 @@ Este diagrama representa:
 
 ![Diagrama de Objetos](../../documentos/imagenes/diagrama_objetos.png)
 
-## Ejemplos de Objetos
+
+### Plataforma
+- **plataformaNovus**: {nombre: "Novus", version: "1.0", fechaCreacion: "2024-02-15"}
 
 ### Usuarios
-- **no_becario1**: {id: "NB001", nombre: "Ana", apellidos: "García", testsRealizados: 2}
-- **no_becario2**: {id: "NB002", nombre: "Carlos", apellidos: "López", testsRealizados: 0}
-- **becario1**: {id: "B001", nombre: "Elena", apellidos: "Martínez", fechaConversion: "2023-10-15"}
-- **admin1**: {id: "A001", nombre: "Miguel", apellidos: "Sánchez", tipo: "aplicación"}
+- **postulante1**: {id: "POS001", nombre: "María García", email: "maria.garcia@email.com", fechaRegistro: "2024-02-20", estado: "En evaluación"}
+- **becario1**: {id: "BEC001", nombre: "Carlos López", email: "carlos.lopez@email.com", fechaInicioBeca: "2024-01-15", programaAsignado: "PROFER 2024"}
+- **admin1**: {id: "ADM001", nombre: "Juan Pérez", email: "juan.perez@novus.com", rol: "Administrador Senior"}
 
 ### Tests
-- **testProgramacion**: {id: "T001", titulo: "Fundamentos de Programación", puntajeMinimo: 70}
-- **testLogica**: {id: "T002", titulo: "Razonamiento Lógico", puntajeMinimo: 65}
+- **testProgramacion**: {id: "TEST001", titulo: "Evaluación Java Básico", duracion: "120 minutos", puntajeMinimo: 75}
 
 ### Capacitación
-- **videoPython**: {id: "V001", titulo: "Introducción a Python", duracion: "45:30"}
-- **docJava**: {id: "D001", titulo: "Manual de Java", formato: "PDF"}
+- **cursoJava**: {id: "CAP001", titulo: "Fundamentos de Java", nivel: "Básico", duracion: "40 horas"}
+- **videoIntro**: {id: "VID001", titulo: "Introducción a Java", duracion: "45 minutos", formato: "MP4"}
+- **manualJava**: {id: "DOC001", titulo: "Manual de Java", formato: "PDF", tamaño: "2.5 MB"}
 
 ### Estadísticas
-- **estadistica1**: {usuario: "NB001", fecha: "2023-10-10", tipoActividad: "Test", resultado: "Aprobado"}
-- **estadistica2**: {usuario: "B001", fecha: "2023-10-20", tipoActividad: "Capacitación", resultado: "Completado"}
+- **estadisticasMensuales**: {id: "EST001", periodo: "Febrero 2024", tasaAprobacion: 75.5, totalPostulantes: 100, totalBecarios: 45}
