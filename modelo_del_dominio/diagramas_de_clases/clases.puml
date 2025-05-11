@@ -11,7 +11,6 @@ skinparam {
     ClassAttributeFontColor #191970
     ClassAttributeFontSize 12
 }
-
 ' Definición de clases principales
 
 class PLATAFORMA {

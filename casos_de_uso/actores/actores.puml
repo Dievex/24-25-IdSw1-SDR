@@ -1,0 +1,38 @@
+@startuml Actores_Sistema_Novus
+
+skinparam actorStyle awesome
+
+actor "POSTULANTE" as NoBecario
+actor "BECARIO" as Becario
+actor "Administrador de Aplicación" as AdminApp
+actor "Administrador de Sede" as AdminSede
+
+rectangle "Sistema Novus" {
+}
+
+NoBecario --> "Sistema Novus" : interactúa
+Becario --> "Sistema Novus" : interactúa
+AdminApp --> "Sistema Novus" : gestiona
+AdminSede --> "Sistema Novus" : supervisa
+
+note right of NoBecario
+  Postulantes que aún no han 
+  aprobado los tests de selección
+end note
+
+note right of Becario
+  Postulantes que han aprobado 
+  los tests y cumplen los requisitos
+end note
+
+note right of AdminApp
+  Personal encargado de la 
+  gestión técnica de la plataforma
+end note
+
+note right of AdminSede
+  Personal de la Universidad 
+  encargado del programa PROFER
+end note
+
+@enduml
