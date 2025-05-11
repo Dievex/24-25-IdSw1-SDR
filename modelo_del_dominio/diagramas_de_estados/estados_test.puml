@@ -14,21 +14,19 @@ title Estados de un Test en Plataforma Novus
 [*] --> CREADO : Administrador crea test
 
 state CREADO : Test definido pero no publicado
-state DISPONIBLE : Test publicado y accesible\npara NO_BECARIOS
-state EN_PROGRESO : Test siendo realizado\npor un NO_BECARIO
-state COMPLETADO : Test finalizado por\nel NO_BECARIO
+state DISPONIBLE : Test publicado y accesible\npara POSTULANTES
+state EN_PROGRESO : Test siendo realizado\npor un POSTULANTE
+state COMPLETADO : Test finalizado por\nel POSTULANTE
 state EVALUADO : Resultados procesados\npor el sistema
 state ARCHIVADO : Test no disponible\npara nuevos intentos
 
 CREADO --> DISPONIBLE : Administrador\npublica test
 
-DISPONIBLE --> EN_PROGRESO : NO_BECARIO\ninicia test
+DISPONIBLE --> EN_PROGRESO : POSTULANTE\ninicia test
 
-EN_PROGRESO --> COMPLETADO : NO_BECARIO\nfinaliza test
+EN_PROGRESO --> COMPLETADO : POSTULANTE\nfinaliza test
 
 COMPLETADO --> EVALUADO : Sistema\nevalúa respuestas
-
-EVALUADO --> DISPONIBLE : Test disponible\npara otros usuarios
 
 DISPONIBLE --> ARCHIVADO : Administrador\narchiva test
 

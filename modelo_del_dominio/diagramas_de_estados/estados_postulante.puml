@@ -14,15 +14,15 @@ title Estados del Postulante en Plataforma Novus
 [*] --> NO_REGISTRADO : Inicio
 
 state NO_REGISTRADO : Usuario sin acceso al sistema
-state NO_BECARIO : Usuario con acceso básico\nPuede realizar tests y acceder\na capacitación básica
+state POSTULANTE : Usuario con acceso básico\nPuede realizar tests y acceder\na capacitación básica
 state EN_EVALUACION : Usuario realizando tests
 state EVALUADO : Tests completados\nPendiente de resultados
 state BECARIO : Usuario con acceso completo\nPuede acceder a capacitación avanzada
 state RECHAZADO : No cumple requisitos
 
-NO_REGISTRADO --> NO_BECARIO : Sede proporciona\nacceso
+NO_REGISTRADO --> POSTULANTE : Sede proporciona\nacceso
 
-NO_BECARIO --> EN_EVALUACION : Inicia test
+POSTULANTE --> EN_EVALUACION : Inicia test
 
 EN_EVALUACION --> EVALUADO : Completa test
 
@@ -31,7 +31,7 @@ EVALUADO --> decision : Sistema evalúa resultados
 decision --> BECARIO : Aprueba todos\nlos tests requeridos
 decision --> RECHAZADO : No aprueba\ntodos los tests
 
-RECHAZADO --> NO_BECARIO : Puede intentar\nnuevamente
+RECHAZADO --> POSTULANTE : Puede intentar\nnuevamente
 
 BECARIO --> [*] : Fin del proceso
 

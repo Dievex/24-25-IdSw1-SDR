@@ -7,7 +7,7 @@ El diagrama de estados muestra los diferentes estados por los que pasan las enti
 Este diagrama representa:
 
 1. **Estados de un Postulante**:
-   - Transición de NO_BECARIO a BECARIO
+   - Transición de POSTULANTE a BECARIO
    - Estados intermedios durante el proceso de selección
    - Condiciones para la aprobación o rechazo
 
