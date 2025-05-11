@@ -25,7 +25,7 @@ Este diagrama representa:
 
 ## Diagrama
 
-![Diagrama de Clases](../../documentos/imagenes/diagrama_clases.png)
+![Diagrama de Clases](../../documentos/imagenes/modelo_del_dominio/clases/clases.svg)
 
 ## Clases Principales
 
