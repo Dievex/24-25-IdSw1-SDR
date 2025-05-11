@@ -1,63 +1,81 @@
-@startuml Diagrama_de_Clases_Beca
-
-title Diagrama de Clases de Plataforma de Gestión de Becas
-
+@startuml Diagrama_de_Clases_Novus
+hide circles
 hide empty members
-hide circle
+title Diagrama de Clases de Plataforma Novus - Gestión de Becarios PROFER
 
-
-class PLATAFORMA {
-  Novus 
+skinparam {
+    ClassBackgroundColor #f0f8ff
+    ClassBorderColor #4682b4
+    ClassFontColor #000000
+    ClassFontSize 14
+    ClassAttributeFontColor #191970
+    ClassAttributeFontSize 12
 }
 
-class ESTADÍSTICA {
+' Definición de clases principales
+
+class PLATAFORMA {
+
 }
 
 abstract class USUARIO {
 }
 
-class ADMINISTRADOR {
-}
-
-class PRUEBAS {
-}
-
-class CAPACITACIÓN {
-}
-
-class CONTENIDO_CAPACITACIÓN {
-}
-
-class VIDEO_TUTORIAL {
-}
-
-class DOCUMENTACIÓN {
+class POSTULANTE {
 }
 
 class BECARIO {
+
 }
 
-class NO_BECARIO {
+class ADMINISTRADOR {
+
 }
 
-class REQUISITO
-{
-  Aprobar pruebas de selección
+class TEST {
+
 }
 
+class CAPACITACION {
 
-PLATAFORMA --> ESTADÍSTICA : "genera"
-PLATAFORMA --> USUARIO : "tiene acceso a"
-PLATAFORMA --> PRUEBAS : "incluye"
-PLATAFORMA --> CAPACITACIÓN : "ofrece"
+}
+
+class CONTENIDO_CAPACITACION {
+
+}
+
+class VIDEO_TUTORIAL {
+
+}
+
+class DOCUMENTACION {
+
+}
+
+class ESTADISTICA {
+
+}
+
+PLATAFORMA  -->  ESTADISTICA : "genera"
+PLATAFORMA  -->  USUARIO : "gestiona"
+PLATAFORMA  -->  TEST : "incluye"
+PLATAFORMA  -->  CAPACITACION : "ofrece"
 
 USUARIO <|-- ADMINISTRADOR
-ADMINISTRADOR --> PLATAFORMA : "administra"
+USUARIO <|-- POSTULANTE
+POSTULANTE <|-- BECARIO : "se convierte si\naprueba tests"
 
-CAPACITACIÓN --> CONTENIDO_CAPACITACIÓN : "contiene"
-CONTENIDO_CAPACITACIÓN <|-- VIDEO_TUTORIAL
-CONTENIDO_CAPACITACIÓN <|-- DOCUMENTACIÓN
-NO_BECARIO -- REQUISITO : cumple
-REQUISITO <|-- BECARIO
-USUARIO <|-- NO_BECARIO
+ADMINISTRADOR --> PLATAFORMA : "administra"
+ADMINISTRADOR --> CAPACITACION : "gestiona"
+ADMINISTRADOR --> ESTADISTICA : "consulta"
+
+CAPACITACION  -->  CONTENIDO_CAPACITACION : "contiene"
+CONTENIDO_CAPACITACION <|-- VIDEO_TUTORIAL
+CONTENIDO_CAPACITACION <|-- DOCUMENTACION
+
+POSTULANTE -->  TEST : "realiza"
+TEST --> BECARIO : "aprobación\nconvierte en"
+
+USUARIO  -->  CAPACITACION : "accede a"
+
 @enduml

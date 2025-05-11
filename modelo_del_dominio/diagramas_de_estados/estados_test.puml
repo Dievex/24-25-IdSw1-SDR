@@ -1,0 +1,35 @@
+@startuml Diagrama_de_Estados_Test
+skinparam {
+    StateFontSize 14
+    StateFontColor black
+    StateBackgroundColor #f0f8ff
+    StateBorderColor #4682b4
+    ArrowColor #4682b4
+    ArrowFontColor #191970
+    ArrowFontSize 12
+}
+
+title Estados de un Test en Plataforma Novus
+
+[*] --> CREADO : Administrador crea test
+
+state CREADO : Test definido pero no publicado
+state DISPONIBLE : Test publicado y accesible\npara POSTULANTES
+state EN_PROGRESO : Test siendo realizado\npor un POSTULANTE
+state COMPLETADO : Test finalizado por\nel POSTULANTE
+state EVALUADO : Resultados procesados\npor el sistema
+state ARCHIVADO : Test no disponible\npara nuevos intentos
+
+CREADO --> DISPONIBLE : Administrador\npublica test
+
+DISPONIBLE --> EN_PROGRESO : POSTULANTE\ninicia test
+
+EN_PROGRESO --> COMPLETADO : POSTULANTE\nfinaliza test
+
+COMPLETADO --> EVALUADO : Sistema\nevalúa respuestas
+
+DISPONIBLE --> ARCHIVADO : Administrador\narchiva test
+
+ARCHIVADO --> DISPONIBLE : Administrador\nreactiva test
+
+@enduml

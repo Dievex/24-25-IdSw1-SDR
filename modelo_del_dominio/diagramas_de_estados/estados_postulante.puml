@@ -1,27 +1,38 @@
 @startuml Diagrama_de_Estados_Postulante
-skinparam defaultTextAlignment center
-
-state UsuarioPostulante {
-  [*] --> AjenoAlSistema
-  AjenoAlSistema --> IdentificandoUsuario : quiere formar parte de PROFER
-  IdentificandoUsuario --> RegistroEnSede : se registra a través de la sede de su país
-  RegistroEnSede --> UsuarioNoBecario
+skinparam {
+    StateFontSize 14
+    StateFontColor black
+    StateBackgroundColor #f0f8ff
+    StateBorderColor #4682b4
+    ArrowColor #4682b4
+    ArrowFontColor #191970
+    ArrowFontSize 12
 }
 
-UsuarioPostulante --> NoBecario
+title Estados del Postulante en Plataforma Novus
 
-state NoBecario {
-  [*] --> Logueado : se loguea
-  Logueado --> RealizaPrueba : se ve su nivel
-  Logueado --> RealizaCapacitación : se le prepara para el trabajo en PROFER
-  RealizaPrueba --> Resultados
-  RealizaCapacitación --> RealizaPrueba : se evalúa su desempeño / evolución
-  state acción <<choice>>
-  Resultados --> acción : pasa a ser becario
-  acción --> Becario : sí
-  acción --> RealizaCapacitación : no
-  Becario --> [*]
-}
+[*] --> NO_REGISTRADO : Inicio
+
+state NO_REGISTRADO : Usuario sin acceso al sistema
+state POSTULANTE : Usuario con acceso básico\nPuede realizar tests y acceder\na capacitación básica
+state EN_EVALUACION : Usuario realizando tests
+state EVALUADO : Tests completados\nPendiente de resultados
+state BECARIO : Usuario con acceso completo\nPuede acceder a capacitación avanzada
+state RECHAZADO : No cumple requisitos
+
+NO_REGISTRADO --> POSTULANTE : Sede proporciona\nacceso
+
+POSTULANTE --> EN_EVALUACION : Inicia test
+
+EN_EVALUACION --> EVALUADO : Completa test
+
+state decision <<choice>>
+EVALUADO --> decision : Sistema evalúa resultados
+decision --> BECARIO : Aprueba todos\nlos tests requeridos
+decision --> RECHAZADO : No aprueba\ntodos los tests
+
+RECHAZADO --> POSTULANTE : Puede intentar\nnuevamente
+
+BECARIO --> [*] : Fin del proceso
+
 @enduml
-
-/'//TODO: Preguntar que sucede cuando no pasa a ser becario '/
