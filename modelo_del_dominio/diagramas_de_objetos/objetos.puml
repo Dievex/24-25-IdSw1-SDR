@@ -1,62 +1,101 @@
-@startuml Diagrama_de_Objetos_Beca
-title Diagrama de Objetos - Ejemplo de Plataforma de Gestión de Becas
+@startuml Diagrama_de_Objetos_Novus
+hide circles
+title Diagrama de Objetos de Plataforma Novus - Gestión de Becarios PROFER
 
-object "Plataforma : Novus" as plataforma {
-  Objetivo = "Gestión de Becas"
+skinparam {
+    ObjectBackgroundColor #f0f8ff
+    ObjectBorderColor #4682b4
+    ObjectFontColor #000000
+    ObjectFontSize 14
+    ObjectAttributeFontColor #191970
+    ObjectAttributeFontSize 12
 }
 
-object "Administrador : Diego" as administrador {
-  Nombre = "Diego"
-  Apellido = "Pérez"
-  Email = "diego.perez@ejemplo.com"
+' Definición de objetos con atributos
+
+object "plataformaNovus : PLATAFORMA" as plataforma {
+    nombre = "Novus"
+    version = "1.0"
+    fechaCreacion = "2024-02-15"
 }
 
-object "Postulante : Samuel" as candidato {
-  Nombre = "Samuel"
-  Apellido = "González"
-  Email = "Samuel.Gonzales@gmail.com"
+object "admin1 : ADMINISTRADOR" as admin {
+    id = "ADM001"
+    nombre = "Juan Pérez"
+    email = "juan.perez@novus.com"
+    rol = "Administrador Senior"
 }
 
-object "Becario: Samuel" as becario {
-  DNI = "12345678"
-  Carnet de Estudiante = "BEC2024"
-  Dirección = "Calle Falsa 123"
-  Porcentaje de Beca = 100%
+object "postulante1 : POSTULANTE" as postulante {
+    id = "POS001"
+    nombre = "María García"
+    email = "maria.garcia@email.com"
+    fechaRegistro = "2024-02-20"
+    estado = "En evaluación"
 }
 
-object "Prueba : Aptitud" as pruebas {
-  Descripción = "Pruebas de conocimiento"
-}
-object "Prueba : Especialización" as pruebas1 {
-  Descripción = "Pruebas de control"
-}
-
-object "Capacitación : Programa de Capacitación" as capacitacion {
+object "becario1 : BECARIO" as becario {
+    id = "BEC001"
+    nombre = "Carlos López"
+    email = "carlos.lopez@email.com"
+    fechaInicioBeca = "2024-01-15"
+    programaAsignado = "PROFER 2024"
 }
 
-object "videoTutorial : VIDEO_TUTORIAL" as videoTutorial {
+object "testProgramacion : TEST" as test {
+    id = "TEST001"
+    titulo = "Evaluación Java Básico"
+    duracion = "120 minutos"
+    puntajeMinimo = 75
 }
 
-object "documentación : DOCUMENTACIÓN" as documentacion {
+object "cursoJava : CAPACITACION" as capacitacion {
+    id = "CAP001"
+    titulo = "Fundamentos de Java"
+    nivel = "Básico"
+    duracion = "40 horas"
 }
 
-object "Requisito : Aprobar" as requisito {
-  Descripción = "Aprobar pruebas de selección"
+object "videoIntro : VIDEO_TUTORIAL" as video {
+    id = "VID001"
+    titulo = "Introducción a Java"
+    duracion = "45 minutos"
+    formato = "MP4"
 }
 
-plataforma -d-- administrador : "administra"
-plataforma -d-- candidato : "tiene acceso"
+object "manualJava : DOCUMENTACION" as doc {
+    id = "DOC001"
+    titulo = "Manual de Java"
+    formato = "PDF"
+    tamaño = "2.5 MB"
+}
 
-plataforma -d-- pruebas : "incluye"
-plataforma -d-- pruebas1 : "incluye"
-plataforma -d-- capacitacion : "ofrece"
+object "estadisticasMensuales : ESTADISTICA" as estadistica {
+    id = "EST001"
+    periodo = "Febrero 2024"
+    tasaAprobacion = 75.5
+    totalPostulantes = 100
+    totalBecarios = 45
+}
 
-capacitacion  -d-- videoTutorial : "incluye"
-capacitacion  -d-- documentacion : "incluye"
+' Relaciones entre objetos
+plataforma --> estadistica : genera
+plataforma --> admin : gestiona
+plataforma --> test : incluye
+plataforma --> capacitacion : ofrece
 
-candidato -d-- requisito : "cumple"
+admin --> plataforma : administra
+admin --> capacitacion : gestiona
+admin --> estadistica : consulta
 
-requisito -d-- becario : "se otorga beca
-"
+capacitacion --> video : contiene
+capacitacion --> doc : contiene
+
+postulante --> test : realiza
+test --> becario : aprobación convierte en
+
+admin --> capacitacion : accede a
+postulante --> capacitacion : accede a
+becario --> capacitacion : accede a
 
 @enduml
