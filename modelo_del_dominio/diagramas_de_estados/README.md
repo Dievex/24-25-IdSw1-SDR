@@ -24,13 +24,13 @@ Este diagrama representa:
 ## Diagramas
 
 ### Diagrama de Estados del Postulante
-![Diagrama de Estados del Postulante](../../documentos/imagenes/diagrama_estados_postulante.png)
+![Diagrama de Estados del Postulante](../../documentos/imagenes/modelo_del_dominio/estados/Estados_Postulante.svg)
 
 ### Diagrama de Estados del Test
-![Diagrama de Estados del Test](../../documentos/imagenes/diagrama_estados_test.png)
+![Diagrama de Estados del Test](../../documentos/imagenes/modelo_del_dominio/estados/Estados_Test.svg)
 
 ### Diagrama de Estados de la Capacitación
-![Diagrama de Estados de la Capacitación](../../documentos/imagenes/diagrama_estados_capacitacion.png)
+![Diagrama de Estados de la Capacitación](../../documentos/imagenes/modelo_del_dominio/estados/Estados_Capacitacion.svg)
 
 ## Estados Principales
 

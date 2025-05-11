@@ -1,7 +1,7 @@
 # Novus - Plataforma de Administración de Becarios PROFER
 
 <p align="center">
-  <img src="documentos/imagenes/logo_novus.png" alt="Logo Novus" width="200"/>
+  <img src="/documentos/imagenes/novusdef.jpg" alt="Logo Novus" width="200"/>
 </p>
 
 ## Descripción
