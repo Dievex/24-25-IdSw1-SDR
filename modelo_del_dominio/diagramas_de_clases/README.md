@@ -8,8 +8,8 @@ Este diagrama representa:
 
 1. **Jerarquía de Usuarios**:
    - La clase base `Usuario` con atributos comunes
-   - Especialización en `NO_BECARIO`, `BECARIO` y `Administrador`
-   - Transición de `NO_BECARIO` a `BECARIO` mediante la aprobación de tests
+   - Especialización en `POSTULANTE`, `BECARIO` y `Administrador`
+   - Transición de `POSTULANTE` a `BECARIO` mediante la aprobación de tests
 
 2. **Recursos de Capacitación**:
    - Clase `Capacitación` que agrupa recursos formativos
@@ -17,7 +17,7 @@ Este diagrama representa:
 
 3. **Evaluación**:
    - Clase `Test` con sus preguntas y criterios de evaluación
-   - Relación con `NO_BECARIO` para el proceso de selección
+   - Relación con `POSTULANTE` para el proceso de selección
 
 4. **Seguimiento**:
    - Clase `Estadística` para el monitoreo del progreso
@@ -25,42 +25,5 @@ Este diagrama representa:
 
 ## Diagrama
 
-![Diagrama de Clases](../../documentos/imagenes/modelo_del_dominio/clases/clases.svg)
+![Diagrama de Clases](../../documentos/imagenes/modelo_del_dominio/clases/Diagrama_de_Clases_Novus.svg)
 
-## Clases Principales
-
-### Usuario
-- **Atributos**: id, nombre, apellidos, email, contraseña
-- **Operaciones**: iniciarSesion(), cerrarSesion()
-
-### NO_BECARIO
-- **Atributos**: fechaRegistro, testsRealizados
-- **Operaciones**: realizarTest(), verCapacitacion()
-
-### BECARIO
-- **Atributos**: fechaConversion, nivelAcceso
-- **Operaciones**: accederCapacitacionAvanzada()
-
-### Administrador
-- **Atributos**: tipo (aplicación/sede), permisos
-- **Operaciones**: gestionarUsuarios(), verEstadisticas(), subirMaterial()
-
-### Test
-- **Atributos**: id, titulo, descripcion, preguntas, puntajeMinimo
-- **Operaciones**: evaluar(), generarResultado()
-
-### Capacitación
-- **Atributos**: id, titulo, descripcion, fechaPublicacion
-- **Operaciones**: mostrarContenido()
-
-### Video
-- **Atributos**: duracion, formato, url
-- **Operaciones**: reproducir()
-
-### Documentación
-- **Atributos**: formato, tamaño, url
-- **Operaciones**: descargar()
-
-### Estadística
-- **Atributos**: usuario, fecha, tipoActividad, resultado
-- **Operaciones**: generarInforme(), filtrarDatos()
