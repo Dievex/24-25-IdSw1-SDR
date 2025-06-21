@@ -32,76 +32,22 @@ partition ManejoVerResultado {
     
     if (¿Resultado disponible?) then (No)
       :Sistema muestra estado
-      • "Resultado en proceso"
-      • Tiempo estimado de calificación
-      • "Te notificaremos cuando esté listo"
-      • Opción: "Activar notificaciones";
+      • "Resultado en proceso";
+      
       
     else (Sí)
       :Sistema muestra resultado detallado
       • Puntaje final obtenido
       • Puntaje máximo posible
       • Porcentaje de aciertos
-      • Estado: Aprobado/Reprobado
       • Tiempo utilizado vs tiempo límite;
       
-      :Sistema muestra análisis por secciones
-      • Desglose por categorías
-      • Fortalezas identificadas
-      • Áreas de mejora
-      • Comparación con promedio;
-      
-      if (¿Test permite revisión?) then (Sí)
-        :Sistema permite ver detalles
-        • Preguntas y respuestas
-        • Respuestas correctas
-        • Explicaciones (si disponibles)
-        • Retroalimentación específica;
-        
-        :Postulante puede revisar
-        • Errores cometidos
-        • Justificación de respuestas correctas
-        • Consejos para mejorar
-        • Material de estudio sugerido;
-        
-      else (No)
-        :Sistema muestra información limitada
-        • Solo puntaje general
-        • Sin detalles de preguntas
-        • Política de confidencialidad;
-        
-      endif
-      
-      if (¿Permite certificado?) then (Sí)
-        :Sistema ofrece certificado
-        • Botón: "Descargar certificado"
-        • Formato PDF personalizado
-        • Validación digital incluida;
-        
-        if (¿Postulante descarga?) then (Sí)
-          :Sistema genera certificado
-          • Datos del postulante
-          • Detalles del test realizado
-          • Puntaje obtenido
-          • Fecha de emisión
-          • Código de verificación;
-          
-        endif
-        
-      endif
-      
-      :Sistema ofrece opciones adicionales
-      • Compartir resultado (si permitido)
-      • Imprimir resumen
-      • Exportar a PDF
-      • Repetir test (si habilitado);
       
     endif
     
     :Sistema actualiza estadísticas
-    • Historial de consultas
-    • Tiempo en revisión
-    • Secciones más consultadas;
+    • Historial de consultas;
+    
     
   endif
   
