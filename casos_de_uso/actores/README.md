@@ -36,7 +36,6 @@ Cada actor tiene un rol específico y diferentes niveles de acceso al sistema, c
 - **Responsabilidades**:
   - Acceder a material avanzado de capacitación
   - Ver su propio progreso
-  - Participar en actividades exclusivas para becarios
 
 ### Administrador de Aplicación
 - **Descripción**: Personal encargado de la gestión técnica de la plataforma
