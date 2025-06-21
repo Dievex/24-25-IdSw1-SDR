@@ -1,0 +1,15 @@
+@startuml
+skinparam actorStyle awesome
+left to right direction
+actor "Postulante" as Postulante
+actor "Becario" as Becario
+
+rectangle "Gestión Test" {
+  usecase "Hacer Test" as HacerTest
+  usecase "Ver Resultado" as VerResultados
+  
+}
+
+Postulante --> HacerTest
+Postulante --> VerResultados
+@enduml
