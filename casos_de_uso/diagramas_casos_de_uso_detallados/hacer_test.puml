@@ -1,0 +1,117 @@
+@startuml
+title Detallado del Hacer Test (Postulante)
+
+start
+
+:VISTA_HACER_TEST;
+
+partition ManejoHacerTest {
+  
+  :Postulante accede a tests disponibles
+  • Ve lista de tests asignados
+  • Revisa estado: Pendiente/En progreso
+  • Verifica fechas límite;
+  
+  :Postulante selecciona test
+  • Lee instrucciones generales
+  • Revisa duración estimada
+  • Verifica requisitos técnicos;
+  
+  :Sistema verifica elegibilidad
+  • Test asignado al postulante
+  • Dentro del período válido
+  • No completado previamente
+  • Requisitos técnicos cumplidos;
+  
+  if (¿Puede realizar test?) then (No)
+    :Sistema muestra restricción
+    • Error específico:
+      - "Test no asignado"
+      - "Fuera de tiempo"
+      - "Ya completado"
+      - "Requisitos técnicos no cumplidos";
+    
+  else (Sí)
+    :Sistema muestra preparación
+    • Instrucciones detalladas
+    • Duración: X minutos
+    • Número de preguntas: Y
+    • Tipo de evaluación
+    • Botón: "Comenzar Test";
+    
+    if (¿Postulante inicia test?) then (Sí)
+      :Sistema inicia sesión de test
+      • Registra hora de inicio
+      • Activa cronómetro
+      • Carga primera pregunta
+      • Habilita navegación;
+      
+      :Postulante realiza test
+      • Responde preguntas
+      • Navega entre preguntas
+      • Ve tiempo restante
+      • Puede marcar para revisión;
+      
+      :Sistema monitorea progreso
+      • Guarda respuestas automáticamente
+      • Actualiza tiempo restante
+      • Permite navegación libre
+      • Advierte tiempo crítico;
+      
+      if (¿Tiempo agotado?) then (Sí)
+        :Sistema finaliza automáticamente
+        • Guarda respuestas actuales
+        • Marca como "Tiempo agotado"
+        • Procesa calificación;
+        
+      else (No - Postulante termina)
+        :Postulante revisa respuestas
+        • Ve resumen de preguntas
+        • Identifica sin responder
+        • Puede modificar respuestas;
+        
+        :Sistema solicita confirmación
+        • "¿Enviar test definitivamente?"
+        • Advertencia: "No podrá modificar"
+        • Opciones: Enviar/Continuar;
+        
+        if (¿Confirma envío?) then (Sí)
+          :Sistema procesa envío
+          • Marca test como completado
+          • Registra hora de finalización
+          • Inicia proceso de calificación;
+          
+        else (No)
+          :Sistema mantiene sesión
+          • Vuelve al test
+          • Mantiene tiempo restante;
+          
+        endif
+        
+      endif
+      
+      :Sistema calcula resultados
+      • Evalúa respuestas correctas
+      • Aplica ponderación de puntajes
+      • Genera calificación final
+      • Determina estado: Aprobado/Reprobado;
+      
+      :Sistema muestra confirmación
+      • "Test completado exitosamente"
+      • Tiempo utilizado
+      • "Resultados disponibles pronto"
+      • Opción: "Ver otros tests";
+      
+    else (No)
+      :Sistema mantiene disponibilidad
+      • Test permanece pendiente
+      • Puede iniciar más tarde;
+      
+    endif
+    
+  endif
+  
+}
+
+stop
+@enduml
