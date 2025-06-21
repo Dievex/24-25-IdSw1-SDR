@@ -8,7 +8,7 @@ Los siguientes actores participan en los casos de uso:
 
 - **Usuario**: Actor base del cual heredan los demás actores
 - **Administrador**: Gestiona el sistema completo (usuarios, capacitaciones, tests)
-- **Seleccionador**: Consulta información y gestiona postulantes
+- **Seleccionador**: Consulta información y ve los postulantes
 - **Postulante**: Realiza tests y capacitaciones
 - **Becario**: Realiza capacitaciones y consulta su progreso
 
