@@ -7,7 +7,7 @@ start
 
 partition ManejoEliminarTest {
   
-  :Usuario selecciona test
+  :Administrador selecciona test
   • Desde lista o vista detalle
   • Hace clic en "Eliminar"
   • Sistema verifica permisos;

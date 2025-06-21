@@ -21,8 +21,8 @@ partition ManejoEditarTest {
   else (Sí)
     :Sistema verifica estado del test
     • Borrador: edición completa
-    • Activo con resultados: limitaciones
-    • Archivado: solo lectura;
+    • Activo con resultados: limitaciones;
+    
     
     if (¿Test tiene resultados?) then (Sí)
       :Sistema muestra advertencia
@@ -33,7 +33,7 @@ partition ManejoEditarTest {
         - Modificar descripción
         - Duplicar para nueva versión;
       
-      if (¿Usuario elige duplicar?) then (Sí)
+      if (¿Adiminstrador elige duplicar?) then (Sí)
         :Sistema crea copia
         • Nuevo ID asignado
         • Estado: "Borrador"
@@ -41,14 +41,14 @@ partition ManejoEditarTest {
         • Redirige a edición completa;
         
       else (No)
-        :Usuario realiza cambios limitados
+        :Administrador realiza cambios limitados
         • Solo campos permitidos
         • Sin modificar preguntas;
         
       endif
       
     else (No - Sin resultados)
-      :Usuario puede editar libremente
+      :Administrador puede editar libremente
       • Información básica del test
       • Agregar/eliminar preguntas
       • Modificar respuestas correctas

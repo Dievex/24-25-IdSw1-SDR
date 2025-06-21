@@ -7,23 +7,21 @@ start
 
 partition ManejoEliminarPostulante {
   
-  :Usuario selecciona postulante
+  :Administrador selecciona postulante
   • Desde lista o perfil
   • Hace clic en "Eliminar"
   • Sistema verifica permisos;
   
   :Sistema verifica dependencias
-  • Postulaciones activas
   • Inscripciones en capacitaciones
-  • Evaluaciones realizadas
-  • Documentos asociados;
+  • Evaluaciones realizadas;
+
   
   if (¿Tiene dependencias activas?) then (Sí)
     :Sistema muestra opciones
     • Error: "No se puede eliminar"
     • Dependencias encontradas:
-      - Postulaciones: X
-      - Inscripciones: Y
+      - Capacitaciones Vistas: X
       - Evaluaciones: Z
     • Opción: "Desactivar postulante";
     
@@ -51,7 +49,7 @@ partition ManejoEliminarPostulante {
     • Advertencia: "Acción irreversible"
     • Botones: Confirmar/Cancelar;
     
-    if (¿Usuario confirma?) then (No)
+    if (¿Administrador confirma?) then (No)
       :Sistema cancela operación
       • Vuelve a lista de postulantes;
       
@@ -59,8 +57,8 @@ partition ManejoEliminarPostulante {
       :Sistema elimina postulante
       • Borra de base de datos
       • Elimina archivos asociados
-      • Registra en log de auditoría
-      • Notifica sistemas relacionados;
+      • Registra en log de auditoría;
+    
       
       :Sistema muestra
       • Mensaje: "Postulante eliminado"

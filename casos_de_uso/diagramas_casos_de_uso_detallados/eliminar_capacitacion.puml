@@ -18,7 +18,7 @@ partition ManejoEliminarCapacitacion {
   • Detalles de la capacitación
   • Botones: Confirmar/Cancelar;
     
-    if (¿Usuario confirma?) then (No)
+    if (¿Administrador confirma?) then (No)
       :Sistema cancela operación
       • Vuelve a vista anterior;
       
