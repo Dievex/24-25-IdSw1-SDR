@@ -14,8 +14,7 @@ partition ManejoEliminarTest {
   
   :Sistema verifica dependencias
   • Resultados de postulantes
-  • Tests en progreso
-  • Evaluaciones programadas
+  • Test en progreso
   • Referencias en capacitaciones;
   
   if (¿Tiene resultados registrados?) then (Sí)
@@ -69,7 +68,7 @@ partition ManejoEliminarTest {
     • Detalles del test a eliminar
     • Botones: Confirmar/Cancelar;
     
-    if (¿Usuario confirma?) then (No)
+    if (¿Administrador confirma?) then (No)
       :Sistema cancela operación
       • Vuelve a lista de tests;
       
@@ -77,8 +76,8 @@ partition ManejoEliminarTest {
       :Sistema elimina test
       • Borra estructura de BD
       • Elimina banco de preguntas
-      • Limpia archivos asociados
-      • Registra en auditoría;
+      • Limpia archivos asociados;
+     
       
       :Sistema confirma eliminación
       • Mensaje: "Test eliminado exitosamente"
