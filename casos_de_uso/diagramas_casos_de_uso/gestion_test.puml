@@ -2,7 +2,6 @@
 skinparam actorStyle awesome
 left to right direction
 actor "Postulante" as Postulante
-actor "Becario" as Becario
 
 rectangle "Gestión Test" {
   usecase "Hacer Test" as HacerTest
