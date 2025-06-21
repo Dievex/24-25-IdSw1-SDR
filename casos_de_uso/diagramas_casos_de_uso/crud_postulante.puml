@@ -1,0 +1,24 @@
+@startuml
+skinparam actorStyle awesome
+
+' Actores del sistema
+actor "Administrador" as Admin
+actor "Seleccionador" as Seleccionador
+
+' Casos de uso CRUD Postulante
+rectangle "CRUD Postulante" {
+  usecase "Crear Postulante" as CrearPostulante
+  usecase "Listar Postulante" as ListarPostulante
+  usecase "Editar Postulante" as EditarPostulante
+  usecase "Eliminar Postulante" as EliminarPostulante
+}
+
+' Relaciones entre actores y casos de uso
+Admin --> CrearPostulante
+Admin --> ListarPostulante
+Admin --> EditarPostulante
+Admin --> EliminarPostulante
+
+Seleccionador --> ListarPostulante
+
+@enduml
