@@ -1,0 +1,94 @@
+@startuml
+title Detallado del Iniciar Sesión
+
+start
+
+:VISTA_INICIAR_SESION;
+
+partition ManejoIniciarSesion {
+  
+  :Usuario accede a la página de login
+  • Muestra formulario de acceso
+  • Opciones: Email/Usuario
+  • Campo de contraseña
+  • Botón "Recordarme"
+  • Enlaces: "Olvidé contraseña";
+  
+  :Usuario introduce credenciales
+  • Email o nombre de usuario
+  • Contraseña
+  • Opcionalmente marca "Recordarme";
+  
+  :Sistema valida formato
+  • Email válido
+  • Campos no vacíos
+  • Longitud mínima de contraseña;
+  
+  if (¿Formato válido?) then (No)
+    :Sistema muestra
+    • Error: "Formato inválido"
+    • Campos específicos con error
+    • Mantiene datos ingresados;
+    
+  else (Sí)
+    :Sistema verifica credenciales
+    • Busca usuario en base de datos
+    • Verifica contraseña encriptada
+    • Revisa estado de la cuenta;
+    
+    if (¿Credenciales correctas?) then (No)
+      :Sistema registra intento fallido
+      • Incrementa contador de intentos
+      • Registra IP y timestamp
+      • Verifica política de bloqueo;
+      
+      if (¿Máximo intentos alcanzado?) then (Sí)
+        :Sistema bloquea temporalmente
+        • Mensaje: "Cuenta bloqueada temporalmente"
+        • Tiempo de espera: X minutos
+        • Opción: "Contactar soporte";
+        
+      else (No)
+        :Sistema muestra
+        • Error: "Credenciales incorrectas"
+        • Intentos restantes: X
+        • Sugerencia: "Verificar datos";
+        
+      endif
+      
+    else (Sí)
+      if (¿Cuenta activa?) then (No)
+        :Sistema muestra
+        • Error: "Cuenta inactiva"
+        • Motivo del bloqueo
+        • Contacto: "Administrador del sistema";
+        
+      else (Sí)
+        :Sistema crea sesión
+        • Genera token de sesión
+        • Establece tiempo de expiración
+        • Registra última conexión
+        • Resetea contador de intentos;
+        
+        :Sistema identifica tipo de usuario
+        • Administrador → Dashboard admin
+        • Seleccionador → Panel de evaluación
+        • Postulante → Portal postulante
+        • Becario → Área de capacitaciones;
+        
+        :Sistema redirige según rol
+        • Carga interfaz personalizada
+        • Muestra menús específicos
+        • Aplica permisos de usuario
+        • Mensaje: "Bienvenido [Nombre]";
+        
+      endif
+      
+    endif
+    
+  endif
+  
+}
+
+stop
+@enduml

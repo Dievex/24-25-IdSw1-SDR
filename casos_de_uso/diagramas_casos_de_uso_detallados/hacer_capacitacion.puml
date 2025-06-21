@@ -1,0 +1,74 @@
+@startuml
+title Detallado del Hacer Capacitación
+
+start
+
+:VISTA_HACER_CAPACITACION;
+
+partition ManejoHacerCapacitacion {
+  
+  :Usuario accede a capacitaciones
+  • Ve lista de capacitaciones disponibles
+  • Filtra por categoría/fecha
+  • Revisa requisitos;
+  
+  :Usuario selecciona capacitación
+  • Lee descripción completa
+  • Verifica fecha y horario
+  • Revisa cupos disponibles;
+  
+  :Sistema verifica elegibilidad
+  • Cumple requisitos previos
+  • No está ya inscrito
+  • Hay cupos disponibles
+  • Fecha límite no vencida;
+  
+  if (¿Cumple requisitos?) then (No)
+    :Sistema muestra
+    • Error: "No cumple requisitos"
+    • Detalles específicos:
+      - Requisitos faltantes
+      - Capacitaciones previas necesarias
+      - Documentación pendiente;
+    
+  else (Sí)
+    if (¿Hay cupos disponibles?) then (No)
+      :Sistema muestra opciones
+      • Mensaje: "Sin cupos disponibles"
+      • Opción: "Lista de espera"
+      • Sugerencia: "Capacitaciones similares";
+      
+      if (¿Usuario se inscribe en lista?) then (Sí)
+        :Sistema registra en lista de espera
+        • Posición en la lista
+        • Notificación si se libera cupo;
+        
+      endif
+      
+    else (Sí)
+      :Sistema procesa inscripción
+      • Registra al usuario
+      • Reduce cupo disponible
+      • Genera confirmación
+      • Envía detalles por email;
+      
+      :Sistema muestra confirmación
+      • Mensaje: "Inscripción exitosa"
+      • Código de inscripción
+      • Detalles de la capacitación
+      • Instrucciones de acceso;
+      
+      :Usuario accede a contenido
+      • Materiales de estudio
+      • Videos y recursos
+      • Calendario de actividades
+      • Foros de discusión;
+      
+    endif
+    
+  endif
+  
+}
+
+stop
+@enduml

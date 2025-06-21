@@ -1,0 +1,72 @@
+@startuml
+title Detallado del Cerrar Sesión
+
+start
+
+:VISTA_CERRAR_SESION;
+
+partition ManejoCerrarSesion {
+  
+  :Usuario solicita cerrar sesión
+  • Hace clic en "Cerrar Sesión"
+  • O selecciona desde menú usuario
+  • O por timeout automático;
+  
+  :Sistema verifica estado actual
+  • Sesión activa válida
+  • Trabajo sin guardar
+  • Procesos en ejecución;
+  
+  if (¿Hay cambios sin guardar?) then (Sí)
+    :Sistema muestra advertencia
+    • "Tienes cambios sin guardar"
+    • Lista de elementos pendientes
+    • Opciones: Guardar/Descartar/Cancelar;
+    
+    :Usuario toma decisión
+    • Guarda cambios pendientes
+    • O descarta modificaciones
+    • O cancela el cierre;
+    
+  endif
+  
+  if (¿Hay procesos activos?) then (Sí)
+    :Sistema verifica criticidad
+    • Tests en progreso
+    • Cargas de archivos
+    • Evaluaciones activas;
+    
+    :Sistema maneja procesos
+    • Espera finalización automática
+    • O permite forzar cierre
+    • Con advertencias apropiadas;
+    
+  endif
+  
+  :Sistema procesa cierre de sesión
+  • Invalida token de sesión
+  • Limpia cookies de sesión
+  • Registra hora de cierre
+  • Actualiza estado "offline";
+  
+  :Sistema limpia datos temporales
+  • Cache del navegador
+  • Variables de sesión
+  • Archivos temporales
+  • Estados de interfaz;
+  
+  :Sistema registra auditoría
+  • Usuario que cerró sesión
+  • Timestamp de cierre
+  • Duración de la sesión
+  • IP de origen;
+  
+  :Sistema redirige
+  • A página de login
+  • Mensaje: "Sesión cerrada exitosamente"
+  • Limpia historial sensible;
+  
+}
+
+stop
+@enduml

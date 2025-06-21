@@ -1,0 +1,81 @@
+@startuml
+title Detallado del Ver Progreso
+
+start
+
+:VISTA_VER_PROGRESO;
+
+partition ManejoVerProgreso {
+  
+  :Usuario accede a su dashboard
+  • Autenticación verificada
+  • Carga perfil de usuario
+  • Identifica tipo: Postulante/Becario;
+  
+  :Sistema consulta datos de progreso
+  • Capacitaciones inscritas
+  • Estado de cada capacitación
+  • Porcentaje de avance
+  • Calificaciones obtenidas;
+  
+  if (¿Tiene capacitaciones registradas?) then (No)
+    :Sistema muestra
+    • Mensaje: "No tienes capacitaciones"
+    • Botón: "Explorar capacitaciones"
+    • Sugerencias: "Capacitaciones recomendadas";
+    
+  else (Sí)
+    :Sistema muestra dashboard completo
+    • Resumen general de progreso
+    • Lista de capacitaciones activas
+    • Historial de completadas
+    • Próximas fechas importantes;
+    
+    :Usuario puede ver detalles específicos
+    • Progreso por módulos
+    • Tiempo dedicado
+    • Actividades pendientes
+    • Calificaciones parciales;
+    
+    if (¿Usuario selecciona capacitación?) then (Sí)
+      :Sistema muestra detalle específico
+      • Progreso por lecciones
+      • Actividades completadas/pendientes
+      • Calificaciones de evaluaciones
+      • Tiempo restante para completar
+      • Certificaciones obtenidas;
+      
+      :Usuario puede acceder a
+      • Continuar donde lo dejó
+      • Revisar material anterior
+      • Ver retroalimentación
+      • Descargar certificados;
+      
+      if (¿Capacitación completada?) then (Sí)
+        :Sistema permite
+        • Descargar certificado
+        • Ver calificación final
+        • Acceder a material de referencia
+        • Calificar la capacitación;
+        
+      else (No)
+        :Sistema muestra
+        • Siguiente actividad pendiente
+        • Recordatorios de fechas límite
+        • Progreso requerido para avanzar;
+        
+      endif
+      
+    endif
+    
+    :Usuario puede generar reportes
+    • Exportar progreso completo
+    • Historial de certificaciones
+    • Estadísticas personales;
+    
+  endif
+  
+}
+
+stop
+@enduml
