@@ -7,7 +7,7 @@ start
 
 partition ManejoCrearCapacitacion {
   
-  :Usuario introduce
+  :Administrador introduce
   • Nombre de la capacitación
   • Descripción
   • URL o archivo
