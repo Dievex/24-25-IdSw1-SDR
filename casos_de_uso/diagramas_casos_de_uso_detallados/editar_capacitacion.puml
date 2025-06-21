@@ -1,0 +1,50 @@
+@startuml
+title Detallado del Editar Capacitación
+
+start
+
+:VISTA_EDITAR_CAPACITACION;
+
+partition ManejoEditarCapacitacion {
+  
+  :Sistema carga datos existentes
+  • Busca capacitación por ID
+  • Muestra formulario prellenado;
+  
+  if (¿Capacitación existe?) then (No)
+    :Sistema muestra
+    • Error: "Capacitación no encontrada"
+    • Redirige a lista;
+    
+  else (Sí)
+    :Usuario modifica
+    • Nombre de la capacitación
+    • Descripción
+    • Fecha de inicio/fin
+    • Cupo máximo
+    • Requisitos;
+    
+    :Sistema valida cambios;
+    
+    if (¿Datos válidos?) then (No)
+      :Sistema muestra
+      • Error: "Datos inválidos"
+      • Mantiene formulario;
+      
+    else (Sí)
+      :Sistema actualiza capacitación
+      • Guarda cambios en BD
+      • Registra fecha de modificación;
+      
+      :Sistema muestra
+      • Mensaje: "Capacitación actualizada"
+      • Redirige a vista de detalle;
+      
+    endif
+    
+  endif
+  
+}
+
+stop
+@enduml

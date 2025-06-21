@@ -1,0 +1,50 @@
+@startuml
+title Detallado del Eliminar Capacitación
+
+start
+
+:VISTA_ELIMINAR_CAPACITACION;
+
+partition ManejoEliminarCapacitacion {
+  
+  :Usuario selecciona capacitación
+  • Desde lista o vista detalle
+  • Hace clic en "Eliminar";
+  
+  :Sistema verifica dependencias
+  • Revisa inscripciones activas
+  • Verifica relaciones;
+  
+  if (¿Tiene inscripciones activas?) then (Sí)
+    :Sistema muestra
+    • Error: "No se puede eliminar"
+    • Razón: "Tiene inscripciones activas"
+    • Opción: "Cancelar capacitación";
+    
+  else (No)
+    :Sistema muestra confirmación
+    • Pregunta: "¿Está seguro?"
+    • Detalles de la capacitación
+    • Botones: Confirmar/Cancelar;
+    
+    if (¿Usuario confirma?) then (No)
+      :Sistema cancela operación
+      • Vuelve a vista anterior;
+      
+    else (Sí)
+      :Sistema elimina capacitación
+      • Borra de base de datos
+      • Registra en log de auditoría;
+      
+      :Sistema muestra
+      • Mensaje: "Capacitación eliminada"
+      • Actualiza lista;
+      
+    endif
+    
+  endif
+  
+}
+
+stop
+@enduml

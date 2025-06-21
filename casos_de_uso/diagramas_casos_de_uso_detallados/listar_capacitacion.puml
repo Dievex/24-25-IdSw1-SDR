@@ -1,0 +1,35 @@
+@startuml
+title Detallado del Listar Capacitación
+
+start
+
+:VISTA_LISTAR_CAPACITACION;
+
+partition ManejoListarCapacitacion {
+  
+  :Sistema carga las capacitaciones
+  • Consulta base de datos
+  • Obtiene lista completa;
+  
+  if (¿Existen capacitaciones?) then (No)
+    :Sistema muestra
+    • Mensaje: "No hay capacitaciones disponibles"
+    • Opción para crear nueva;
+    
+  else (Sí)
+    :Sistema muestra
+    • Lista de capacitaciones
+    • Nombre, fechas, cupos
+    • Opciones de acción (Ver, Editar, Eliminar);
+    
+    :Usuario puede
+    • Filtrar por estado
+    • Buscar por nombre
+    • Ordenar por fecha;
+    
+  endif
+  
+}
+
+stop
+@enduml

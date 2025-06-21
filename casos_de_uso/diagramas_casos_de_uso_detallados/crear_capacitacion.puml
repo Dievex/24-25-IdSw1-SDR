@@ -1,0 +1,36 @@
+@startuml
+title Detallado del Crear Capacitación
+
+start
+
+:VISTA_CREAR_CAPACITACION;
+
+partition ManejoCrearCapacitacion {
+  
+  :Usuario introduce
+  • Nombre de la capacitación
+  • Descripción
+  • URL o archivo
+  
+  :Sistema valida los datos;
+  
+  if (¿Datos válidos?) then (No)
+    :Sistema muestra
+    • Error: "Datos inválidos"
+    • Campos requeridos;
+    
+  else (Sí)
+    :Sistema crea la capacitación
+    • Asigna ID único
+    • Guarda en base de datos;
+    
+    :Sistema muestra
+    • Mensaje: "Capacitación creada exitosamente"
+    • Redirige a lista de capacitaciones;
+    
+  endif
+  
+}
+
+stop
+@enduml
