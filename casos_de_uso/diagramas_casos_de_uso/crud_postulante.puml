@@ -1,11 +1,9 @@
 @startuml
 skinparam actorStyle awesome
-
-' Actores del sistema
+left to right direction
 actor "Administrador" as Admin
 actor "Seleccionador" as Seleccionador
 
-' Casos de uso CRUD Postulante
 rectangle "CRUD Postulante" {
   usecase "Crear Postulante" as CrearPostulante
   usecase "Listar Postulante" as ListarPostulante
@@ -13,7 +11,6 @@ rectangle "CRUD Postulante" {
   usecase "Eliminar Postulante" as EliminarPostulante
 }
 
-' Relaciones entre actores y casos de uso
 Admin --> CrearPostulante
 Admin --> ListarPostulante
 Admin --> EditarPostulante

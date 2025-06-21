@@ -1,0 +1,19 @@
+@startuml
+skinparam actorStyle awesome
+left to right direction
+actor "Administrador" as Admin
+
+rectangle "CRUD Test" {
+  usecase "Crear Test" as CrearTest
+  usecase "Listar Test" as ListarTest
+  usecase "Editar Test" as EditarTest
+  usecase "Eliminar Test" as EliminarTest
+}
+
+Admin --> CrearTest
+Admin --> ListarTest
+Admin --> EditarTest
+Admin --> EliminarTest
+
+
+@enduml
