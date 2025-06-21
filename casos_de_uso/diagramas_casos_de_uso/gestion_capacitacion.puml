@@ -1,0 +1,18 @@
+@startuml
+skinparam actorStyle awesome
+left to right direction
+actor "Postulante" as Postulante
+actor "Becario" as Becario
+
+rectangle "Gestión Capacitación" {
+  usecase "Hacer Capacitación" as HacerCapacitacion
+  usecase "Ver Progreso" as VerProgresos
+  
+}
+
+Postulante --> HacerCapacitacion
+Postulante --> VerProgresos
+
+Becario --> HacerCapacitacion
+Becario --> VerProgresos
+@enduml
