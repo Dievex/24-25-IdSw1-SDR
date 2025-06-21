@@ -7,9 +7,9 @@ start
 
 partition ManejoVerEstadisticas {
   
-  :Usuario accede al módulo
-  • Selecciona "Estadísticas"
-  • Define parámetros de consulta;
+  :Administrador/Seleccionador accede al módulo
+  • Selecciona "Estadísticas";
+
   
   :Sistema carga dashboard
   • Conecta con base de datos
@@ -25,9 +25,9 @@ partition ManejoVerEstadisticas {
     :Sistema genera estadísticas
     • Capacitaciones por mes/año
     • Porcentaje de aprobación
-    • Número de inscritos vs cupos
-    • Distribución por categorías
-    • Tendencias temporales;
+    • Número de postulantes/becarios;
+  
+ 
     
     :Sistema muestra dashboard
     • Gráficos interactivos
@@ -35,11 +35,7 @@ partition ManejoVerEstadisticas {
     • Indicadores clave (KPIs)
     • Opciones de exportación;
     
-    :Usuario puede interactuar
-    • Filtrar por fechas
-    • Seleccionar tipo de gráfico
-    • Exportar a PDF/Excel
-    • Comparar períodos;
+ 
     
     if (¿Usuario exporta?) then (Sí)
       :Sistema genera reporte
