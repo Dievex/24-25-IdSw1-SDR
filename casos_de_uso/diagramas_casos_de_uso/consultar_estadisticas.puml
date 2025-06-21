@@ -1,0 +1,15 @@
+@startuml
+skinparam actorStyle awesome
+left to right direction
+actor "Administrador" as Admin
+actor "Seleccionador" as Seleccionador
+
+rectangle "Consultar Estadísticas" {
+  usecase "Ver Estadísticas" as VerEstadisticas
+}
+
+Admin --> VerEstadisticas
+Seleccionador --> VerEstadisticas
+
+
+@enduml

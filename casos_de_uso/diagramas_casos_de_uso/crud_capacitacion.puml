@@ -1,0 +1,19 @@
+@startuml
+skinparam actorStyle awesome
+left to right direction
+actor "Administrador" as Admin
+
+rectangle "CRUD Capacitacion" {
+  usecase "Crear Capacitacion" as CrearCapacitacion
+  usecase "Listar Capacitacion" as ListarCapacitacion
+  usecase "Editar Capacitacion" as EditarCapacitacion
+  usecase "Eliminar Capacitacion" as EliminarCapacitacion
+}
+
+Admin --> CrearCapacitacion
+Admin --> ListarCapacitacion
+Admin --> EditarCapacitacion
+Admin --> EliminarCapacitacion
+
+
+@enduml
