@@ -31,8 +31,8 @@ note right of AdminApp
 end note
 
 note right of Seleccionador
-  Personal de la Universidad 
-  encargado del programa PROFER
+  Personal de FUNIBER que recomienda 
+  estudiantes para el programa PROFER
 end note
 
 @enduml
