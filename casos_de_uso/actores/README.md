@@ -46,10 +46,9 @@ Cada actor tiene un rol específico y diferentes niveles de acceso al sistema, c
   - Ver estadísticas de todos los usuarios
   - Configurar parámetros del sistema
 
-### Administrador de Sede
-- **Descripción**: Personal de la Universidad encargado del programa PROFER
+### Seleccionador
+- **Descripción**: Personal de FUNIBER que recomienda estudiantes para el programa PROFER
 - **Responsabilidades**:
-  - Proporcionar acceso a los postulantes
   - Ver estadísticas de todos los usuarios
   - Tomar decisiones basadas en los resultados
   - Supervisar el proceso de selección y capacitación

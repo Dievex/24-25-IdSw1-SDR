@@ -1,0 +1,30 @@
+@startuml
+
+skinparam actorStyle awesome
+
+' Actores del sistema
+actor "Administrador" as Admin
+actor "Postulante" as Postulante
+actor "Becario" as Becario
+actor "Seleccionador" as Seleccionador
+
+' Casos de uso
+rectangle "Manejo de Sesión" {
+  usecase "Iniciar Sesión" as IniciarSesion
+  usecase "Cerrar Sesión" as CerrarSesion
+}
+
+' Relaciones entre actores y casos de uso
+Admin --> IniciarSesion
+Admin --> CerrarSesion
+
+Postulante --> IniciarSesion
+Postulante --> CerrarSesion
+
+Becario --> IniciarSesion
+Becario --> CerrarSesion
+
+Seleccionador --> IniciarSesion
+Seleccionador --> CerrarSesion
+
+@enduml

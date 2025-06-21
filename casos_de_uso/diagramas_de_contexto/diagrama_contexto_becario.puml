@@ -27,19 +27,6 @@ state "CAPACITACIÓN" as Capacitacion {
     Completada --> SeleccionCap : Seleccionar nueva\ncapacitación
 }
 
-state "TEST" as Test {
-    state "SELECCIÓN_TEST" as SeleccionTest
-    state "EN_CURSO" as EnCursoTest
-    state "COMPLETADA" as CompletadaTest
-    state "VER_RESULTADOS" as VerRes
-    
-    [*] --> SeleccionTest
-    [*] --> VerRes
-    SeleccionTest --> EnCursoTest : Iniciar test
-    EnCursoTest --> CompletadaTest : Completar test
-    CompletadaTest --> SeleccionTest : Seleccionar nuevo test
-}
-
 [*] --> NoAuth
 
 NoAuth --> Menu
@@ -52,11 +39,6 @@ Menu --> NoAuth
         Cerrar sesión
     end note
 
-Menu --> Test
-    note on link
-        Realizar test
-    end note
-
 Menu --> Capacitacion
     note on link
         Realizar capacitación
@@ -65,11 +47,6 @@ Menu --> Capacitacion
 Capacitacion --> Menu
     note on link
         Volver al menú
-    end note
-
-Test --> Menu
-    note on link
-        Finalizar test
     end note
 
 @enduml

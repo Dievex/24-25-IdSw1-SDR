@@ -14,11 +14,7 @@ state "NO_AUTENTICADO" as NoAuth
 state "MENU_PRINCIPAL" as Menu
 state "MENU_ESTADISTICAS" as Menu_estadisticas
 state "MENU_USUARIOS" as Menu_usuarios
-state "CREAR_USUARIO" as Crear_usuario
 state "VER_USUARIO" as Ver_usuario
-state "EDITAR_USUARIO" as Editar_usuario
-state "ELIMINAR_USUARIO" as Eliminar_usuario
-state "CONSULTAR_ESTADÍSTICAS" as Consultar_estadísticas
 
 [*] --> NoAuth
 
@@ -42,26 +38,6 @@ Menu_usuarios --> Menu
         Salir
     end note
 
-Menu_usuarios --> Crear_usuario
-    note on link
-        Insertar registro
-    end note
-
-Crear_usuario --> Menu_usuarios
-    note on link
-        Guardar
-    end note
-
-Menu_usuarios --> Editar_usuario
-    note on link
-        Actualizar registro
-    end note
-
-Editar_usuario --> Menu_usuarios
-    note on link
-        Guardar
-    end note
-
 Menu_usuarios --> Ver_usuario
     note on link
         Ver lista
@@ -70,16 +46,6 @@ Menu_usuarios --> Ver_usuario
 Ver_usuario --> Menu_usuarios
     note on link
         Salir
-    end note
-
-Menu_usuarios --> Eliminar_usuario
-    note on link
-        Borrar usuario
-    end note
-
-Eliminar_usuario --> Menu_usuarios
-    note on link
-        Guardar
     end note
 
 Menu --> Menu_estadisticas

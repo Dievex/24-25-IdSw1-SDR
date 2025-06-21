@@ -5,7 +5,7 @@ skinparam actorStyle awesome
 actor "POSTULANTE" as NoBecario
 actor "BECARIO" as Becario
 actor "Administrador de Aplicación" as AdminApp
-actor "Administrador de Sede" as AdminSede
+actor "Seleccionador" as Seleccionador
 
 rectangle "Sistema Novus" {
 }
@@ -13,7 +13,7 @@ rectangle "Sistema Novus" {
 NoBecario --> "Sistema Novus" : interactúa
 Becario --> "Sistema Novus" : interactúa
 AdminApp --> "Sistema Novus" : gestiona
-AdminSede --> "Sistema Novus" : supervisa
+Seleccionador --> "Sistema Novus" : supervisa
 
 note right of NoBecario
   Postulantes que aún no han 
@@ -30,7 +30,7 @@ note right of AdminApp
   gestión técnica de la plataforma
 end note
 
-note right of AdminSede
+note right of Seleccionador
   Personal de la Universidad 
   encargado del programa PROFER
 end note
