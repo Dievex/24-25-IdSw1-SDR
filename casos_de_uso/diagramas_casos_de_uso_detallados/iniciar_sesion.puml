@@ -9,24 +9,24 @@ partition ManejoIniciarSesion {
   
   :Usuario accede a la página de login
   • Muestra formulario de acceso
-  • Opciones: Email/Usuario
+  • Opciones: Email
   • Campo de contraseña
-  • Botón "Recordarme"
-  • Enlaces: "Olvidé contraseña";
+  • Botón "Iniciar sesión";
+
   
   :Usuario introduce credenciales
-  • Email o nombre de usuario
-  • Contraseña
-  • Opcionalmente marca "Recordarme";
+  • Email 
+  • Contraseña;
+ 
   
   :Sistema valida formato
   • Email válido
   • Campos no vacíos
   • Longitud mínima de contraseña;
   
-  if (¿Formato válido?) then (No)
+  if (¿Contraseña/email válidos?) then (No)
     :Sistema muestra
-    • Error: "Formato inválido"
+    • Error: "email o contraseña incorrectos"
     • Campos específicos con error
     • Mantiene datos ingresados;
     
@@ -42,19 +42,12 @@ partition ManejoIniciarSesion {
       • Registra IP y timestamp
       • Verifica política de bloqueo;
       
-      if (¿Máximo intentos alcanzado?) then (Sí)
-        :Sistema bloquea temporalmente
-        • Mensaje: "Cuenta bloqueada temporalmente"
-        • Tiempo de espera: X minutos
-        • Opción: "Contactar soporte";
-        
-      else (No)
-        :Sistema muestra
-        • Error: "Credenciales incorrectas"
-        • Intentos restantes: X
-        • Sugerencia: "Verificar datos";
-        
-      endif
+      
+      :Sistema muestra
+      • Error: "Credenciales incorrectas"
+      • Intentos restantes: X
+      • Sugerencia: "Verificar datos";
+    
       
     else (Sí)
       if (¿Cuenta activa?) then (No)
@@ -67,8 +60,8 @@ partition ManejoIniciarSesion {
         :Sistema crea sesión
         • Genera token de sesión
         • Establece tiempo de expiración
-        • Registra última conexión
-        • Resetea contador de intentos;
+        • Registra última conexión;
+       
         
         :Sistema identifica tipo de usuario
         • Administrador → Dashboard admin
