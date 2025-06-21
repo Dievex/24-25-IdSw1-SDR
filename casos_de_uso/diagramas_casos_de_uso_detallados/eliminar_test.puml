@@ -1,0 +1,94 @@
+@startuml
+title Detallado del Eliminar Test
+
+start
+
+:VISTA_ELIMINAR_TEST;
+
+partition ManejoEliminarTest {
+  
+  :Usuario selecciona test
+  • Desde lista o vista detalle
+  • Hace clic en "Eliminar"
+  • Sistema verifica permisos;
+  
+  :Sistema verifica dependencias
+  • Resultados de postulantes
+  • Tests en progreso
+  • Evaluaciones programadas
+  • Referencias en capacitaciones;
+  
+  if (¿Tiene resultados registrados?) then (Sí)
+    :Sistema muestra restricción
+    • Error: "No se puede eliminar"
+    • Motivo: "Existen X resultados registrados"
+    • Alternativas disponibles:
+      - Archivar test
+      - Desactivar test
+      - Exportar datos primero;
+    
+    :Usuario selecciona alternativa
+    • Archivar test
+    • Desactivar test  
+    • Exportar datos;
+    
+    :Sistema procesa la opción elegida
+    • Archivado: preserva datos históricos
+    • Desactivado: mantiene resultados
+    • Exportación: genera reporte completo;
+    
+  else (No - Sin resultados)
+    if (¿Hay tests en progreso?) then (Sí)
+      :Sistema muestra advertencia
+      • "X postulantes realizando test"
+      • "¿Finalizar sesiones activas?"
+      • Opciones: Esperar/Forzar finalización;
+      
+      if (¿Forzar finalización?) then (Sí)
+        :Sistema finaliza sesiones
+        • Guarda respuestas parciales
+        • Notifica a postulantes
+        • Calcula puntajes parciales;
+        
+        :Continúa con eliminación;
+        
+      else (No)
+        :Sistema cancela eliminación
+        • Mantiene test activo
+        • Sugiere eliminar más tarde;
+        
+        stop
+        
+      endif
+      
+    endif
+    
+    :Sistema muestra confirmación final
+    • Pregunta: "¿Eliminar permanentemente?"
+    • Advertencia: "Acción irreversible"
+    • Detalles del test a eliminar
+    • Botones: Confirmar/Cancelar;
+    
+    if (¿Usuario confirma?) then (No)
+      :Sistema cancela operación
+      • Vuelve a lista de tests;
+      
+    else (Sí)
+      :Sistema elimina test
+      • Borra estructura de BD
+      • Elimina banco de preguntas
+      • Limpia archivos asociados
+      • Registra en auditoría;
+      
+      :Sistema confirma eliminación
+      • Mensaje: "Test eliminado exitosamente"
+      • Actualiza lista automáticamente;
+      
+    endif
+    
+  endif
+  
+}
+
+stop
+@enduml

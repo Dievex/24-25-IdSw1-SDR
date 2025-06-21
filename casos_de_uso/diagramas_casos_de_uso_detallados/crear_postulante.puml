@@ -1,0 +1,56 @@
+@startuml
+title Detallado del Crear Postulante
+
+start
+
+:VISTA_CREAR_POSTULANTE;
+
+partition ManejoCrearPostulante {
+  
+  :Usuario introduce
+  • Nombre completo
+  • Documento de identidad
+  • Email
+  • Teléfono
+  • Dirección
+  • Fecha de nacimiento
+  • Nivel educativo
+  • Experiencia laboral;
+  
+  :Sistema valida los datos
+  • Formato de email
+  • Unicidad de documento
+  • Campos obligatorios;
+  
+  if (¿Datos válidos?) then (No)
+    :Sistema muestra
+    • Error: "Datos inválidos"
+    • Campos con errores resaltados
+    • Mensajes específicos por campo;
+    
+  else (Sí)
+    if (¿Documento ya existe?) then (Sí)
+      :Sistema muestra
+      • Error: "Postulante ya registrado"
+      • Opción: "Ver perfil existente";
+      
+    else (No)
+      :Sistema crea el postulante
+      • Asigna ID único
+      • Genera número de postulante
+      • Guarda en base de datos
+      • Crea perfil básico;
+      
+      :Sistema muestra
+      • Mensaje: "Postulante creado exitosamente"
+      • Número de registro asignado
+      • Redirige a perfil del postulante;
+      
+    endif
+    
+  endif
+  
+}
+
+stop
+@enduml

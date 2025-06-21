@@ -1,0 +1,63 @@
+@startuml
+title Detallado del Crear Test
+
+start
+
+:VISTA_CREAR_TEST;
+
+partition ManejoCrearTest {
+  
+  :Usuario introduce información básica
+  • Nombre del test
+  • Descripción
+  • Tipo de evaluación
+  • Duración límite
+  • Puntaje máximo
+  • Nivel de dificultad;
+  
+  :Usuario configura preguntas
+  • Añade preguntas una por una
+  • Define tipo: múltiple opción/abierta
+  • Asigna puntaje por pregunta
+  • Establece respuestas correctas;
+  
+  :Sistema valida la configuración
+  • Mínimo de preguntas requeridas
+  • Suma de puntajes = puntaje máximo
+  • Todas las preguntas tienen respuesta
+  • Duración coherente con contenido;
+  
+  if (¿Configuración válida?) then (No)
+    :Sistema muestra
+    • Error: "Configuración inválida"
+    • Problemas específicos:
+      - Puntajes no coinciden
+      - Preguntas sin respuesta
+      - Duración insuficiente;
+    
+  else (Sí)
+    :Sistema crea el test
+    • Genera ID único
+    • Guarda estructura en BD
+    • Crea banco de preguntas
+    • Establece estado "Borrador";
+    
+    :Sistema muestra opciones
+    • Mensaje: "Test creado exitosamente"
+    • Botón: "Vista previa"
+    • Botón: "Publicar test"
+    • Botón: "Seguir editando";
+    
+    :Usuario selecciona una acción;
+    
+    :Sistema procesa la selección
+    • Vista previa: muestra test simulado
+    • Publicar: cambia estado a "Activo"
+    • Seguir editando: redirige a edición;
+    
+  endif
+  
+}
+
+stop
+@enduml

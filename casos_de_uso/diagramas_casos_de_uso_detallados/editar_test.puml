@@ -1,0 +1,88 @@
+@startuml
+title Detallado del Editar Test
+
+start
+
+:VISTA_EDITAR_TEST;
+
+partition ManejoEditarTest {
+  
+  :Sistema carga test existente
+  • Busca test por ID
+  • Verifica permisos de edición
+  • Carga configuración completa;
+  
+  if (¿Test existe?) then (No)
+    :Sistema muestra
+    • Error: "Test no encontrado"
+    • Opción: "Volver a lista"
+    • Sugerencia: "Crear nuevo test";
+    
+  else (Sí)
+    :Sistema verifica estado del test
+    • Borrador: edición completa
+    • Activo con resultados: limitaciones
+    • Archivado: solo lectura;
+    
+    if (¿Test tiene resultados?) then (Sí)
+      :Sistema muestra advertencia
+      • "Test tiene resultados registrados"
+      • "Cambios pueden afectar estadísticas"
+      • Opciones limitadas:
+        - Cambiar estado
+        - Modificar descripción
+        - Duplicar para nueva versión;
+      
+      if (¿Usuario elige duplicar?) then (Sí)
+        :Sistema crea copia
+        • Nuevo ID asignado
+        • Estado: "Borrador"
+        • Sufijo: "- Copia"
+        • Redirige a edición completa;
+        
+      else (No)
+        :Usuario realiza cambios limitados
+        • Solo campos permitidos
+        • Sin modificar preguntas;
+        
+      endif
+      
+    else (No - Sin resultados)
+      :Usuario puede editar libremente
+      • Información básica del test
+      • Agregar/eliminar preguntas
+      • Modificar respuestas correctas
+      • Cambiar puntajes y duración;
+      
+      :Sistema valida cambios
+      • Coherencia de puntajes
+      • Integridad de preguntas
+      • Duración apropiada;
+      
+      if (¿Cambios válidos?) then (No)
+        :Sistema muestra
+        • Error: "Configuración inválida"
+        • Detalles específicos
+        • Mantiene formulario abierto;
+        
+      else (Sí)
+        :Sistema actualiza test
+        • Guarda cambios en BD
+        • Actualiza fecha de modificación
+        • Registra auditoría de cambios;
+        
+        :Sistema muestra confirmación
+        • Mensaje: "Test actualizado"
+        • Resumen de cambios
+        • Opciones: Vista previa/Publicar;
+        
+      endif
+      
+    endif
+    
+  endif
+  
+}
+
+stop
+@enduml

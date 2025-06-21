@@ -1,0 +1,78 @@
+@startuml
+title Detallado del Listar Test
+
+start
+
+:VISTA_LISTAR_TEST;
+
+partition ManejoListarTest {
+  
+  :Sistema identifica tipo de usuario
+  • Administrador: ve todos los tests
+  • Postulante: ve tests activos/asignados;
+  
+  :Sistema carga tests según permisos
+  • Consulta base de datos
+  • Aplica filtros de usuario
+  • Ordena por fecha de creación;
+  
+  if (¿Existen tests?) then (No)
+    if (¿Es Administrador?) then (Sí)
+      :Sistema muestra
+      • Mensaje: "No hay tests creados"
+      • Botón: "Crear primer test"
+      • Opciones de importación;
+      
+    else (No - Postulante)
+      :Sistema muestra
+      • Mensaje: "No hay tests disponibles"
+      • Información: "Contacte al administrador";
+      
+    endif
+    
+  else (Sí)
+    if (¿Es Administrador?) then (Sí)
+      :Sistema muestra lista completa
+      • Nombre, estado, duración
+      • Número de preguntas
+      • Fecha de creación/modificación
+      • Estadísticas de uso
+      • Opciones: Ver/Editar/Eliminar/Duplicar;
+      
+      :Administrador puede
+      • Filtrar por estado/tipo
+      • Buscar por nombre
+      • Cambiar estado masivamente
+      • Exportar estadísticas
+      • Ver resultados por test;
+      
+    else (No - Postulante)
+      :Sistema muestra tests disponibles
+      • Solo tests activos
+      • Tests no realizados
+      • Duración estimada
+      • Fecha límite (si aplica)
+      • Estado: Pendiente/Completado;
+      
+      :Postulante puede
+      • Ver detalles del test
+      • Iniciar test disponible
+      • Ver resultados completados
+      • Filtrar por estado;
+      
+      if (¿Postulante inicia test?) then (Sí)
+        :Sistema inicia sesión
+        • Verifica requisitos
+        • Inicia cronómetro
+        • Redirige a interfaz de test;
+        
+      endif
+      
+    endif
+    
+  endif
+  
+}
+
+stop
+@enduml

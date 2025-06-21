@@ -1,0 +1,58 @@
+@startuml
+title Detallado del Listar Postulante
+
+start
+
+:VISTA_LISTAR_POSTULANTE;
+
+partition ManejoListarPostulante {
+  
+  :Sistema carga los postulantes
+  • Consulta base de datos
+  • Aplica filtros por defecto
+  • Paginación automática;
+  
+  if (¿Existen postulantes?) then (No)
+    :Sistema muestra
+    • Mensaje: "No hay postulantes registrados"
+    • Opción para crear nuevo
+    • Importar desde archivo;
+    
+  else (Sí)
+    :Sistema muestra lista
+    • Nombre, documento, email
+    • Estado del postulante
+    • Fecha de registro
+    • Opciones de acción;
+    
+    :Usuario puede interactuar
+    • Buscar por nombre/documento
+    • Filtrar por estado
+    • Ordenar por columnas
+    • Seleccionar múltiples
+    • Exportar lista;
+    
+    if (¿Usuario selecciona acción?) then (Ver Perfil)
+      :Sistema muestra
+      • Información completa
+      • Historial de postulaciones
+      • Documentos adjuntos;
+      
+    else (Editar)
+      :Sistema redirige
+      • A formulario de edición
+      • Con datos precargados;
+      
+    else (Eliminar)
+      :Sistema solicita
+      • Confirmación de eliminación
+      • Verifica dependencias;
+      
+    endif
+    
+  endif
+  
+}
+
+stop
+@enduml

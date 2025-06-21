@@ -1,0 +1,66 @@
+@startuml
+title Detallado del Editar Postulante
+
+start
+
+:VISTA_EDITAR_POSTULANTE;
+
+partition ManejoEditarPostulante {
+  
+  :Sistema carga datos existentes
+  • Busca postulante por ID
+  • Carga información completa
+  • Muestra formulario prellenado;
+  
+  if (¿Postulante existe?) then (No)
+    :Sistema muestra
+    • Error: "Postulante no encontrado"
+    • Opción: "Volver a lista"
+    • Sugerencia: "Crear nuevo";
+    
+  else (Sí)
+    :Usuario modifica información
+    • Datos personales
+    • Información de contacto
+    • Nivel educativo
+    • Experiencia laboral
+    • Estado del postulante;
+    
+    :Sistema valida cambios
+    • Integridad de datos
+    • Unicidad de email/documento
+    • Formato de campos;
+    
+    if (¿Datos válidos?) then (No)
+      :Sistema muestra
+      • Error: "Datos inválidos"
+      • Campos problemáticos
+      • Mantiene otros cambios;
+      
+    else (Sí)
+      if (¿Email/Documento duplicado?) then (Sí)
+        :Sistema muestra
+        • Error: "Email/Documento ya existe"
+        • Información del registro existente;
+        
+      else (No)
+        :Sistema actualiza postulante
+        • Guarda cambios en BD
+        • Registra fecha de modificación
+        • Auditoría de cambios;
+        
+        :Sistema muestra
+        • Mensaje: "Postulante actualizado"
+        • Resumen de cambios realizados
+        • Opción: "Ver perfil actualizado";
+        
+      endif
+      
+    endif
+    
+  endif
+  
+}
+
+stop
+@enduml
