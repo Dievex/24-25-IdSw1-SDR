@@ -17,12 +17,10 @@ partition ManejoEditarCapacitacion {
     • Redirige a lista;
     
   else (Sí)
-    :Usuario modifica
-    • Nombre de la capacitación
+    :Administrador modifica
+    • Título de la capacitación
     • Descripción
-    • Fecha de inicio/fin
-    • Cupo máximo
-    • Requisitos;
+    • URL o archivo;
     
     :Sistema valida cambios;
     

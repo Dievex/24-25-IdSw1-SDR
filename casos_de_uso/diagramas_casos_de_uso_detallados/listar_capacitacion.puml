@@ -19,13 +19,10 @@ partition ManejoListarCapacitacion {
   else (Sí)
     :Sistema muestra
     • Lista de capacitaciones
-    • Nombre, fechas, cupos
+    • Nombre, duracion, estado
     • Opciones de acción (Ver, Editar, Eliminar);
     
-    :Usuario puede
-    • Filtrar por estado
-    • Buscar por nombre
-    • Ordenar por fecha;
+
     
   endif
   

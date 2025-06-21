@@ -7,25 +7,16 @@ start
 
 partition ManejoEliminarCapacitacion {
   
-  :Usuario selecciona capacitación
+  :Administrador selecciona capacitación
   • Desde lista o vista detalle
   • Hace clic en "Eliminar";
   
-  :Sistema verifica dependencias
-  • Revisa inscripciones activas
-  • Verifica relaciones;
   
-  if (¿Tiene inscripciones activas?) then (Sí)
-    :Sistema muestra
-    • Error: "No se puede eliminar"
-    • Razón: "Tiene inscripciones activas"
-    • Opción: "Cancelar capacitación";
-    
-  else (No)
-    :Sistema muestra confirmación
-    • Pregunta: "¿Está seguro?"
-    • Detalles de la capacitación
-    • Botones: Confirmar/Cancelar;
+  
+  :Sistema muestra confirmación
+  • Pregunta: "¿Está seguro?"
+  • Detalles de la capacitación
+  • Botones: Confirmar/Cancelar;
     
     if (¿Usuario confirma?) then (No)
       :Sistema cancela operación
@@ -42,7 +33,7 @@ partition ManejoEliminarCapacitacion {
       
     endif
     
-  endif
+  
   
 }
 
