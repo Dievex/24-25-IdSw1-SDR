@@ -13,20 +13,20 @@ partition ManejoListarTest {
   
   :Sistema carga tests según permisos
   • Consulta base de datos
-  • Aplica filtros de usuario
-  • Ordena por fecha de creación;
+  • Aplica filtros de usuario;
+  
   
   if (¿Existen tests?) then (No)
     if (¿Es Administrador?) then (Sí)
       :Sistema muestra
       • Mensaje: "No hay tests creados"
-      • Botón: "Crear primer test"
-      • Opciones de importación;
+      • Botón: "Crear primer test";
+     
       
     else (No - Postulante)
       :Sistema muestra
-      • Mensaje: "No hay tests disponibles"
-      • Información: "Contacte al administrador";
+      • Mensaje: "No hay tests disponibles";
+    
       
     endif
     
@@ -40,10 +40,6 @@ partition ManejoListarTest {
       • Opciones: Ver/Editar/Eliminar/Duplicar;
       
       :Administrador puede
-      • Filtrar por estado/tipo
-      • Buscar por nombre
-      • Cambiar estado masivamente
-      • Exportar estadísticas
       • Ver resultados por test;
       
     else (No - Postulante)
@@ -57,8 +53,8 @@ partition ManejoListarTest {
       :Postulante puede
       • Ver detalles del test
       • Iniciar test disponible
-      • Ver resultados completados
-      • Filtrar por estado;
+      • Ver resultados completados;
+      
       
       if (¿Postulante inicia test?) then (Sí)
         :Sistema inicia sesión
