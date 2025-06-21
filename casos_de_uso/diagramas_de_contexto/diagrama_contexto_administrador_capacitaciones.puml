@@ -1,0 +1,94 @@
+@startuml
+
+skinparam {
+    StateFontSize 14
+    StateFontColor black
+    StateBackgroundColor #f0f8ff
+    StateBorderColor #4682b4
+    ArrowColor #4682b4
+    ArrowFontColor #191970
+    ArrowFontSize 12
+}
+
+state "NO_AUTENTICADO" as NoAuth
+state "MENU_PRINCIPAL" as Menu
+state "MENU_ADMINISTRADOR" as Menu_administrador
+state "CREAR_CAPACITACIÓN" as Crear_capacitación
+state "VER_CAPACITACIÓN" as Ver_capacitación
+state "EDITAR_CAPACITACIÓN" as Editar_capacitación
+state "ELIMINAR_CAPACITACIÓN" as Eliminar_capacitación
+state "CONSULTAR_ESTADÍSTICAS" as Consultar_estadísticas
+
+[*] --> NoAuth
+
+NoAuth --> Menu
+    note on link
+        Iniciar sesión
+    end note
+
+Menu --> NoAuth
+    note on link
+        Cerrar sesión
+    end note
+
+Menu --> Menu_administrador
+    note on link
+        Gestión de administrador
+    end note
+
+Menu_administrador --> Menu
+    note on link
+        Salir
+    end note
+
+Menu_administrador --> Crear_capacitación
+    note on link
+        Insertar registro
+    end note
+
+Crear_capacitación --> Menu_administrador
+    note on link
+        Guardar
+    end note
+
+Menu_administrador --> Editar_capacitación
+    note on link
+        Actualizar registro
+    end note
+
+Editar_capacitación --> Menu_administrador
+    note on link
+        Guardar
+    end note
+
+Menu_administrador --> Ver_capacitación
+    note on link
+        Ver lista
+    end note
+
+Ver_capacitación --> Menu_administrador
+    note on link
+        Salir
+    end note
+
+Menu_administrador --> Eliminar_capacitación
+    note on link
+        Borrar capacitación
+    end note
+
+Eliminar_capacitación --> Menu_administrador
+    note on link
+        Guardar
+    end note
+
+Menu_administrador --> Consultar_estadísticas
+    note on link
+        Ver estadísticas
+    end note
+
+Consultar_estadísticas --> Menu_administrador
+    note on link
+        Salir
+    end note
+
+@enduml

@@ -1,0 +1,83 @@
+@startuml
+
+skinparam {
+    StateFontSize 14
+    StateFontColor black
+    StateBackgroundColor #f0f8ff
+    StateBorderColor #4682b4
+    ArrowColor #4682b4
+    ArrowFontColor #191970
+    ArrowFontSize 12
+}
+
+state "NO_AUTENTICADO" as NoAuth
+state "MENU_PRINCIPAL" as Menu
+state "MENU_ADMINISTRADOR" as Menu_administrador
+state "CREAR_TEST" as Crear_test
+state "VER_TEST" as Ver_test
+state "EDITAR_TEST" as Editar_test
+state "ELIMINAR_TEST" as Eliminar_test
+
+[*] --> NoAuth
+
+NoAuth --> Menu
+    note on link
+        Iniciar sesión
+    end note
+
+Menu --> NoAuth
+    note on link
+        Cerrar sesión
+    end note
+
+Menu --> Menu_administrador
+    note on link
+        Gestión de administrador
+    end note
+
+Menu_administrador --> Menu
+    note on link
+        Salir
+    end note
+
+Menu_administrador --> Crear_test
+    note on link
+        Insertar registro
+    end note
+
+Crear_test --> Menu_administrador
+    note on link
+        Guardar
+    end note
+
+Menu_administrador --> Editar_test
+    note on link
+        Actualizar registro
+    end note
+
+Editar_test --> Menu_administrador
+    note on link
+        Guardar
+    end note
+
+Menu_administrador --> Ver_test
+    note on link
+        Ver lista
+    end note
+
+Ver_test --> Menu_administrador
+    note on link
+        Salir
+    end note
+
+Menu_administrador --> Eliminar_test
+    note on link
+        Borrar test
+    end note
+
+Eliminar_test --> Menu_administrador
+    note on link
+        Guardar
+    end note
+
+@enduml
