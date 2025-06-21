@@ -25,6 +25,7 @@ Los siguientes actores participan en los casos de uso:
 
 **Actores involucrados**: Todos los actores del sistema (Usuario base)
 
+![Gestión de Sesiones](../../documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/manejo_sesion.svg)
 ---
 
 ### 2. CRUD de Postulantes
@@ -42,6 +43,7 @@ Los siguientes actores participan en los casos de uso:
 - **Administrador**: Acceso completo (CRUD)
 - **Seleccionador**: Solo consulta (Listar)
 
+![CRUD de Postulantes](../../documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/crud_postulante.svg)
 ---
 
 ### 3. CRUD de Capacitaciones
@@ -60,6 +62,7 @@ Los siguientes actores participan en los casos de uso:
 - **Becario**: Solo consulta (Listar)
 - **Postulante**: Solo consulta (Listar)
 
+![CRUD de Capacitaciones](../../documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/crud_capacitacion.svg)
 ---
 
 ### 4. CRUD de Tests
@@ -77,6 +80,7 @@ Los siguientes actores participan en los casos de uso:
 - **Administrador**: Acceso completo (CRUD)
 - **Postulante**: Solo consulta (Listar)
 
+![CRUD de Test](../../documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/crud_test.svg)
 ---
 
 ### 5. Gestión de Capacitaciones
@@ -92,6 +96,7 @@ Los siguientes actores participan en los casos de uso:
 - **Postulante**: Puede realizar capacitaciones y ver su progreso
 - **Becario**: Puede realizar capacitaciones y ver su progreso
 
+![Gestión de capacitaciones](../../documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/gestion_capacitacion.svg)
 ---
 
 ### 6. Gestión de Tests
@@ -106,6 +111,7 @@ Los siguientes actores participan en los casos de uso:
 **Actores involucrados**:
 - **Postulante**: Puede realizar tests y consultar sus resultados
 
+![Gestión Test](../../documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/gestion_test.svg)
 ---
 
 ### 7. Consulta de Estadísticas
@@ -120,30 +126,5 @@ Los siguientes actores participan en los casos de uso:
 - **Administrador**: Puede consultar estadísticas generales
 - **Seleccionador**: Puede consultar estadísticas relevantes
 
+![Consulta Estadisticas](../../documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/consultar_estadisticas.svg)
 ---
-
-## Convenciones de Diseño
-
-Todos los diagramas siguen las siguientes convenciones:
-
-- **Estilo de actores**: `skinparam actorStyle awesome`
-- **Orientación**: `left to right direction`
-- **Agrupación**: Los casos de uso se agrupan en rectángulos por funcionalidad
-- **Herencia**: Se utiliza la notación `--|>` para representar herencia entre actores
-
-## Cómo Visualizar los Diagramas
-
-Para visualizar estos diagramas:
-
-1. **PlantUML Online**: Copie el contenido de cualquier archivo .puml en [plantuml.com](http://www.plantuml.com/plantuml/uml/)
-2. **VS Code**: Instale la extensión "PlantUML" para previsualizar directamente
-3. **IntelliJ IDEA**: Instale el plugin "PlantUML integration"
-4. **Línea de comandos**: Use `plantuml archivo.puml` si tiene PlantUML instalado
-
-## Relación con Otros Diagramas
-
-Estos diagramas de casos de uso se complementan con:
-
-- **Diagramas de casos de uso detallados** (`../diagramas_casos_de_uso_detallados/`): Versiones expandidas de casos específicos
-- **Diagramas de contexto** (`../diagramas_de_contexto/`): Vista de contexto por actor
-- **Actores** (`../actores/`): Definición detallada de los actores del sistema
