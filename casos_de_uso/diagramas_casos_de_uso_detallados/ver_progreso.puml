@@ -7,13 +7,13 @@ start
 
 partition ManejoVerProgreso {
   
-  :Usuario accede a su dashboard
+  :Postulante/Becario accede a su dashboard
   • Autenticación verificada
-  • Carga perfil de usuario
-  • Identifica tipo: Postulante/Becario;
+  • Carga perfil de usuario;
+  
   
   :Sistema consulta datos de progreso
-  • Capacitaciones inscritas
+  • Capacitaciones realizadas
   • Estado de cada capacitación
   • Porcentaje de avance
   • Calificaciones obtenidas;
@@ -21,21 +21,17 @@ partition ManejoVerProgreso {
   if (¿Tiene capacitaciones registradas?) then (No)
     :Sistema muestra
     • Mensaje: "No tienes capacitaciones"
-    • Botón: "Explorar capacitaciones"
-    • Sugerencias: "Capacitaciones recomendadas";
+    • Botón: "Explorar capacitaciones";
+   
     
   else (Sí)
     :Sistema muestra dashboard completo
     • Resumen general de progreso
     • Lista de capacitaciones activas
-    • Historial de completadas
-    • Próximas fechas importantes;
+    • Historial de completadas;
+   
     
-    :Usuario puede ver detalles específicos
-    • Progreso por módulos
-    • Tiempo dedicado
-    • Actividades pendientes
-    • Calificaciones parciales;
+  
     
     if (¿Usuario selecciona capacitación?) then (Sí)
       :Sistema muestra detalle específico
@@ -69,9 +65,9 @@ partition ManejoVerProgreso {
     endif
     
     :Usuario puede generar reportes
-    • Exportar progreso completo
-    • Historial de certificaciones
-    • Estadísticas personales;
+    • Exportar progreso completo;
+    
+ 
     
   endif
   
