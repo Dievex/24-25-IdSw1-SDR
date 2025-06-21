@@ -15,40 +15,27 @@ partition ManejoListarPostulante {
   if (¿Existen postulantes?) then (No)
     :Sistema muestra
     • Mensaje: "No hay postulantes registrados"
-    • Opción para crear nuevo
-    • Importar desde archivo;
+    • Opción para crear nuevo;
+    
     
   else (Sí)
     :Sistema muestra lista
-    • Nombre, documento, email
+    • Nombre Completo, email, pasaporte, direccion,contraseña 
     • Estado del postulante
     • Fecha de registro
-    • Opciones de acción;
+    • Opciones: Ver/Editar/Eliminar;
     
-    :Usuario puede interactuar
-    • Buscar por nombre/documento
-    • Filtrar por estado
-    • Ordenar por columnas
-    • Seleccionar múltiples
-    • Exportar lista;
     
-    if (¿Usuario selecciona acción?) then (Ver Perfil)
-      :Sistema muestra
-      • Información completa
-      • Historial de postulaciones
-      • Documentos adjuntos;
-      
-    else (Editar)
-      :Sistema redirige
-      • A formulario de edición
-      • Con datos precargados;
-      
-    else (Eliminar)
-      :Sistema solicita
-      • Confirmación de eliminación
-      • Verifica dependencias;
-      
-    endif
+    
+    :Administrador selecciona acción disponible
+    • Ver perfil completo
+    • Editar información
+    • Eliminar postulante;
+    
+    :Sistema procesa la acción elegida
+    • Ver: muestra información completa
+    • Editar: redirige a formulario
+    • Eliminar: solicita confirmación;
     
   endif
   
