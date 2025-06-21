@@ -15,5 +15,7 @@ Admin --> ListarTest
 Admin --> EditarTest
 Admin --> EliminarTest
 
+Postulante --> ListarTest
+
 
 @enduml

@@ -15,5 +15,8 @@ Admin --> ListarCapacitacion
 Admin --> EditarCapacitacion
 Admin --> EliminarCapacitacion
 
+Becario --> ListarCapacitacion
+Postulante --> ListarCapacitacion
+
 
 @enduml
