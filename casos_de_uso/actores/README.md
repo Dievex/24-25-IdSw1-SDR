@@ -44,7 +44,6 @@ Cada actor tiene un rol específico y diferentes niveles de acceso al sistema, c
   - Subir material de capacitación
   - Crear y modificar tests
   - Ver estadísticas de todos los usuarios
-  - Configurar parámetros del sistema
 
 ### Seleccionador
 - **Descripción**: Personal de FUNIBER que recomienda estudiantes para el programa PROFER
