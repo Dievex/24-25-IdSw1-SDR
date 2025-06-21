@@ -27,4 +27,4 @@ Este diagrama representa:
 
 ## Diagrama
 
-![Diagrama de Objetos](../../documentos/imagenes/modelo_del_dominio/objetos/objetos.svg)
+![Diagrama de Objetos](../../documentos/imagenes/modelo_del_dominio/objetos/Diagrama_de_Objetos_Novus.svg)

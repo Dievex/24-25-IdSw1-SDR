@@ -42,6 +42,13 @@ object "becario1 : BECARIO" as becario {
     programaAsignado = "PROFER 2024"
 }
 
+object "seleccionador1 : SELECCIONADOR" as seleccionador {
+    id = "SEL001"
+    nombre = "Ana Rodríguez"
+    email = "ana.rodriguez@novus.com"
+    departamento = "Recursos Humanos"
+}
+
 object "testProgramacion : TEST" as test {
     id = "TEST001"
     titulo = "Evaluación Java Básico"
@@ -54,6 +61,12 @@ object "cursoJava : CAPACITACION" as capacitacion {
     titulo = "Fundamentos de Java"
     nivel = "Básico"
     duracion = "40 horas"
+}
+
+object "contenido1 : CONTENIDO_CAPACITACION" as contenido {
+    id = "CONT001"
+    orden = 1
+    obligatorio = true
 }
 
 object "videoIntro : VIDEO_TUTORIAL" as video {
@@ -81,6 +94,8 @@ object "estadisticasMensuales : ESTADISTICA" as estadistica {
 ' Relaciones entre objetos
 plataforma --> estadistica : genera
 plataforma --> admin : gestiona
+plataforma --> postulante : gestiona
+plataforma --> seleccionador : gestiona
 plataforma --> test : incluye
 plataforma --> capacitacion : ofrece
 
@@ -88,11 +103,14 @@ admin --> plataforma : administra
 admin --> capacitacion : gestiona
 admin --> estadistica : consulta
 
-capacitacion --> video : contiene
-capacitacion --> doc : contiene
+seleccionador --> estadistica : consulta
+
+capacitacion --> contenido : contiene
+contenido --> video : es
+contenido --> doc : es
 
 postulante --> test : realiza
-test --> becario : aprobación convierte en
+test --> becario : "aprobación\nconvierte en"
 
 admin --> capacitacion : accede a
 postulante --> capacitacion : accede a
