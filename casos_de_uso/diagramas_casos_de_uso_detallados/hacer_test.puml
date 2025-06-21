@@ -14,22 +14,22 @@ partition ManejoHacerTest {
   
   :Postulante selecciona test
   • Lee instrucciones generales
-  • Revisa duración estimada
-  • Verifica requisitos técnicos;
+  • Revisa duración estimada;
+ 
   
   :Sistema verifica elegibilidad
   • Test asignado al postulante
   • Dentro del período válido
-  • No completado previamente
-  • Requisitos técnicos cumplidos;
+  • No completado previamente;
+
   
   if (¿Puede realizar test?) then (No)
     :Sistema muestra restricción
     • Error específico:
       - "Test no asignado"
       - "Fuera de tiempo"
-      - "Ya completado"
-      - "Requisitos técnicos no cumplidos";
+      - "Ya completado";
+   
     
   else (Sí)
     :Sistema muestra preparación
@@ -93,8 +93,8 @@ partition ManejoHacerTest {
       :Sistema calcula resultados
       • Evalúa respuestas correctas
       • Aplica ponderación de puntajes
-      • Genera calificación final
-      • Determina estado: Aprobado/Reprobado;
+      • Genera calificación final;
+      
       
       :Sistema muestra confirmación
       • "Test completado exitosamente"
