@@ -7,37 +7,36 @@ start
 
 partition ManejoCrearPostulante {
   
-  :Usuario introduce
+  :Administrador introduce
   • Nombre completo
-  • Documento de identidad
   • Email
-  • Teléfono
   • Dirección
-  • Fecha de nacimiento
-  • Nivel educativo
-  • Experiencia laboral;
+  • Pasaporte
+  • Tipo de usuario
+  • Contraseña;
+
   
   :Sistema valida los datos
   • Formato de email
-  • Unicidad de documento
   • Campos obligatorios;
   
   if (¿Datos válidos?) then (No)
     :Sistema muestra
-    • Error: "Datos inválidos"
-    • Campos con errores resaltados
-    • Mensajes específicos por campo;
+    • Error: "Datos inválidos";
+   
+  
     
   else (Sí)
-    if (¿Documento ya existe?) then (Sí)
+    if (¿Usuario ya existe?) then (Sí)
       :Sistema muestra
-      • Error: "Postulante ya registrado"
+      • Error: "Usuario ya registrado"
       • Opción: "Ver perfil existente";
       
     else (No)
-      :Sistema crea el postulante
+      :Sistema crea el usuario
       • Asigna ID único
-      • Genera número de postulante
+      • Genera número de Usuario
+      • Asigna Tipo de Usuario "Postulante"
       • Guarda en base de datos
       • Crea perfil básico;
       

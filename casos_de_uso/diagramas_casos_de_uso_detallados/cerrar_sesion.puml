@@ -10,31 +10,18 @@ partition ManejoCerrarSesion {
   :Usuario solicita cerrar sesión
   • Hace clic en "Cerrar Sesión"
   • O selecciona desde menú usuario
-  • O por timeout automático;
-  
+
   :Sistema verifica estado actual
   • Sesión activa válida
-  • Trabajo sin guardar
+  • Test en ejecución
   • Procesos en ejecución;
   
-  if (¿Hay cambios sin guardar?) then (Sí)
-    :Sistema muestra advertencia
-    • "Tienes cambios sin guardar"
-    • Lista de elementos pendientes
-    • Opciones: Guardar/Descartar/Cancelar;
-    
-    :Usuario toma decisión
-    • Guarda cambios pendientes
-    • O descarta modificaciones
-    • O cancela el cierre;
-    
-  endif
   
   if (¿Hay procesos activos?) then (Sí)
     :Sistema verifica criticidad
     • Tests en progreso
     • Cargas de archivos
-    • Evaluaciones activas;
+    • Capacitaciones en curso;
     
     :Sistema maneja procesos
     • Espera finalización automática
