@@ -20,15 +20,15 @@ partition ManejoEditarPostulante {
     
   else (Sí)
     :Usuario modifica información
-    • Datos personales
-    • Información de contacto
-    • Nivel educativo
-    • Experiencia laboral
-    • Estado del postulante;
+    • Nombre completo
+    • Email
+    • Dirección
+    • Pasaporte
+    • Tipo de usuario
+    • Contraseña;
     
     :Sistema valida cambios
     • Integridad de datos
-    • Unicidad de email/documento
     • Formato de campos;
     
     if (¿Datos válidos?) then (No)
@@ -38,12 +38,8 @@ partition ManejoEditarPostulante {
       • Mantiene otros cambios;
       
     else (Sí)
-      if (¿Email/Documento duplicado?) then (Sí)
-        :Sistema muestra
-        • Error: "Email/Documento ya existe"
-        • Información del registro existente;
-        
-      else (No)
+  
+      
         :Sistema actualiza postulante
         • Guarda cambios en BD
         • Registra fecha de modificación
@@ -54,7 +50,7 @@ partition ManejoEditarPostulante {
         • Resumen de cambios realizados
         • Opción: "Ver perfil actualizado";
         
-      endif
+      
       
     endif
     
