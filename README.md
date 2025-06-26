@@ -36,9 +36,11 @@ Las [actas de reuniones](documentos/actas/README.md) documentan el progreso del 
 
 ## Equipo
 
-- [Nombre del Estudiante 1]
-- [Nombre del Estudiante 2]
-- [Nombre del Estudiante 3]
+- Elías Alarcón Ceballos
+- Diego García Niño
+- Lydia García Rivero
+- Daniel Lavín Aguado
+- Maura Martínez Noda
 
 ## Metodología
 
