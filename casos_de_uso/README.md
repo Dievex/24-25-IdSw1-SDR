@@ -12,32 +12,32 @@
 
 # Casos de Uso
 
-## Actores del Sistema
+# Actores del Sistema
 
 Los actores son entidades externas que interactúan con el sistema Novus. Pueden ser personas, otros sistemas o dispositivos.
 
-### Descripción
+## Descripción
 
 Este documento define los actores principales del sistema Novus y sus características:
 
-### Diagrama
+## Diagrama
 
 ![Diagrama de Actores](../../documentos/imagenes/actores/Actores.svg)
 
-#### Explicación del Diagrama
+### Explicación del Diagrama
 
 El diagrama muestra los cuatro actores principales que interactúan con el Sistema Novus:
 
-1. **POSTULANTE**: Postulantes en proceso de selección  
-2. **BECARIO**: Postulantes ya seleccionados  
-3. **Administrador de Aplicación**: Gestores técnicos del sistema  
-4. **Seleccionador**: Supervisores del programa que recomienda estudiantes para el programa PROFER  
+1. **POSTULANTE**: Postulantes en proceso de selección
+2. **BECARIO**: Postulantes ya seleccionados
+3. **Administrador de Aplicación**: Gestores técnicos del sistema
+4. **Seleccionador**: Supervisores del programa que recomienda estudiantes para el programa PROFER
 
 Cada actor tiene un rol específico y diferentes niveles de acceso al sistema, como se detalla a continuación.
 
-### Actores Principales
+## Actores Principales
 
-#### POSTULANTE
+### POSTULANTE
 - **Descripción**: Postulantes que aún no han aprobado los tests de selección
 - **Responsabilidades**:
   - Acceder a la plataforma con credenciales proporcionadas por la sede
@@ -45,13 +45,13 @@ Cada actor tiene un rol específico y diferentes niveles de acceso al sistema, c
   - Acceder a material básico de capacitación
   - Ver su propio progreso
 
-#### BECARIO
+### BECARIO
 - **Descripción**: Postulantes que han aprobado los tests y cumplen los requisitos
 - **Responsabilidades**:
   - Acceder a material avanzado de capacitación
   - Ver su propio progreso
 
-#### Administrador de Aplicación
+### Administrador de Aplicación
 - **Descripción**: Personal encargado de la gestión técnica de la plataforma
 - **Responsabilidades**:
   - Gestionar usuarios
@@ -59,7 +59,7 @@ Cada actor tiene un rol específico y diferentes niveles de acceso al sistema, c
   - Crear y modificar tests
   - Ver estadísticas de todos los usuarios
 
-#### Seleccionador
+### Seleccionador
 - **Descripción**: Personal de FUNIBER que recomienda estudiantes para el programa PROFER
 - **Responsabilidades**:
   - Ver estadísticas de todos los usuarios
