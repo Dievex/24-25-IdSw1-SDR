@@ -1,3 +1,14 @@
+<p align="center">
+  <a href="http://github.com/Dievex/24-25-IdSw1-SDR/blob/version-002/README.md">
+    🏠 <strong>Inicio</strong>
+  </a> •
+  <a href="https://github.com/Dievex/24-25-IdSw1-SDR/blob/version-002/modelo_del_dominio/README.md">
+    📦 <strong>Modelo del Dominio</strong>
+  </a> •
+  <a href="https://github.com/Dievex/24-25-IdSw1-SDR/blob/version-002/casos_de_uso/README.md">
+    ⚙️ <strong>Casos de Uso</strong>
+  </a>
+</p>
 # Diagramas de Casos de Uso Detallados
 
 Esta carpeta contiene los diagramas de casos de uso detallados del sistema, implementados en PlantUML. Cada diagrama representa un caso de uso específico con sus flujos principales, alternativos y de excepción.
