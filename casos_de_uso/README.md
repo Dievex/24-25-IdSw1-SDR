@@ -22,7 +22,7 @@ Este documento define los actores principales del sistema Novus y sus caracterí
 
 ## Diagrama
 
-![Diagrama de Actores](../../documentos/imagenes/actores/Actores.svg)
+![Diagrama de Actores](/documentos/imagenes/actores/Actores.svg)
 
 ### Explicación del Diagrama
 
@@ -94,7 +94,7 @@ Los siguientes actores participan en los casos de uso:
 
 **Actores involucrados**: Todos los actores del sistema (Usuario base)
 
-![Gestión de Sesiones](../../documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/manejo_sesion.svg)
+![Gestión de Sesiones](/documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/manejo_sesion.svg)
 ---
 
 ### 2. CRUD de Postulantes
@@ -112,7 +112,7 @@ Los siguientes actores participan en los casos de uso:
 - **Administrador**: Acceso completo (CRUD)
 - **Seleccionador**: Solo consulta (Listar)
 
-![CRUD de Postulantes](../../documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/crud_postulante.svg)
+![CRUD de Postulantes](/documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/crud_postulante.svg)
 ---
 
 ### 3. CRUD de Capacitaciones
@@ -131,7 +131,7 @@ Los siguientes actores participan en los casos de uso:
 - **Becario**: Solo consulta (Listar)
 - **Postulante**: Solo consulta (Listar)
 
-![CRUD de Capacitaciones](../../documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/crud_capacitacion.svg)
+![CRUD de Capacitaciones](/documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/crud_capacitacion.svg)
 ---
 
 ### 4. CRUD de Tests
@@ -149,7 +149,7 @@ Los siguientes actores participan en los casos de uso:
 - **Administrador**: Acceso completo (CRUD)
 - **Postulante**: Solo consulta (Listar)
 
-![CRUD de Test](../../documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/crud_test.svg)
+![CRUD de Test](/documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/crud_test.svg)
 ---
 
 ### 5. Gestión de Capacitaciones
@@ -165,7 +165,7 @@ Los siguientes actores participan en los casos de uso:
 - **Postulante**: Puede realizar capacitaciones y ver su progreso
 - **Becario**: Puede realizar capacitaciones y ver su progreso
 
-![Gestión de capacitaciones](../../documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/gestion_capacitacion.svg)
+![Gestión de capacitaciones](/documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/gestion_capacitacion.svg)
 ---
 
 ### 6. Gestión de Tests
@@ -180,7 +180,7 @@ Los siguientes actores participan en los casos de uso:
 **Actores involucrados**:
 - **Postulante**: Puede realizar tests y consultar sus resultados
 
-![Gestión Test](../../documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/gestion_test.svg)
+![Gestión Test](/documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/gestion_test.svg)
 ---
 
 ### 7. Consulta de Estadísticas
@@ -211,66 +211,66 @@ Los diagramas de casos de uso detallados proporcionan una vista granular de cada
 ### Gestión de Sesión
 
 #### Iniciar Sesión  
-![Iniciar Sesión](documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/iniciar_sesion.svg)
+![Iniciar Sesión](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/iniciar_sesion.svg)
 
 #### Cerrar Sesión  
-![Cerrar Sesión](documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/cerrar_sesion.svg)
+![Cerrar Sesión](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/cerrar_sesion.svg)
 
 ### Gestión de Postulantes
 
 #### Crear Postulante  
-![Crear Postulante](documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/crear_postulante.svg)
+![Crear Postulante](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/crear_postulante.svg)
 
 #### Editar Postulante  
-![Editar Postulante](documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/editar_postulante.svg)
+![Editar Postulante](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/editar_postulante.svg)
 
 #### Eliminar Postulante  
-![Eliminar Postulante](documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/eliminar_postulante.svg)
+![Eliminar Postulante](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/eliminar_postulante.svg)
 
 #### Listar Postulante  
-![Listar Postulante](documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/listar_postulante.svg)
+![Listar Postulante](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/listar_postulante.svg)
 
 ### Gestión de Capacitaciones
 
 #### Crear Capacitación  
-![Crear Capacitación](documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/crear_capacitacion.svg)
+![Crear Capacitación](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/crear_capacitacion.svg)
 
 #### Editar Capacitación  
-![Editar Capacitación](documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/editar_capacitacion.svg)
+![Editar Capacitación](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/editar_capacitacion.svg)
 
 #### Eliminar Capacitación  
-![Eliminar Capacitación](documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/eliminar_capacitacion.svg)
+![Eliminar Capacitación](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/eliminar_capacitacion.svg)
 
 #### Listar Capacitación  
-![Listar Capacitación](documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/listar_capacitacion.svg)
+![Listar Capacitación]/(documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/listar_capacitacion.svg)
 
 #### Hacer Capacitación  
-![Hacer Capacitación](documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/hacer_capacitacion.svg)
+![Hacer Capacitación]/(documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/hacer_capacitacion.svg)
 
 ### Gestión de Tests
 
 #### Crear Test  
-![Crear Test](documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/crear_test.svg)
+![Crear Test](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/crear_test.svg)
 
 #### Editar Test  
-![Editar Test](documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/editar_test.svg)
+![Editar Test](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/editar_test.svg)
 
 #### Eliminar Test  
-![Eliminar Test](documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/eliminar_test.svg)
+![Eliminar Test](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/eliminar_test.svg)
 
 #### Listar Test  
-![Listar Test](documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/listar_test.svg)
+![Listar Test](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/listar_test.svg)
 
 #### Hacer Test  
-![Hacer Test](documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/hacer_test.svg)
+![Hacer Test](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/hacer_test.svg)
 
 ### Consulta y Reportes
 
 #### Ver Estadísticas  
-![Ver Estadísticas](documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/ver_estadisticas.svg)
+![Ver Estadísticas](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/ver_estadisticas.svg)
 
 #### Ver Progreso  
-![Ver Progreso](documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/ver_progreso.svg)
+![Ver Progreso](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/ver_progreso.svg)
 
 #### Ver Resultados  
 ![Ver Resultados](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/ver_resultados.svg)
