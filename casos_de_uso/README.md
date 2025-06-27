@@ -51,7 +51,7 @@ Cada actor tiene un rol específico y diferentes niveles de acceso al sistema, c
   - Acceder a material avanzado de capacitación
   - Ver su propio progreso
 
-### Administrador de Aplicación
+### ADMINISTRADOR DE LA APLICACIÓN
 - **Descripción**: Personal encargado de la gestión técnica de la plataforma
 - **Responsabilidades**:
   - Gestionar usuarios
@@ -59,7 +59,7 @@ Cada actor tiene un rol específico y diferentes niveles de acceso al sistema, c
   - Crear y modificar tests
   - Ver estadísticas de todos los usuarios
 
-### Seleccionador
+### SELECCIONADOR
 - **Descripción**: Personal de FUNIBER que recomienda estudiantes para el programa PROFER
 - **Responsabilidades**:
   - Ver estadísticas de todos los usuarios
