@@ -273,7 +273,7 @@ Los diagramas de casos de uso detallados proporcionan una vista granular de cada
 ![Ver Progreso](documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/ver_progreso.svg)
 
 #### Ver Resultados  
-![Ver Resultados](documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/ver_resultados.svg)
+![Ver Resultados](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/ver_resultados.svg)
 
 ---
 
