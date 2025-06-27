@@ -242,10 +242,10 @@ Los diagramas de casos de uso detallados proporcionan una vista granular de cada
 ![Eliminar Capacitación](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/eliminar_capacitacion.svg)
 
 #### Listar Capacitación  
-![Listar Capacitación]/(documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/listar_capacitacion.svg)
+![Listar Capacitación](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/listar_capacitacion.svg)
 
 #### Hacer Capacitación  
-![Hacer Capacitación]/(documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/hacer_capacitacion.svg)
+![Hacer Capacitación](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/hacer_capacitacion.svg)
 
 ### Gestión de Tests
 
