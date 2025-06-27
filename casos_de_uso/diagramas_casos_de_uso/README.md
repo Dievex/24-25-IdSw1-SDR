@@ -9,10 +9,8 @@
     ⚙️ <strong>Casos de Uso</strong>
   </a>
 </p>
-# Diagramas de Casos de Uso
 
-Esta carpeta contiene los diagramas de casos de uso del sistema, organizados por funcionalidades principales. Todos los diagramas están implementados en PlantUML (.puml) y representan las interacciones entre los diferentes actores del sistema y las funcionalidades disponibles.
-
+# Diagramas de Casos de uso
 ## Actores del Sistema
 
 Los siguientes actores participan en los casos de uso:
