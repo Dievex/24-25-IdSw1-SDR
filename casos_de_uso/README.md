@@ -306,3 +306,44 @@ Los diagramas de casos de uso detallados proporcionan una vista granular de cada
 
 |![Diagrama de Contexto](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_postulante.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_postulante.puml)|
 |---|---|
+
+# Prototipos
+
+Los prototipos muestran diseños preliminares de las interfaces de usuario del sistema Novus, permitiendo visualizar cómo los usuarios interactuarán con la plataforma.
+
+## Descripción
+
+Estos prototipos representan:
+
+1. **Interfaz de Login**:
+   - Pantalla de inicio de sesión para todos los usuarios
+
+2. **Panel de Administración**:
+   - Interfaz para administradores con acceso a todas las funcionalidades
+
+3. **Sección de Tests**:
+   - Interfaz para la realización de tests por parte de los NO_BECARIOS
+
+4. **Sección de Capacitación**:
+   - Interfaz para acceder a videos y documentación
+
+5. **Visualización de Estadísticas**:
+   - Interfaz para que los administradores vean el progreso de los usuarios
+
+## Prototipos
+
+### Interfaz de Login
+![Prototipo - Login](../../documentos/imagenes/prototipo_login.png)
+
+### Panel de Administración
+![Prototipo - Panel de Administración](../../documentos/imagenes/prototipo_admin.png)
+
+### Sección de Tests
+![Prototipo - Tests](../../documentos/imagenes/prototipo_tests.png)
+
+### Sección de Capacitación
+![Prototipo - Capacitación](../../documentos/imagenes/prototipo_capacitacion.png)
+
+### Visualización de Estadísticas
+![Prototipo - Estadísticas](../../documentos/imagenes/prototipo_estadisticas.png)
+
