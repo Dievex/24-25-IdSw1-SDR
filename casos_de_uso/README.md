@@ -10,8 +10,6 @@
   </a>
 </p>
 
-# Casos de Uso
-
 # Actores del Sistema
 
 Los actores son entidades externas que interactúan con el sistema Novus. Pueden ser personas, otros sistemas o dispositivos.
