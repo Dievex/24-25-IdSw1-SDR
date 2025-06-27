@@ -94,7 +94,7 @@ Los siguientes actores participan en los casos de uso:
 
 **Actores involucrados**: Todos los actores del sistema (Usuario base)
 
-![Gestión de Sesiones](/documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/manejo_sesion.svg)
+![Gestión de Sesiones](../../documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/manejo_sesion.svg)
 ---
 
 ### 2. CRUD de Postulantes
@@ -112,7 +112,7 @@ Los siguientes actores participan en los casos de uso:
 - **Administrador**: Acceso completo (CRUD)
 - **Seleccionador**: Solo consulta (Listar)
 
-![CRUD de Postulantes](/documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/crud_postulante.svg)
+![CRUD de Postulantes](../../documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/crud_postulante.svg)
 ---
 
 ### 3. CRUD de Capacitaciones
@@ -131,7 +131,7 @@ Los siguientes actores participan en los casos de uso:
 - **Becario**: Solo consulta (Listar)
 - **Postulante**: Solo consulta (Listar)
 
-![CRUD de Capacitaciones](/documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/crud_capacitacion.svg)
+![CRUD de Capacitaciones](../../documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/crud_capacitacion.svg)
 ---
 
 ### 4. CRUD de Tests
@@ -149,7 +149,7 @@ Los siguientes actores participan en los casos de uso:
 - **Administrador**: Acceso completo (CRUD)
 - **Postulante**: Solo consulta (Listar)
 
-![CRUD de Test](/documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/crud_test.svg)
+![CRUD de Test](../../documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/crud_test.svg)
 ---
 
 ### 5. Gestión de Capacitaciones
@@ -165,7 +165,7 @@ Los siguientes actores participan en los casos de uso:
 - **Postulante**: Puede realizar capacitaciones y ver su progreso
 - **Becario**: Puede realizar capacitaciones y ver su progreso
 
-![Gestión de capacitaciones](/documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/gestion_capacitacion.svg)
+![Gestión de capacitaciones](../../documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/gestion_capacitacion.svg)
 ---
 
 ### 6. Gestión de Tests
@@ -180,7 +180,7 @@ Los siguientes actores participan en los casos de uso:
 **Actores involucrados**:
 - **Postulante**: Puede realizar tests y consultar sus resultados
 
-![Gestión Test](/documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/gestion_test.svg)
+![Gestión Test](../../documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/gestion_test.svg)
 ---
 
 ### 7. Consulta de Estadísticas
@@ -191,6 +191,11 @@ Los siguientes actores participan en los casos de uso:
 **Casos de uso incluidos**:
 - Ver Estadísticas
 
+**Actores involucrados**:
+- **Administrador**: Puede consultar estadísticas generales
+- **Seleccionador**: Puede consultar estadísticas relevantes
+
+![Consulta Estadisticas](../../documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/consultar_estadisticas.svg)
 ---
 
 # Diagramas de Casos de Uso Detallados
