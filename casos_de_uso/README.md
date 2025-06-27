@@ -84,7 +84,8 @@ Los siguientes actores participan en los casos de uso:
 ## Diagramas Disponibles
 
 ### 1. Gestión de Sesiones
-**Archivo**: `manejo_sesion.puml`  
+**Archivo**: `manejo_sesion.puml`
+
 **Descripción**: Define los casos de uso relacionados con la autenticación y manejo de sesiones de usuario.
 
 **Casos de uso incluidos**:
@@ -94,11 +95,11 @@ Los siguientes actores participan en los casos de uso:
 **Actores involucrados**: Todos los actores del sistema (Usuario base)
 
 ![Gestión de Sesiones](../../documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/manejo_sesion.svg)
-
 ---
 
 ### 2. CRUD de Postulantes
-**Archivo**: `crud_postulante.puml`  
+**Archivo**: `crud_postulante.puml`
+
 **Descripción**: Gestión completa de postulantes en el sistema.
 
 **Casos de uso incluidos**:
@@ -112,11 +113,11 @@ Los siguientes actores participan en los casos de uso:
 - **Seleccionador**: Solo consulta (Listar)
 
 ![CRUD de Postulantes](../../documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/crud_postulante.svg)
-
 ---
 
 ### 3. CRUD de Capacitaciones
-**Archivo**: `crud_capacitacion.puml`  
+**Archivo**: `crud_capacitacion.puml`
+
 **Descripción**: Administración de capacitaciones disponibles en el sistema.
 
 **Casos de uso incluidos**:
@@ -131,11 +132,11 @@ Los siguientes actores participan en los casos de uso:
 - **Postulante**: Solo consulta (Listar)
 
 ![CRUD de Capacitaciones](../../documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/crud_capacitacion.svg)
-
 ---
 
 ### 4. CRUD de Tests
-**Archivo**: `crud_test.puml`  
+**Archivo**: `crud_test.puml`
+
 **Descripción**: Gestión de tests y evaluaciones del sistema.
 
 **Casos de uso incluidos**:
@@ -149,11 +150,11 @@ Los siguientes actores participan en los casos de uso:
 - **Postulante**: Solo consulta (Listar)
 
 ![CRUD de Test](../../documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/crud_test.svg)
-
 ---
 
 ### 5. Gestión de Capacitaciones
-**Archivo**: `gestion_capacitacion.puml`  
+**Archivo**: `gestion_capacitacion.puml`
+
 **Descripción**: Funcionalidades para realizar y seguir el progreso de capacitaciones.
 
 **Casos de uso incluidos**:
@@ -161,14 +162,15 @@ Los siguientes actores participan en los casos de uso:
 - Ver Progreso
 
 **Actores involucrados**:
-- **Postulante** y **Becario**
+- **Postulante**: Puede realizar capacitaciones y ver su progreso
+- **Becario**: Puede realizar capacitaciones y ver su progreso
 
 ![Gestión de capacitaciones](../../documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/gestion_capacitacion.svg)
-
 ---
 
 ### 6. Gestión de Tests
-**Archivo**: `gestion_test.puml`  
+**Archivo**: `gestion_test.puml`
+
 **Descripción**: Funcionalidades para realizar tests y consultar resultados.
 
 **Casos de uso incluidos**:
@@ -176,24 +178,18 @@ Los siguientes actores participan en los casos de uso:
 - Ver Resultado
 
 **Actores involucrados**:
-- **Postulante**
+- **Postulante**: Puede realizar tests y consultar sus resultados
 
 ![Gestión Test](../../documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/gestion_test.svg)
-
 ---
 
 ### 7. Consulta de Estadísticas
-**Archivo**: `consultar_estadisticas.puml`  
+**Archivo**: `consultar_estadisticas.puml`
+
 **Descripción**: Funcionalidades para consultar estadísticas del sistema.
 
 **Casos de uso incluidos**:
 - Ver Estadísticas
-
-**Actores involucrados**:
-- **Administrador**
-- **Seleccionador**
-
-![Consulta Estadisticas](../../documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/consultar_estadisticas.svg)
 
 ---
 
