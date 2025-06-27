@@ -1,3 +1,14 @@
+<p align="center">
+  <a href="http://github.com/Dievex/24-25-IdSw1-SDR/blob/version-002/README.md">
+    🏠 <strong>Inicio</strong>
+  </a> •
+  <a href="https://github.com/Dievex/24-25-IdSw1-SDR/blob/version-002/modelo_del_dominio/README.md">
+    📦 <strong>Modelo del Dominio</strong>
+  </a> •
+  <a href="https://github.com/Dievex/24-25-IdSw1-SDR/blob/version-002/casos_de_uso/README.md">
+    ⚙️ <strong>Casos de Uso</strong>
+  </a>
+</p>
 # Diagrama de Estados
 
 El diagrama de estados muestra los diferentes estados por los que pasan las entidades del sistema Novus y las transiciones entre estos estados.
