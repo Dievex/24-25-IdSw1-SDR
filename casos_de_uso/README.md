@@ -333,17 +333,17 @@ Estos prototipos representan:
 ## Prototipos
 
 ### Interfaz de Login
-![Prototipo - Login](../../documentos/imagenes/prototipo_login.png)
+![Prototipo - Login](/documentos/imagenes/prototipo_login.png)
 
 ### Panel de Administración
-![Prototipo - Panel de Administración](../../documentos/imagenes/prototipo_admin.png)
+![Prototipo - Panel de Administración](/documentos/imagenes/prototipo_admin.png)
 
 ### Sección de Tests
-![Prototipo - Tests](../../documentos/imagenes/prototipo_tests.png)
+![Prototipo - Tests](/documentos/imagenes/prototipo_tests.png)
 
 ### Sección de Capacitación
-![Prototipo - Capacitación](../../documentos/imagenes/prototipo_capacitacion.png)
+![Prototipo - Capacitación](/documentos/imagenes/prototipo_capacitacion.png)
 
 ### Visualización de Estadísticas
-![Prototipo - Estadísticas](../../documentos/imagenes/prototipo_estadisticas.png)
+![Prototipo - Estadísticas](/documentos/imagenes/prototipo_estadisticas.png)
 
