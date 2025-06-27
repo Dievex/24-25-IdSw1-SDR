@@ -1,3 +1,14 @@
+<p align="center">
+  <a href="http://github.com/Dievex/24-25-IdSw1-SDR/blob/version-002/README.md">
+    🏠 <strong>Inicio</strong>
+  </a> •
+  <a href="https://github.com/Dievex/24-25-IdSw1-SDR/blob/version-002/modelo_del_dominio/README.md">
+    📦 <strong>Modelo del Dominio</strong>
+  </a> •
+  <a href="https://github.com/Dievex/24-25-IdSw1-SDR/blob/version-002/casos_de_uso/README.md">
+    ⚙️ <strong>Casos de Uso</strong>
+  </a>
+</p>
 # Diagrama de Objetos
 
 El diagrama de objetos muestra instancias concretas de las clases definidas en el diagrama de clases, ilustrando cómo se relacionan en escenarios específicos del sistema Novus.
