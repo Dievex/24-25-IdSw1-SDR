@@ -19,7 +19,7 @@ state "CAPACITACIÓN" as Capacitacion {
     state "COMPLETADA" as Completada
     state "VER_PROGRESO" as VerProg
     
-    [*] --> SeleccionCap
+    [*] --> SeleccionCap : Listar las capacitaciones
     [*] --> VerProg : Ver progreso de las capacitaciones
     SeleccionCap --> EnCurso : Iniciar capacitación
     EnCurso --> Completada : Completar módulos
