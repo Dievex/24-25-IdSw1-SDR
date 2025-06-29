@@ -7,10 +7,8 @@ start
 
 partition ManejoEliminarTest {
   
-  :Administrador selecciona test
-  • Desde lista o vista detalle
-  • Hace clic en "Eliminar"
-  • Sistema verifica permisos;
+  :Administrador selecciona test;
+  :Administrador solicita eliminar test;
   
   :Sistema verifica dependencias
   • Resultados de postulantes
@@ -20,13 +18,15 @@ partition ManejoEliminarTest {
   if (¿Tiene resultados registrados?) then (Sí)
     :Sistema muestra restricción
     • Error: "No se puede eliminar"
-    • Motivo: "Existen X resultados registrados"
+    • Motivo: "Existen X resultados registrados";
+
+    :Sistema muestra alternativas
     • Alternativas disponibles:
       - Archivar test
       - Desactivar test
       - Exportar datos primero;
     
-    :Usuario selecciona alternativa
+    :Administrador selecciona alternativa
     • Archivar test
     • Desactivar test  
     • Exportar datos;
@@ -40,10 +40,12 @@ partition ManejoEliminarTest {
     if (¿Hay tests en progreso?) then (Sí)
       :Sistema muestra advertencia
       • "X postulantes realizando test"
-      • "¿Finalizar sesiones activas?"
+      • "¿Finalizar sesiones activas?";
+
+      :Sistema muestra opciones
       • Opciones: Esperar/Forzar finalización;
       
-      if (¿Forzar finalización?) then (Sí)
+      if (¿Administrador solicita forzar finalización?) then (Sí)
         :Sistema finaliza sesiones
         • Guarda respuestas parciales
         • Notifica a postulantes
@@ -65,20 +67,14 @@ partition ManejoEliminarTest {
     :Sistema muestra confirmación final
     • Pregunta: "¿Eliminar permanentemente?"
     • Advertencia: "Acción irreversible"
-    • Detalles del test a eliminar
-    • Botones: Confirmar/Cancelar;
+    • Detalles del test a eliminar;
     
     if (¿Administrador confirma?) then (No)
-      :Sistema cancela operación
-      • Vuelve a lista de tests;
+      :Sistema cancela operación;
       
     else (Sí)
-      :Sistema elimina test
-      • Borra estructura de BD
-      • Elimina banco de preguntas
-      • Limpia archivos asociados;
+      :Sistema elimina test;
      
-      
       :Sistema confirma eliminación
       • Mensaje: "Test eliminado exitosamente"
       • Actualiza lista automáticamente;

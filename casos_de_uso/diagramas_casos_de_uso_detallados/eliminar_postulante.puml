@@ -8,6 +8,7 @@ start
 partition ManejoEliminarPostulante {
   
   :Administrador selecciona postulante;
+  :Administrador solicita eliminar postulante;
   
   :Sistema verifica dependencias
   • Inscripciones en capacitaciones
