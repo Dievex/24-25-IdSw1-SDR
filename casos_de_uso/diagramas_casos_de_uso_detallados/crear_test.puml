@@ -7,35 +7,30 @@ start
 
 partition ManejoCrearTest {
   
-  :Administrador introduce información básica
+  :Administrador solicita introducir información básica
   • Nombre del test
   • Descripción
   • Duración límite
   • Puntaje máximo;
+
+  :Sistema permite introducir los datos;
   
-  
-  :Administrador configura preguntas
-  • Añade preguntas una por una
-  • Define tipo: múltiple opción/abierta
-  • Asigna puntaje por pregunta
-  • Establece respuestas correctas;
-  
-  :Sistema valida la configuración
-  • Suma de puntajes = puntaje máximo
-  • Todas las preguntas tienen respuesta
-  • Duración coherente con contenido;
-  
- 
-  :Sistema crea el test
-  • Genera ID único
-  • Guarda estructura en BD
-  • Crea banco de preguntas
-  • Establece estado "Borrador";
+  repeat
+    :Administrador solicita configurar pregunta
+    • Define tipo: múltiple opción/abierta
+    • Asigna puntaje por pregunta
+    • Establece respuestas correctas;
     
- :Sistema muestra opciones
- • Mensaje: "Test creado exitosamente"
- • Botón: "Publicar test"
- • Botón: "Cancelar";
+    :Sistema valida la configuración
+    • Suma de puntajes = puntaje máximo
+    • La pregunta tiene respuesta;
+  repeat while (¿Crear otra pregunta?) is (Sí)
+  ->No;
+  
+  :Sistema crea el test;
+    
+ :Sistema muestra
+ • Mensaje: "Test creado exitosamente";
     
 
   

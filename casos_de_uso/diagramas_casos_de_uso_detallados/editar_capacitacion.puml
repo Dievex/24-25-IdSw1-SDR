@@ -7,22 +7,16 @@ start
 
 partition ManejoEditarCapacitacion {
   
-  :Sistema carga datos existentes
-  • Busca capacitación por ID
-  • Muestra formulario prellenado;
+  :Sistema muestra datos existentes;
   
   if (¿Capacitación existe?) then (No)
     :Sistema muestra
-    • Error: "Capacitación no encontrada"
-    • Redirige a lista;
+    • Error: "Capacitación no encontrada";
     
   else (Sí)
-    :Administrador modifica
-    • Título de la capacitación
-    • Descripción
-    • URL o archivo;
+    :Administrador solicita modificar;
     
-    :Sistema valida cambios;
+    :Sistema valida modificación;
     
     if (¿Datos válidos?) then (No)
       :Sistema muestra
@@ -31,7 +25,7 @@ partition ManejoEditarCapacitacion {
       
     else (Sí)
       :Sistema actualiza capacitación
-      • Guarda cambios en BD
+      • Guarda cambios
       • Registra fecha de modificación;
       
       :Sistema muestra

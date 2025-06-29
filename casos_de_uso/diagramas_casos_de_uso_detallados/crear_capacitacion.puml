@@ -17,9 +17,7 @@ partition ManejoCrearCapacitacion {
     • Campos requeridos;
     
   else (Sí)
-    :Sistema crea la capacitación
-    • Asigna ID único
-    • Guarda en base de datos;
+    :Sistema crea la capacitación;
     
     :Sistema muestra
     • Mensaje: "Capacitación creada exitosamente"
