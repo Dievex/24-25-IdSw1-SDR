@@ -7,49 +7,28 @@ start
 
 partition ManejoEditarPostulante {
   
-  :Sistema carga datos existentes
-  • Busca postulante por ID
-  • Carga información completa
-  • Muestra formulario prellenado;
+  :Sistema muestra datos existentes;
   
   if (¿Postulante existe?) then (No)
     :Sistema muestra
-    • Error: "Postulante no encontrado"
-    • Opción: "Volver a lista"
-    • Sugerencia: "Crear nuevo";
+    • Error: "Postulante no encontrado";
     
   else (Sí)
-    :Usuario modifica información
-    • Nombre completo
-    • Email
-    • Dirección
-    • Pasaporte
-    • Tipo de usuario
-    • Contraseña;
+    :Usuario solicita modificar información;
     
     :Sistema valida cambios
-    • Integridad de datos
-    • Formato de campos;
+    • Integridad de datos;
     
     if (¿Datos válidos?) then (No)
       :Sistema muestra
-      • Error: "Datos inválidos"
-      • Campos problemáticos
-      • Mantiene otros cambios;
+      • Error: "Datos inválidos";
       
     else (Sí)
-  
-      
-        :Sistema actualiza postulante
-        • Guarda cambios en BD
-        • Registra fecha de modificación
-        • Auditoría de cambios;
+        :Sistema actualiza postulante;
         
         :Sistema muestra
         • Mensaje: "Postulante actualizado"
-        • Resumen de cambios realizados
-        • Opción: "Ver perfil actualizado";
-        
+        • Resumen de cambios realizados;
       
       
     endif
