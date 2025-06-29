@@ -62,3 +62,7 @@ Cada actor tiene un rol específico y diferentes niveles de acceso al sistema, c
   - Ver estadísticas de todos los usuarios
   - Tomar decisiones basadas en los resultados
   - Supervisar el proceso de selección y capacitación
+
+### Usuario no registrado
+- **Descripción**: Usuarios que no han accedido al sistema
+

@@ -2,24 +2,26 @@
 
 skinparam actorStyle awesome
 left to right direction
-actor "Usuario" as User
+
 actor "Administrador" as Admin
 actor "Postulante" as Postulante
 actor "Becario" as Becario
 actor "Seleccionador" as Seleccionador
+actor "Usuario no registrado" as NoRegistrado
 
 rectangle "Manejo de Sesión" {
   usecase "Iniciar Sesión" as IniciarSesion
   usecase "Cerrar Sesión" as CerrarSesion
 }
 
-Admin --|>  User
-Seleccionador --|>  User
-Postulante --|> User
-Becario --|> User
 
-User --> IniciarSesion
-User --> CerrarSesion
+NoRegistrado --> IniciarSesion
+Admin -u-> CerrarSesion
+Postulante -u-> CerrarSesion
+Becario -u-> CerrarSesion
+Seleccionador -r-> CerrarSesion
+
+
 
 
 @enduml

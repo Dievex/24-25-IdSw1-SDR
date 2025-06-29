@@ -6,6 +6,7 @@ actor "POSTULANTE" as NoBecario
 actor "BECARIO" as Becario
 actor "Administrador de Aplicación" as AdminApp
 actor "Seleccionador" as Seleccionador
+actor "Usuario no registrado" as NoRegistrado
 
 rectangle "Sistema Novus" {
 }
@@ -14,6 +15,7 @@ NoBecario --> "Sistema Novus" : interactúa
 Becario --> "Sistema Novus" : interactúa
 AdminApp --> "Sistema Novus" : gestiona
 Seleccionador --> "Sistema Novus" : supervisa
+NoRegistrado --> "Sistema Novus" : interactúa
 
 note right of NoBecario
   Postulantes que aún no han 
@@ -34,5 +36,11 @@ note right of Seleccionador
   Personal de FUNIBER que recomienda 
   estudiantes para el programa PROFER
 end note
+
+note right of NoRegistrado
+  Usuarios que no han accedido
+  al sistema
+end note
+
 
 @enduml
