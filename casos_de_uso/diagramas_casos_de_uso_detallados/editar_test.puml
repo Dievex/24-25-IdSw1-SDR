@@ -7,16 +7,11 @@ start
 
 partition ManejoEditarTest {
   
-  :Sistema carga test existente
-  • Busca test por ID
-  • Verifica permisos de edición
-  • Carga configuración completa;
+  :Sistema muestra test existente;
   
   if (¿Test existe?) then (No)
     :Sistema muestra
-    • Error: "Test no encontrado"
-    • Opción: "Volver a lista"
-    • Sugerencia: "Crear nuevo test";
+    • Error: "Test no encontrado";
     
   else (Sí)
     :Sistema verifica estado del test
@@ -33,22 +28,30 @@ partition ManejoEditarTest {
         - Modificar descripción
         - Duplicar para nueva versión;
       
-      if (¿Adiminstrador elige duplicar?) then (Sí)
-        :Sistema crea copia
-        • Nuevo ID asignado
-        • Estado: "Borrador"
-        • Sufijo: "- Copia"
-        • Redirige a edición completa;
+      if (¿Adiminstrador solicita duplicar?) then (Sí)
+        :Sistema crea copia;
         
       else (No)
-        :Administrador realiza cambios limitados
+        :Administrador solicita realizar cambios limitados
         • Solo campos permitidos
         • Sin modificar preguntas;
+
+        :Sistema valida cambios;
+
+        if (¿Cambios válidos?) then (No)
+          :Sistema muestra
+          • Error: "Configuración inválida"
+          • Mantiene formulario abierto;
+          
+        else (Sí)
+          :Sistema actualiza test;
+          
+        endif
         
       endif
       
     else (No - Sin resultados)
-      :Administrador puede editar libremente
+      :Administrador solicita editar libremente
       • Información básica del test
       • Agregar/eliminar preguntas
       • Modificar respuestas correctas
@@ -62,19 +65,15 @@ partition ManejoEditarTest {
       if (¿Cambios válidos?) then (No)
         :Sistema muestra
         • Error: "Configuración inválida"
-        • Detalles específicos
         • Mantiene formulario abierto;
         
       else (Sí)
         :Sistema actualiza test
-        • Guarda cambios en BD
-        • Actualiza fecha de modificación
-        • Registra auditoría de cambios;
+        • Actualiza fecha de modificación;
         
         :Sistema muestra confirmación
         • Mensaje: "Test actualizado"
-        • Resumen de cambios
-        • Opciones: Vista previa/Publicar;
+        • Resumen de cambios;
         
       endif
       
