@@ -7,9 +7,8 @@ start
 
 partition ManejoCerrarSesion {
   
-  :Usuario solicita cerrar sesión
-  • Hace clic en "Cerrar Sesión"
-  • O selecciona desde menú usuario
+  :Usuario solicita cerrar sesión;
+
 
   :Sistema verifica estado actual
   • Sesión activa válida
@@ -31,27 +30,14 @@ partition ManejoCerrarSesion {
   endif
   
   :Sistema procesa cierre de sesión
-  • Invalida token de sesión
-  • Limpia cookies de sesión
-  • Registra hora de cierre
-  • Actualiza estado "offline";
-  
-  :Sistema limpia datos temporales
-  • Cache del navegador
-  • Variables de sesión
-  • Archivos temporales
-  • Estados de interfaz;
-  
-  :Sistema registra auditoría
-  • Usuario que cerró sesión
-  • Timestamp de cierre
-  • Duración de la sesión
-  • IP de origen;
-  
-  :Sistema redirige
-  • A página de login
-  • Mensaje: "Sesión cerrada exitosamente"
-  • Limpia historial sensible;
+    • Solicita confirmación;
+
+    if (¿Usuario confirma?) then (Sí)
+      :Sistema cierra sesión;
+      :VISTA_INICIAR_SESION;
+    else (No)
+      :Sistema mantiene sesión activa;
+    endif
   
 }
 

@@ -7,12 +7,9 @@ start
 
 partition ManejoCrearCapacitacion {
   
-  :Administrador introduce
-  • Nombre de la capacitación
-  • Descripción
-  • URL o archivo
+  :Administrador solicita introducir datos de la capacitación;
   
-  :Sistema valida los datos;
+  :Sistema permite introducir los datos;
   
   if (¿Datos válidos?) then (No)
     :Sistema muestra
