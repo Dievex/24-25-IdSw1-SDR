@@ -7,25 +7,19 @@ start
 
 partition ManejoEliminarCapacitacion {
   
-  :Administrador selecciona capacitación
-  • Desde lista o vista detalle
-  • Hace clic en "Eliminar";
-  
-  
+  :Administrador selecciona capacitación;
+
+  :Administrador solicita eliminar capacitación;
   
   :Sistema muestra confirmación
   • Pregunta: "¿Está seguro?"
-  • Detalles de la capacitación
-  • Botones: Confirmar/Cancelar;
+  • Detalles de la capacitación;
     
     if (¿Administrador confirma?) then (No)
-      :Sistema cancela operación
-      • Vuelve a vista anterior;
+      :Sistema cancela operación;
       
     else (Sí)
-      :Sistema elimina capacitación
-      • Borra de base de datos
-      • Registra en log de auditoría;
+      :Sistema elimina capacitación;
       
       :Sistema muestra
       • Mensaje: "Capacitación eliminada"
