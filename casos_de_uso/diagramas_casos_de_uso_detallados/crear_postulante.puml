@@ -7,18 +7,9 @@ start
 
 partition ManejoCrearPostulante {
   
-  :Administrador introduce
-  • Nombre completo
-  • Email
-  • Dirección
-  • Pasaporte
-  • Tipo de usuario
-  • Contraseña;
+  :Administrador solicita introducir datos del postulante;
 
-  
-  :Sistema valida los datos
-  • Formato de email
-  • Campos obligatorios;
+  :Sistema permite introducir los datos;
   
   if (¿Datos válidos?) then (No)
     :Sistema muestra
@@ -33,16 +24,10 @@ partition ManejoCrearPostulante {
       • Opción: "Ver perfil existente";
       
     else (No)
-      :Sistema crea el usuario
-      • Asigna ID único
-      • Genera número de Usuario
-      • Asigna Tipo de Usuario "Postulante"
-      • Guarda en base de datos
-      • Crea perfil básico;
+      :Sistema crea el usuario;
       
       :Sistema muestra
       • Mensaje: "Postulante creado exitosamente"
-      • Número de registro asignado
       • Redirige a perfil del postulante;
       
     endif
