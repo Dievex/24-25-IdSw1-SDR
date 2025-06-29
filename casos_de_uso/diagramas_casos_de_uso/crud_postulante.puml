@@ -6,16 +6,20 @@ actor "Seleccionador" as Seleccionador
 
 rectangle "CRUD Postulante" {
   usecase "Crear Postulante" as CrearPostulante
-  usecase "Listar Postulante" as ListarPostulante
+  usecase "Listar Postulantes" as ListarPostulante
   usecase "Editar Postulante" as EditarPostulante
   usecase "Eliminar Postulante" as EliminarPostulante
+  usecase "Ver Postulante" as VerPostulante
 }
 
 Admin --> CrearPostulante
 Admin --> ListarPostulante
 Admin --> EditarPostulante
 Admin --> EliminarPostulante
+Admin --> VerPostulante
+
 
 Seleccionador --> ListarPostulante
+Seleccionador --> VerPostulante
 
 @enduml

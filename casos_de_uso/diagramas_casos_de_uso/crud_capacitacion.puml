@@ -5,18 +5,23 @@ actor "Administrador" as Admin
 
 rectangle "CRUD Capacitacion" {
   usecase "Crear Capacitacion" as CrearCapacitacion
-  usecase "Listar Capacitacion" as ListarCapacitacion
+  usecase "Listar Capacitaciones" as ListarCapacitacion
   usecase "Editar Capacitacion" as EditarCapacitacion
   usecase "Eliminar Capacitacion" as EliminarCapacitacion
+  usecase "Ver Capacitacion" as VerCapacitacion
 }
 
 Admin --> CrearCapacitacion
 Admin --> ListarCapacitacion
 Admin --> EditarCapacitacion
 Admin --> EliminarCapacitacion
+Admin --> VerCapacitacion
 
 Becario --> ListarCapacitacion
 Postulante --> ListarCapacitacion
+Becario --> VerCapacitacion
+Postulante --> VerCapacitacion
+
 
 
 @enduml

@@ -8,14 +8,17 @@ rectangle "CRUD Test" {
   usecase "Listar Test" as ListarTest
   usecase "Editar Test" as EditarTest
   usecase "Eliminar Test" as EliminarTest
+  usecase "Ver Test" as VerTest
 }
 
 Admin --> CrearTest
 Admin --> ListarTest
 Admin --> EditarTest
 Admin --> EliminarTest
+Admin --> VerTest
 
 Postulante --> ListarTest
+Postulante --> VerTest
 
 
 @enduml
