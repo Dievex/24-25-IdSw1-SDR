@@ -9,6 +9,7 @@
     ⚙️ <strong>Casos de Uso</strong>
   </a>
 </p>
+
 # Diagrama de Clases
 
 El diagrama de clases muestra la estructura estática del sistema Novus, definiendo las clases, sus atributos, operaciones y las relaciones entre ellas.
