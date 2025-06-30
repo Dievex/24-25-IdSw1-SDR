@@ -80,7 +80,7 @@ Cada actor tiene un rol específico y diferentes niveles de acceso al sistema, c
 - Iniciar Sesión
 - Cerrar Sesión
 
-**Actores involucrados**: Todos los actores del sistema (Usuario base)
+**Actores involucrados**: Todos los actores del sistema (Usuario base) y el usuario no registrado
 
 ![Gestión de Sesiones](/documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/manejo_sesion.svg)
 ---
@@ -93,12 +93,13 @@ Cada actor tiene un rol específico y diferentes niveles de acceso al sistema, c
 **Casos de uso incluidos**:
 - Crear Postulante
 - Listar Postulante
+- Ver Postulante
 - Editar Postulante
 - Eliminar Postulante
 
 **Actores involucrados**:
 - **Administrador**: Acceso completo (CRUD)
-- **Seleccionador**: Solo consulta (Listar)
+- **Seleccionador**: Solo consulta (Listar y Ver)
 
 ![CRUD de Postulantes](/documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/crud_Postulante.svg)
 ---
@@ -111,13 +112,14 @@ Cada actor tiene un rol específico y diferentes niveles de acceso al sistema, c
 **Casos de uso incluidos**:
 - Crear Capacitación
 - Listar Capacitación
+- Ver Capacitación
 - Editar Capacitación
 - Eliminar Capacitación
 
 **Actores involucrados**:
 - **Administrador**: Acceso completo (CRUD)
-- **Becario**: Solo consulta (Listar)
-- **Postulante**: Solo consulta (Listar)
+- **Becario**: Solo consulta (Listar y Ver)
+- **Postulante**: Solo consulta (Listar y Ver)
 
 ![CRUD de Capacitaciones](/documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/crud_capacitacion.svg)
 ---
@@ -130,12 +132,13 @@ Cada actor tiene un rol específico y diferentes niveles de acceso al sistema, c
 **Casos de uso incluidos**:
 - Crear Test
 - Listar Test
+- Ver Test
 - Editar Test
 - Eliminar Test
 
 **Actores involucrados**:
 - **Administrador**: Acceso completo (CRUD)
-- **Postulante**: Solo consulta (Listar)
+- **Postulante**: Solo consulta (Listar y Ver)
 
 ![CRUD de Test](/documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/crud_test.svg)
 ---
