@@ -7,45 +7,29 @@ start
 
 partition ManejoVerEstadisticas {
   
-  :Administrador/Seleccionador accede al módulo
+  :Administrador/Seleccionador solicita acceder al módulo
   • Selecciona "Estadísticas";
 
-  
-  :Sistema carga dashboard
-  • Conecta con base de datos
-  • Procesa información;
+  :Sistema permite acceder al módulo;
   
   if (¿Datos disponibles?) then (No)
     :Sistema muestra
-    • Error: "No hay datos suficientes"
-    • Mensaje: "Seleccione otro período"
-    • Opciones de filtro;
+    • Error: "No hay datos suficientes";
     
   else (Sí)
-    :Sistema genera estadísticas
-    • Capacitaciones por mes/año
-    • Porcentaje de aprobación
-    • Número de postulantes/becarios;
-  
- 
+    :Sistema genera estadísticas;
     
-    :Sistema muestra dashboard
-    • Gráficos interactivos
-    • Tablas resumen
-    • Indicadores clave (KPIs)
-    • Opciones de exportación;
-    
- 
+    :Sistema muestra dashboard;
+
+    :Administrador/seleccionador solicita exportar;
+
+    :Sistema permite exportación;
     
     if (¿Usuario exporta?) then (Sí)
-      :Sistema genera reporte
-      • Formato seleccionado
-      • Descarga automática;
+      :Sistema genera reporte;
       
     else (No)
-      :Usuario continúa navegando
-      • Actualiza filtros
-      • Explora diferentes vistas;
+      :Administrador/seleccionador continúa navegando;
       
     endif
     
