@@ -26,16 +26,17 @@ Este documento define los actores principales del sistema Novus y sus caracterí
 
 El diagrama muestra los cuatro actores principales que interactúan con el Sistema Novus:
 
-1. **POSTULANTE**: Postulantes en proceso de selección
-2. **BECARIO**: Postulantes ya seleccionados
+1. **Postulante**: Postulantes en proceso de selección
+2. **Becario**: Postulantes ya seleccionados
 3. **Administrador de Aplicación**: Gestores técnicos del sistema
 4. **Seleccionador**: Supervisores del programa que recomienda estudiantes para el programa PROFER
+5. **Usuario no registrado**: Usuario que no ha accedido al sistema
 
 Cada actor tiene un rol específico y diferentes niveles de acceso al sistema, como se detalla a continuación.
 
 ## Actores Principales
 
-### POSTULANTE
+### Postulante
 - **Descripción**: Postulantes que aún no han aprobado los tests de selección
 - **Responsabilidades**:
   - Acceder a la plataforma con credenciales proporcionadas por la sede
@@ -43,13 +44,13 @@ Cada actor tiene un rol específico y diferentes niveles de acceso al sistema, c
   - Acceder a material básico de capacitación
   - Ver su propio progreso
 
-### BECARIO
+### Becario
 - **Descripción**: Postulantes que han aprobado los tests y cumplen los requisitos
 - **Responsabilidades**:
   - Acceder a material avanzado de capacitación
   - Ver su propio progreso
 
-### ADMINISTRADOR DE LA APLICACIÓN
+### Administrador DE LA APLICACIÓN
 - **Descripción**: Personal encargado de la gestión técnica de la plataforma
 - **Responsabilidades**:
   - Gestionar usuarios
@@ -57,27 +58,18 @@ Cada actor tiene un rol específico y diferentes niveles de acceso al sistema, c
   - Crear y modificar tests
   - Ver estadísticas de todos los usuarios
 
-### SELECCIONADOR
+### Seleccionador
 - **Descripción**: Personal de FUNIBER que recomienda estudiantes para el programa PROFER
 - **Responsabilidades**:
   - Ver estadísticas de todos los usuarios
   - Tomar decisiones basadas en los resultados
   - Supervisar el proceso de selección y capacitación
+
+### Usuario no registrado
+- **Descripción**: Usuarios que no han accedido al sistema
 ---
 
 # Diagramas de Casos de Uso
-
-Esta carpeta contiene los diagramas de casos de uso del sistema, organizados por funcionalidades principales. Todos los diagramas están implementados en PlantUML (.puml) y representan las interacciones entre los diferentes actores del sistema y las funcionalidades disponibles.
-
-## Actores del Sistema
-
-Los siguientes actores participan en los casos de uso:
-
-- **Usuario**: Actor base del cual heredan los demás actores
-- **Administrador**: Gestiona el sistema completo (usuarios, capacitaciones, tests)
-- **Seleccionador**: Consulta información y ve los postulantes
-- **Postulante**: Realiza tests y capacitaciones
-- **Becario**: Realiza capacitaciones y consulta su progreso
 
 ## Diagramas Disponibles
 
@@ -96,9 +88,9 @@ Los siguientes actores participan en los casos de uso:
 ---
 
 ### 2. CRUD de Postulantes
-**Archivo**: `crud_postulante.puml`
+**Archivo**: `crud_Postulante.puml`
 
-**Descripción**: Gestión completa de postulantes en el sistema.
+**Descripción**: Gestión completa de Postulantes en el sistema.
 
 **Casos de uso incluidos**:
 - Crear Postulante
@@ -110,7 +102,7 @@ Los siguientes actores participan en los casos de uso:
 - **Administrador**: Acceso completo (CRUD)
 - **Seleccionador**: Solo consulta (Listar)
 
-![CRUD de Postulantes](/documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/crud_postulante.svg)
+![CRUD de Postulantes](/documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/crud_Postulante.svg)
 ---
 
 ### 3. CRUD de Capacitaciones
@@ -222,16 +214,16 @@ Los diagramas de casos de uso detallados proporcionan una vista granular de cada
 ### Gestión de Postulantes
 
 #### Crear Postulante  
-![Crear Postulante](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/crear_postulante.svg)
+![Crear Postulante](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/crear_Postulante.svg)
 
 #### Editar Postulante  
-![Editar Postulante](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/editar_postulante.svg)
+![Editar Postulante](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/editar_Postulante.svg)
 
 #### Eliminar Postulante  
-![Eliminar Postulante](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/eliminar_postulante.svg)
+![Eliminar Postulante](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/eliminar_Postulante.svg)
 
 #### Listar Postulante  
-![Listar Postulante](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/listar_postulante.svg)
+![Listar Postulante](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/listar_Postulante.svg)
 
 ### Gestión de Capacitaciones
 
@@ -284,69 +276,29 @@ Los diagramas de casos de uso detallados proporcionan una vista granular de cada
 
 ### Seleccionador
 
-|![Diagrama de Contexto](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_seleccionador.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_seleccionador.puml)|
+|![Diagrama de Contexto](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_Seleccionador.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_Seleccionador.puml)|
 |---|---|
 
 ### Administrador
 
 #### Diagrama General
-|![Diagrama de Contexto](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_administrador.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_administrador.puml)|
+|![Diagrama de Contexto](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_Administrador.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_Administrador.puml)|
 |---|---|
 
 #### Gestión de Usuarios
-|![Diagrama de Contexto Usuarios](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_administrador_usuarios.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_administrador_usuarios.puml)|
+|![Diagrama de Contexto Usuarios](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_Administrador_usuarios.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_Administrador_usuarios.puml)|
 |---|---|
 
 #### Gestión de Tests
-|![Diagrama de Contexto Tests](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_administrador_tests.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_administrador_tests.puml)|
+|![Diagrama de Contexto Tests](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_Administrador_tests.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_Administrador_tests.puml)|
 |---|---|
 
 #### Gestión de Capacitaciones y Estadísticas
-|![Diagrama de Contexto Capacitaciones](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_administrador_capacitaciones.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_administrador_capacitaciones.puml)|
+|![Diagrama de Contexto Capacitaciones](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_Administrador_capacitaciones.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_Administrador_capacitaciones.puml)|
 |---|---|
 
 ### Usuario
 
-|![Diagrama de Contexto](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_postulante.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_postulante.puml)|
+|![Diagrama de Contexto](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_Postulante.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_Postulante.puml)|
 |---|---|
-
-# Prototipos
-
-Los prototipos muestran diseños preliminares de las interfaces de usuario del sistema Novus, permitiendo visualizar cómo los usuarios interactuarán con la plataforma.
-
-## Descripción
-
-Estos prototipos representan:
-
-1. **Interfaz de Login**:
-   - Pantalla de inicio de sesión para todos los usuarios
-
-2. **Panel de Administración**:
-   - Interfaz para administradores con acceso a todas las funcionalidades
-
-3. **Sección de Tests**:
-   - Interfaz para la realización de tests por parte de los NO_BECARIOS
-
-4. **Sección de Capacitación**:
-   - Interfaz para acceder a videos y documentación
-
-5. **Visualización de Estadísticas**:
-   - Interfaz para que los administradores vean el progreso de los usuarios
-
-## Prototipos
-
-### Interfaz de Login
-![Prototipo - Login](/documentos/imagenes/prototipo_login.png)
-
-### Panel de Administración
-![Prototipo - Panel de Administración](/documentos/imagenes/prototipo_admin.png)
-
-### Sección de Tests
-![Prototipo - Tests](/documentos/imagenes/prototipo_tests.png)
-
-### Sección de Capacitación
-![Prototipo - Capacitación](/documentos/imagenes/prototipo_capacitacion.png)
-
-### Visualización de Estadísticas
-![Prototipo - Estadísticas](/documentos/imagenes/prototipo_estadisticas.png)
 
