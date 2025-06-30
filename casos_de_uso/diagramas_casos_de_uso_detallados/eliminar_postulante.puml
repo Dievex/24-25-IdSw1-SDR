@@ -10,6 +10,8 @@ partition ManejoEliminarPostulante {
   :Administrador selecciona postulante;
   :Administrador solicita eliminar postulante;
   
+  :Sistema permite eliminar postulante;
+  
   :Sistema verifica dependencias
   • Inscripciones en capacitaciones
   • Evaluaciones realizadas;

@@ -6,23 +6,17 @@ start
 :VISTA_LISTAR_CAPACITACION;
 
 partition ManejoListarCapacitacion {
+
+  :Usuario solicita ver las capacitaciones;
   
-  :Sistema carga las capacitaciones
-  • Consulta base de datos
-  • Obtiene lista completa;
+  :Sistema muestra las capacitaciones;
   
   if (¿Existen capacitaciones?) then (No)
     :Sistema muestra
-    • Mensaje: "No hay capacitaciones disponibles"
-    • Opción para crear nueva;
+    • Mensaje: "No hay capacitaciones disponibles";
     
   else (Sí)
-    :Sistema muestra
-    • Lista de capacitaciones
-    • Nombre, duracion, estado
-    • Opciones de acción (Ver, Editar, Eliminar);
-    
-
+    :Sistema muestra lista de capacitaciones;
     
   endif
   

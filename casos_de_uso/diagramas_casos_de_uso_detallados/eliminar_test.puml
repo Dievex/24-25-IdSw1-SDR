@@ -10,6 +10,8 @@ partition ManejoEliminarTest {
   :Administrador selecciona test;
   :Administrador solicita eliminar test;
   
+  :Sistema permite eliminar test;
+  
   :Sistema verifica dependencias
   • Resultados de postulantes
   • Test en progreso
@@ -26,10 +28,12 @@ partition ManejoEliminarTest {
       - Desactivar test
       - Exportar datos primero;
     
-    :Administrador selecciona alternativa
+    :Administrador solicita seleccionar alternativa
     • Archivar test
     • Desactivar test  
     • Exportar datos;
+
+    :Sistema permite la seleccion;
     
     :Sistema procesa la opción elegida
     • Archivado: preserva datos históricos

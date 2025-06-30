@@ -35,6 +35,8 @@ partition ManejoEditarTest {
         :Administrador solicita realizar cambios limitados
         • Solo campos permitidos
         • Sin modificar preguntas;
+        
+        :Sistema permite realizar cambios limitados;
 
         :Sistema valida cambios;
 
@@ -56,6 +58,8 @@ partition ManejoEditarTest {
       • Agregar/eliminar preguntas
       • Modificar respuestas correctas
       • Cambiar puntajes y duración;
+
+      :Sistema permite editar libremente;
       
       :Sistema valida cambios
       • Coherencia de puntajes

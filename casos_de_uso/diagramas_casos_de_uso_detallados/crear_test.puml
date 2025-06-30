@@ -20,6 +20,8 @@ partition ManejoCrearTest {
     • Define tipo: múltiple opción/abierta
     • Asigna puntaje por pregunta
     • Establece respuestas correctas;
+
+    :Sistema permite configurar pregunta;
     
     :Sistema valida la configuración
     • Suma de puntajes = puntaje máximo

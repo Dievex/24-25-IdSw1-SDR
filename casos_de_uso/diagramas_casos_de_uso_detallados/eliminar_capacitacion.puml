@@ -11,6 +11,8 @@ partition ManejoEliminarCapacitacion {
 
   :Administrador solicita eliminar capacitación;
   
+  :Sistema permite eliminar capacitación;
+
   :Sistema muestra confirmación
   • Pregunta: "¿Está seguro?"
   • Detalles de la capacitación;

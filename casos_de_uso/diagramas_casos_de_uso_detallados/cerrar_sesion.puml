@@ -28,6 +28,8 @@ partition ManejoCerrarSesion {
     • Con advertencias apropiadas;
     
   endif
+
+  :Sistema permite cerrar sesion;
   
   :Sistema procesa cierre de sesión
     • Solicita confirmación;

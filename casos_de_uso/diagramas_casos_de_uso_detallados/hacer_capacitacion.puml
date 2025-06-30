@@ -10,9 +10,11 @@ partition ManejoHacerCapacitacion {
   :Postulante/Becario solicita acceder a capacitaciones
   • Ve lista de capacitaciones disponibles;
 
+  :Sistema permite acceder a capacitaciones;
   
   :Postulante/Becario selecciona capacitación
   • Lee descripción completa;
+
   
   :Sistema verifica elegibilidad
   • Cumple requisitos previos;
@@ -27,9 +29,10 @@ partition ManejoHacerCapacitacion {
     
     
   else (Sí)
-    :Postulante/Becario accede a contenido
+    :Postulante/Becario solicita acceder a contenido
       • Videos y recursos;
-       
+    
+    :Sistema permite acceder a contenido;
     
   endif
   

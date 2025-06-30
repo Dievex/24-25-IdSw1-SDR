@@ -14,7 +14,9 @@ partition ManejoEditarPostulante {
     • Error: "Postulante no encontrado";
     
   else (Sí)
-    :Usuario solicita modificar información;
+    :Administrador solicita modificar información;
+    
+    :Sistema permite modificar información;
     
     :Sistema valida cambios
     • Integridad de datos;
