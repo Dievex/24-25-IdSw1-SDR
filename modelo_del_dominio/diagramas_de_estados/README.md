@@ -36,7 +36,7 @@ Este diagrama representa:
 ## Diagramas
 
 ### Diagrama de Estados del Postulante
-![Diagrama de Estados del Postulante](../../documentos/imagenes/modelo_del_dominio/estados/Estados_Postulante.svg)
+![Diagrama de Estados del Postulante](../../documentos/imagenes/modelo_del_dominio/estados/estados_postulante.svg)
 
 ### Diagrama de Estados del Test
 ![Diagrama de Estados del Test](../../documentos/imagenes/modelo_del_dominio/estados/Estados_Test.svg)
