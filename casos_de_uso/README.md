@@ -277,25 +277,25 @@ Los diagramas de casos de uso detallados proporcionan una vista granular de cada
 
 ### Seleccionador
 
-|![Diagrama de Contexto](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_Seleccionador.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_Seleccionador.puml)|
+|![Diagrama de Contexto](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_seleccionador.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_seleccionador.puml)|
 |---|---|
 
 ### Administrador
 
 #### Diagrama General
-|![Diagrama de Contexto](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_Administrador.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_Administrador.puml)|
+|![Diagrama de Contexto](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_administrador.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_administrador.puml)|
 |---|---|
 
 #### Gestión de Usuarios
-|![Diagrama de Contexto Usuarios](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_Administrador_usuarios.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_Administrador_usuarios.puml)|
+|![Diagrama de Contexto Usuarios](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_administrador_usuarios.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_administrador_usuarios.puml)|
 |---|---|
 
 #### Gestión de Tests
-|![Diagrama de Contexto Tests](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_Administrador_tests.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_Administrador_tests.puml)|
+|![Diagrama de Contexto Tests](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_administrador_tests.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_administrador_tests.puml)|
 |---|---|
 
 #### Gestión de Capacitaciones y Estadísticas
-|![Diagrama de Contexto Capacitaciones](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_Administrador_capacitaciones.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_Administrador_capacitaciones.puml)|
+|![Diagrama de Contexto Capacitaciones](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_administrador_capacitaciones.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_administrador_capacitaciones.puml)|
 |---|---|
 
 ### Usuario
