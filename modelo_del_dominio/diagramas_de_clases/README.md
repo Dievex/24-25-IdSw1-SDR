@@ -19,7 +19,7 @@ Este diagrama representa:
 
 1. **Jerarquía de Usuarios**:
    - La clase base `Usuario` con atributos comunes
-   - Especialización en `POSTULANTE`, `BECARIO` y `Administrador`
+   - Especialización en `POSTULANTE`, `BECARIO`,`Administrador` y `Seleccionador`
    - Transición de `POSTULANTE` a `BECARIO` mediante la aprobación de tests
 
 2. **Recursos de Capacitación**:

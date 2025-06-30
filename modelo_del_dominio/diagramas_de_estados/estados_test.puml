@@ -10,26 +10,21 @@ skinparam {
 }
 
 title Estados de un Test en Plataforma Novus
+[*] --> EN_CONSTRUCCIÓN : Administrador crea test
 
-[*] --> CREADO : Administrador crea test
+state EN_CONSTRUCCIÓN : "Test definido pero no publicado"
+state DISPONIBLE : "Test publicado y accesible\npara POSTULANTES"
+state EN_PROGRESO : "Test siendo realizado\npor un POSTULANTE"
+state COMPLETADO : "Test finalizado por\nel POSTULANTE"
+state EVALUADO : "Resultados procesados\npor el sistema"
+state ARCHIVADO : "Test no disponible\npara nuevos intentos"
 
-state CREADO : Test definido pero no publicado
-state DISPONIBLE : Test publicado y accesible\npara POSTULANTES
-state EN_PROGRESO : Test siendo realizado\npor un POSTULANTE
-state COMPLETADO : Test finalizado por\nel POSTULANTE
-state EVALUADO : Resultados procesados\npor el sistema
-state ARCHIVADO : Test no disponible\npara nuevos intentos
-
-CREADO --> DISPONIBLE : Administrador\npublica test
-
+EN_CONSTRUCCIÓN --> DISPONIBLE : Administrador\npublica test
 DISPONIBLE --> EN_PROGRESO : POSTULANTE\ninicia test
-
 EN_PROGRESO --> COMPLETADO : POSTULANTE\nfinaliza test
-
 COMPLETADO --> EVALUADO : Sistema\nevalúa respuestas
-
 DISPONIBLE --> ARCHIVADO : Administrador\narchiva test
-
 ARCHIVADO --> DISPONIBLE : Administrador\nreactiva test
+EN_CONSTRUCCIÓN --> EN_CONSTRUCCIÓN : Administrador\nedita o ajusta test
 
 @enduml

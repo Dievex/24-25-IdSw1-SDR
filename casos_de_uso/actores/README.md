@@ -29,6 +29,7 @@ El diagrama muestra los cuatro actores principales que interactúan con el Siste
 2. **BECARIO**: Postulantes ya seleccionados
 3. **Administrador de Aplicación**: Gestores técnicos del sistema
 4. **Seleccionador**: Supervisores del programa que recomienda estudiantes para el programa PROFER
+5. **Usuario no registrado**: Usuarios que no han accedido al sistema
 
 Cada actor tiene un rol específico y diferentes niveles de acceso al sistema, como se detalla a continuación.
 
