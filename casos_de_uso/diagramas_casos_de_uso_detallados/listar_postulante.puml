@@ -6,26 +6,18 @@ start
 :VISTA_LISTAR_POSTULANTE;
 
 partition ManejoListarPostulante {
+
+  :Administrador/seleccionador solicita ver los postulantes;
   
-  :Sistema carga los postulantes
-  • Consulta base de datos
-  • Aplica filtros por defecto
-  • Paginación automática;
+  :Sistema muestra los postulantes;
   
   if (¿Existen postulantes?) then (No)
     :Sistema muestra
-    • Mensaje: "No hay postulantes registrados"
-    • Opción para crear nuevo;
+    • Mensaje: "No hay postulantes registrados";
     
     
   else (Sí)
-    :Sistema muestra lista
-    • Nombre Completo, email, pasaporte, direccion,contraseña 
-    • Estado del postulante
-    • Fecha de registro
-    • Opciones: Ver/Editar/Eliminar;
-    
-    
+    :Sistema muestra lista;
     
     :Administrador selecciona acción disponible
     • Ver perfil completo
@@ -37,7 +29,7 @@ partition ManejoListarPostulante {
     • Editar: redirige a formulario
     • Eliminar: solicita confirmación;
     
-  endif
+  endif∫
   
 }
 
