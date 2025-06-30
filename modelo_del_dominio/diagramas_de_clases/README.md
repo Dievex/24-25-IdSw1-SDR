@@ -20,8 +20,8 @@ Este diagrama representa:
 
 1. **Jerarquía de Usuarios**:
    - La clase base `Usuario` con atributos comunes
-   - Especialización en `POSTULANTE`, `BECARIO`,`Administrador` y `Seleccionador`
-   - Transición de `POSTULANTE` a `BECARIO` mediante la aprobación de tests
+   - Especialización en `Postulante`, `Becario`,`Administrador` y `Seleccionador`
+   - Transición de `Postulante` a `Becario` mediante la aprobación de tests
 
 2. **Recursos de Capacitación**:
    - Clase `Capacitación` que agrupa recursos formativos
@@ -29,7 +29,7 @@ Este diagrama representa:
 
 3. **Evaluación**:
    - Clase `Test` con sus preguntas y criterios de evaluación
-   - Relación con `POSTULANTE` para el proceso de selección
+   - Relación con `Postulante` para el proceso de selección
 
 4. **Seguimiento**:
    - Clase `Estadística` para el monitoreo del progreso
