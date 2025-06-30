@@ -25,8 +25,8 @@ Este documento define los actores principales del sistema Novus y sus caracterí
 
 El diagrama muestra los cuatro actores principales que interactúan con el Sistema Novus:
 
-1. **POSTULANTE**: Postulantes en proceso de selección
-2. **BECARIO**: Postulantes ya seleccionados
+1. **Postulante**: Postulantes en proceso de selección
+2. **Becario**: Postulantes ya seleccionados
 3. **Administrador de Aplicación**: Gestores técnicos del sistema
 4. **Seleccionador**: Supervisores del programa que recomienda estudiantes para el programa PROFER
 5. **Usuario no registrado**: Usuarios que no han accedido al sistema
@@ -35,7 +35,7 @@ Cada actor tiene un rol específico y diferentes niveles de acceso al sistema, c
 
 ## Actores Principales
 
-### POSTULANTE
+### Postulante
 - **Descripción**: Postulantes que aún no han aprobado los tests de selección
 - **Responsabilidades**:
   - Acceder a la plataforma con credenciales proporcionadas por la sede
@@ -43,7 +43,7 @@ Cada actor tiene un rol específico y diferentes niveles de acceso al sistema, c
   - Acceder a material básico de capacitación
   - Ver su propio progreso
 
-### BECARIO
+### Becario
 - **Descripción**: Postulantes que han aprobado los tests y cumplen los requisitos
 - **Responsabilidades**:
   - Acceder a material avanzado de capacitación
