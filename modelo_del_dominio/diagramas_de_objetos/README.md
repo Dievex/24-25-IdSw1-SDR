@@ -19,14 +19,14 @@ El diagrama de objetos muestra instancias concretas de las clases definidas en e
 Este diagrama representa:
 
 1. **Instancias de Usuarios**:
-   - Ejemplos de POSTULANTES en diferentes etapas del proceso
-   - Ejemplos de BECARIOS que han completado el proceso
+   - Ejemplos de Postulantes en diferentes etapas del proceso
+   - Ejemplos de Becarios que han completado el proceso
    - Administradores del sistema
 
 2. **Tests y Resultados**:
    - Tests específicos con sus características
    - Resultados de tests para diferentes usuarios
-   - Transición de POSTULANTE a BECARIO tras aprobar tests
+   - Transición de Postulante a Becario tras aprobar tests
 
 3. **Recursos de Capacitación**:
    - Videos específicos con sus atributos
