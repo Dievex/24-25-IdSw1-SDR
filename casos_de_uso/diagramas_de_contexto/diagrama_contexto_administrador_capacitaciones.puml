@@ -38,7 +38,7 @@ Menu --> Menu_administrador
 
 Menu_administrador --> Menu
     note on link
-        Salir
+        Volver
     end note
 
 Menu_administrador --> Crear_capacitación
@@ -68,7 +68,7 @@ Menu_administrador --> Ver_capacitación
 
 Ver_capacitación --> Menu_administrador
     note on link
-        Salir
+        Volver
     end note
 
 Menu_administrador --> Eliminar_capacitación
@@ -88,7 +88,7 @@ Menu_administrador --> Consultar_estadísticas
 
 Consultar_estadísticas --> Menu_administrador
     note on link
-        Salir
+        Volver
     end note
 
 @enduml

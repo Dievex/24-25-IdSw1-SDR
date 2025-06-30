@@ -35,7 +35,7 @@ Menu --> Menu_usuarios
 
 Menu_usuarios --> Menu
     note on link
-        Salir
+        Volver
     end note
 
 Menu_usuarios --> Ver_usuario
@@ -45,7 +45,7 @@ Menu_usuarios --> Ver_usuario
 
 Ver_usuario --> Menu_usuarios
     note on link
-        Salir
+        Volver
     end note
 
 Menu --> Menu_estadisticas
@@ -55,7 +55,7 @@ Menu --> Menu_estadisticas
 
 Menu_estadisticas --> Menu
     note on link
-        Salir
+        Volver
     end note
 
 Menu_estadisticas --> Consultar_estadísticas
@@ -65,7 +65,7 @@ Menu_estadisticas --> Consultar_estadísticas
 
 Consultar_estadísticas --> Menu_estadisticas
     note on link
-        Salir
+        Volver
     end note
 
 

@@ -37,7 +37,7 @@ Menu --> Menu_administrador
 
 Menu_administrador --> Menu
     note on link
-        Salir
+        Volver
     end note
 
 Menu_administrador --> Crear_test
@@ -67,7 +67,7 @@ Menu_administrador --> Ver_test
 
 Ver_test --> Menu_administrador
     note on link
-        Salir
+        Volver
     end note
 
 Menu_administrador --> Eliminar_test
