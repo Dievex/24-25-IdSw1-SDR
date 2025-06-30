@@ -48,6 +48,7 @@ Los siguientes actores participan en los casos de uso:
 - Listar Postulante
 - Editar Postulante
 - Eliminar Postulante
+- Ver Postulante
 
 **Actores involucrados**:
 - **Administrador**: Acceso completo (CRUD)
@@ -64,6 +65,7 @@ Los siguientes actores participan en los casos de uso:
 **Casos de uso incluidos**:
 - Crear Capacitación
 - Listar Capacitación
+- Ver Capacitación
 - Editar Capacitación
 - Eliminar Capacitación
 
@@ -83,6 +85,7 @@ Los siguientes actores participan en los casos de uso:
 **Casos de uso incluidos**:
 - Crear Test
 - Listar Test
+- Ver Test
 - Editar Test
 - Eliminar Test
 
