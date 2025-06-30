@@ -6,21 +6,22 @@ start
 :VISTA_LISTAR_TEST;
 
 partition ManejoListarTest {
+
+  :Usuario solicita ver los tests;
   
   :Sistema identifica tipo de usuario
   • Administrador: ve todos los tests
   • Postulante: ve tests activos/asignados;
   
-  :Sistema carga tests según permisos
-  • Consulta base de datos
-  • Aplica filtros de usuario;
+  :Sistema carga tests según permisos;
   
   
   if (¿Existen tests?) then (No)
     if (¿Es Administrador?) then (Sí)
       :Sistema muestra
-      • Mensaje: "No hay tests creados"
-      • Botón: "Crear primer test";
+      • Mensaje: "No hay tests creados";
+
+      :CREAR_TEST;
      
       
     else (No - Postulante)
@@ -57,10 +58,7 @@ partition ManejoListarTest {
       
       
       if (¿Postulante inicia test?) then (Sí)
-        :Sistema inicia sesión
-        • Verifica requisitos
-        • Inicia cronómetro
-        • Redirige a interfaz de test;
+        :HACER_TEST;
         
       endif
       
