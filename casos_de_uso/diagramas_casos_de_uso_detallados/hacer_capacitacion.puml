@@ -7,13 +7,12 @@ start
 
 partition ManejoHacerCapacitacion {
   
-  :Usuario accede a capacitaciones
+  :Postulante/Becario solicita acceder a capacitaciones
   • Ve lista de capacitaciones disponibles;
 
   
-  :Usuario selecciona capacitación
-  • Lee descripción completa
-  • Hace clic en "Play"
+  :Postulante/Becario selecciona capacitación
+  • Lee descripción completa;
   
   :Sistema verifica elegibilidad
   • Cumple requisitos previos;
@@ -28,7 +27,7 @@ partition ManejoHacerCapacitacion {
     
     
   else (Sí)
-    :Usuario accede a contenido
+    :Postulante/Becario accede a contenido
       • Videos y recursos;
        
     

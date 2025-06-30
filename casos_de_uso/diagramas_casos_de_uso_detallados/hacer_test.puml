@@ -7,14 +7,14 @@ start
 
 partition ManejoHacerTest {
   
-  :Postulante accede a tests disponibles
+  :Postulante solicita acceder a tests disponibles
   • Ve lista de tests asignados
   • Revisa estado: Pendiente/En progreso
   • Verifica fechas límite;
+
+  :Sistema permite acceder a los test disponibles;
   
-  :Postulante selecciona test
-  • Lee instrucciones generales
-  • Revisa duración estimada;
+  :Postulante selecciona test;
  
   
   :Sistema verifica elegibilidad
@@ -36,33 +36,27 @@ partition ManejoHacerTest {
     • Instrucciones detalladas
     • Duración: X minutos
     • Número de preguntas: Y
-    • Tipo de evaluación
-    • Botón: "Comenzar Test";
+    • Tipo de evaluación;
     
     if (¿Postulante inicia test?) then (Sí)
       :Sistema inicia sesión de test
       • Registra hora de inicio
       • Activa cronómetro
-      • Carga primera pregunta
       • Habilita navegación;
       
       :Postulante realiza test
       • Responde preguntas
       • Navega entre preguntas
-      • Ve tiempo restante
-      • Puede marcar para revisión;
+      • Ve tiempo restante;
       
       :Sistema monitorea progreso
-      • Guarda respuestas automáticamente
-      • Actualiza tiempo restante
-      • Permite navegación libre
-      • Advierte tiempo crítico;
+      • Guarda respuestas
+      • Actualiza tiempo restante;
       
       if (¿Tiempo agotado?) then (Sí)
         :Sistema finaliza automáticamente
         • Guarda respuestas actuales
-        • Marca como "Tiempo agotado"
-        • Procesa calificación;
+        • Marca como "Tiempo agotado";
         
       else (No - Postulante termina)
         :Postulante revisa respuestas
@@ -72,8 +66,7 @@ partition ManejoHacerTest {
         
         :Sistema solicita confirmación
         • "¿Enviar test definitivamente?"
-        • Advertencia: "No podrá modificar"
-        • Opciones: Enviar/Continuar;
+        • Advertencia: "No podrá modificar";
         
         if (¿Confirma envío?) then (Sí)
           :Sistema procesa envío
@@ -99,8 +92,7 @@ partition ManejoHacerTest {
       :Sistema muestra confirmación
       • "Test completado exitosamente"
       • Tiempo utilizado
-      • "Resultados disponibles pronto"
-      • Opción: "Ver otros tests";
+      • "Resultados disponibles pronto";
       
     else (No)
       :Sistema mantiene disponibilidad
