@@ -86,7 +86,7 @@ Cada actor tiene un rol específico y diferentes niveles de acceso al sistema, c
 ---
 
 ### 2. CRUD de Postulantes
-**Archivo**: `crud_Postulante.puml`
+**Archivo**: `crud_postulante.puml`
 
 **Descripción**: Gestión completa de Postulantes en el sistema.
 
@@ -101,7 +101,7 @@ Cada actor tiene un rol específico y diferentes niveles de acceso al sistema, c
 - **Administrador**: Acceso completo (CRUD)
 - **Seleccionador**: Solo consulta (Listar y Ver)
 
-![CRUD de Postulantes](/documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/crud_Postulante.svg)
+![CRUD de Postulantes](/documentos/imagenes/casos_de_uso/diagrams_casos_de_uso/crud_postulante.svg)
 ---
 
 ### 3. CRUD de Capacitaciones
@@ -215,16 +215,16 @@ Los diagramas de casos de uso detallados proporcionan una vista granular de cada
 ### Gestión de Postulantes
 
 #### Crear Postulante  
-![Crear Postulante](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/crear_Postulante.svg)
+![Crear Postulante](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/crear_postulante.svg)
 
 #### Editar Postulante  
-![Editar Postulante](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/editar_Postulante.svg)
+![Editar Postulante](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/editar_postulante.svg)
 
 #### Eliminar Postulante  
-![Eliminar Postulante](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/eliminar_Postulante.svg)
+![Eliminar Postulante](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/eliminar_postulante.svg)
 
 #### Listar Postulante  
-![Listar Postulante](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/listar_Postulante.svg)
+![Listar Postulante](/documentos/imagenes/casos_de_uso/diagramas_casos_de_uso_detallados/listar_postulante.svg)
 
 ### Gestión de Capacitaciones
 
@@ -300,6 +300,6 @@ Los diagramas de casos de uso detallados proporcionan una vista granular de cada
 
 ### Usuario
 
-|![Diagrama de Contexto](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_Postulante.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_Postulante.puml)|
+|![Diagrama de Contexto](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_postulante.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_postulante.puml)|
 |---|---|
 
