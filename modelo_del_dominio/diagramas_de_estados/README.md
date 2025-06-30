@@ -56,9 +56,9 @@ Este diagrama representa:
 
 ### Estados de Test
 - **En Construcción**: Test definido pero no publicado
-- **Disponible**: Test publicado y accesible para NO_BECARIOS
-- **En Progreso**: Test siendo realizado por un NO_BECARIO
-- **Completado**: Test finalizado por el NO_BECARIO
+- **Disponible**: Test publicado y accesible para Postulantes
+- **En Progreso**: Test siendo realizado por un Postulante
+- **Completado**: Test finalizado por el Postulante
 - **Evaluado**: Resultados procesados por el sistema
 - **Archivado**: Test no disponible para nuevos intentos
 
