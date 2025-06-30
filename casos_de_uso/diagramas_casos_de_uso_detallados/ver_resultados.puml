@@ -7,10 +7,9 @@ start
 
 partition ManejoVerResultado {
   
-  :Postulante accede a sus resultados
-  • Navega a sección "Mis Resultados"
-  • Sistema carga historial completo
-  • Muestra tests realizados;
+  :Postulante solicita acceder a sus resultados;
+
+  :Sistema permite acceder a sus resultados;
   
   :Sistema presenta lista de tests
   • Tests completados
@@ -20,15 +19,12 @@ partition ManejoVerResultado {
   
   if (¿Tiene tests realizados?) then (No)
     :Sistema muestra
-    • Mensaje: "No has realizado tests"
-    • Opción: "Ver tests disponibles"
-    • Información: "Realiza tu primer test";
+    • Mensaje: "No has realizado tests";
     
   else (Sí)
-    :Postulante selecciona test específico
-    • Hace clic en test de interés
-    • Sistema verifica permisos
-    • Carga detalles completos;
+    :Postulante solicita seleccionar test específico;
+
+    :Sistema permite seleccionar;
     
     if (¿Resultado disponible?) then (No)
       :Sistema muestra estado
@@ -36,11 +32,7 @@ partition ManejoVerResultado {
       
       
     else (Sí)
-      :Sistema muestra resultado detallado
-      • Puntaje final obtenido
-      • Puntaje máximo posible
-      • Porcentaje de aciertos
-      • Tiempo utilizado vs tiempo límite;
+      :Sistema muestra resultado detallado;
       
       
     endif
