@@ -20,6 +20,7 @@ Los siguientes actores participan en los casos de uso:
 - **Seleccionador**: Consulta información y ve los postulantes
 - **Postulante**: Realiza tests y capacitaciones
 - **Becario**: Realiza capacitaciones y consulta su progreso
+- **Usuario:No_Registrado**: Usuario que aun no ha accedido al sistema
 
 ## Diagramas Disponibles
 
