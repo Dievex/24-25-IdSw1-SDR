@@ -6,18 +6,15 @@ start
 :VISTA_INICIAR_SESION;
 
 partition ManejoIniciarSesion {
-  
-  :Usuario accede a la página de login
-  • Muestra formulario de acceso
-  • Opciones: Email
-  • Campo de contraseña
-  • Botón "Iniciar sesión";
 
   
-  :Usuario introduce credenciales
+  :Usuario solicita introducir credenciales
   • Email 
   • Contraseña;
  
+  :Sistema permite introducir credenciales;
+
+  :Usuario introduce credenciales;
   
   :Sistema valida formato
   • Email válido
@@ -31,16 +28,10 @@ partition ManejoIniciarSesion {
     • Mantiene datos ingresados;
     
   else (Sí)
-    :Sistema verifica credenciales
-    • Busca usuario en base de datos
-    • Verifica contraseña encriptada
-    • Revisa estado de la cuenta;
+    :Sistema verifica credenciales;
     
     if (¿Credenciales correctas?) then (No)
-      :Sistema registra intento fallido
-      • Incrementa contador de intentos
-      • Registra IP y timestamp
-      • Verifica política de bloqueo;
+      :Sistema registra intento fallido;
       
       
       :Sistema muestra
@@ -53,15 +44,10 @@ partition ManejoIniciarSesion {
       if (¿Cuenta activa?) then (No)
         :Sistema muestra
         • Error: "Cuenta inactiva"
-        • Motivo del bloqueo
-        • Contacto: "Administrador del sistema";
+        • Motivo del bloqueo;
         
       else (Sí)
-        :Sistema crea sesión
-        • Genera token de sesión
-        • Establece tiempo de expiración
-        • Registra última conexión;
-       
+        :Sistema crea sesión;
         
         :Sistema identifica tipo de usuario
         • Administrador → Dashboard admin
