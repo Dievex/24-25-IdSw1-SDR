@@ -9,6 +9,7 @@
     ⚙️ <strong>Casos de Uso</strong>
   </a>
 </p>
+
 # Diagrama de Objetos
 
 El diagrama de objetos muestra instancias concretas de las clases definidas en el diagrama de clases, ilustrando cómo se relacionan en escenarios específicos del sistema Novus.
