@@ -71,8 +71,6 @@ Cada actor tiene un rol específico y diferentes niveles de acceso al sistema, c
 
 # Diagramas de Casos de Uso
 
-## Diagramas Disponibles
-
 ### 1. Gestión de Sesiones
 **Archivo**: `manejo_sesion.puml`
 

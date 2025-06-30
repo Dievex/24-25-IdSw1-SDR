@@ -29,7 +29,7 @@ partition ManejoListarPostulante {
     • Editar: redirige a formulario
     • Eliminar: solicita confirmación;
     
-  endif∫
+  endif
   
 }
 
