@@ -298,8 +298,13 @@ Los diagramas de casos de uso detallados proporcionan una vista granular de cada
 |![Diagrama de Contexto Capacitaciones](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_administrador_capacitaciones.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_administrador_capacitaciones.puml)|
 |---|---|
 
-### Usuario
+### Postulante
 
 |![Diagrama de Contexto](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_postulante.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_postulante.puml)|
+|---|---|
+
+### Becario
+
+|![Diagrama de Contexto](/documentos/imagenes/casos_de_uso/diagramas_contexto/diagrama_contexto_becario.svg)|[Código](/casos_de_uso/diagramas_de_contexto/diagrama_contexto_becario.puml)|
 |---|---|
 
