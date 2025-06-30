@@ -1,4 +1,4 @@
-@startuml diagrama_contexto_postulante
+@startuml diagrama_contexto_becario
 
 skinparam {
     StateFontSize 14
