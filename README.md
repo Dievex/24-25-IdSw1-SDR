@@ -20,8 +20,8 @@
 
 Novus es una plataforma diseñada para administrar y optimizar el proceso de selección y capacitación de becarios PROFER de la Universidad Europea del Atlántico. La plataforma permite:
 
-- Gestionar el acceso de postulantes (POSTULANTES)
-- Administrar tests de selección para convertir POSTULANTES en BECARIOS
+- Gestionar el acceso de postulantes 
+- Administrar tests de selección para convertir postulantes en becarios
 - Proporcionar capacitación mediante videos y documentación
 - Generar estadísticas de progreso para los administradores
 
