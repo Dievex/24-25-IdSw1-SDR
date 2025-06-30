@@ -9,6 +9,7 @@
     ⚙️ <strong>Casos de Uso</strong>
   </a>
 </p>
+
 # Diagrama de Estados
 
 El diagrama de estados muestra los diferentes estados por los que pasan las entidades del sistema Novus y las transiciones entre estos estados.
@@ -18,7 +19,7 @@ El diagrama de estados muestra los diferentes estados por los que pasan las enti
 Este diagrama representa:
 
 1. **Estados de un Postulante**:
-   - Transición de POSTULANTE a BECARIO
+   - Transición de Postulante a Becario
    - Estados intermedios durante el proceso de selección
    - Condiciones para la aprobación o rechazo
 
@@ -47,14 +48,14 @@ Este diagrama representa:
 
 ### Estados de Postulante
 - **No Registrado**: Usuario sin acceso al sistema
-- **NO_BECARIO**: Usuario con acceso básico, puede realizar tests y acceder a capacitación básica
+- **Postulante**: Usuario con acceso básico, puede realizar tests y acceder a capacitación básica
 - **En Evaluación**: Usuario realizando tests
 - **Evaluado**: Tests completados, pendiente de resultados
-- **BECARIO**: Usuario con acceso completo, puede acceder a capacitación avanzada
+- **Becario**: Usuario con acceso completo, puede acceder a capacitación avanzada
 - **Rechazado**: No cumple los requisitos, puede intentar nuevamente
 
 ### Estados de Test
-- **Creado**: Test definido pero no publicado
+- **En Construcción**: Test definido pero no publicado
 - **Disponible**: Test publicado y accesible para NO_BECARIOS
 - **En Progreso**: Test siendo realizado por un NO_BECARIO
 - **Completado**: Test finalizado por el NO_BECARIO
